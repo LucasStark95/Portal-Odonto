@@ -29184,7 +29184,7 @@
 													"_parent": {
 														"$ref": "AAAAAAFdqSWPyqJSqYg="
 													},
-													"name": "TriagemController",
+													"name": "ProntuarioController",
 													"visibility": "public"
 												}
 											],
@@ -31705,7 +31705,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "TriagemController",
+											"text": "ProntuarioController",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
@@ -32058,7 +32058,7 @@
 											"height": 13,
 											"autoResize": false,
 											"underline": false,
-											"text": "TriagemController",
+											"text": "ProntuarioController",
 											"horizontalAlignment": 2,
 											"verticalAlignment": 5,
 											"wordWrap": false
