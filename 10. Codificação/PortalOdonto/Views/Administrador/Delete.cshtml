@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Model.Models.Usuario>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MatriculaUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cep)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeMae)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SenhaUsuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MatriculaUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Endereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bairro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cep)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeMae)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SenhaUsuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataNascimento)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdUsuario }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdUsuario }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdUsuario })
+        </td>
+    </tr>
+}
+
+</table>

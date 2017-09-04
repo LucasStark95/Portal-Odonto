@@ -1,0 +1,161 @@
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\ApplicationInsights.config
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\csc.exe
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\csc.exe.config
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\csc.rsp
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\csi.exe
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\csi.rsp
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\System.AppContext.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\vbc.exe
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\vbc.exe.config
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\vbc.rsp
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\VBCSCompiler.exe
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\PortalOdonto.dll.config
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\PortalOdonto.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\PortalOdonto.pdb
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Antlr3.Runtime.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.Web.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Model.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Negocio.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Newtonsoft.Json.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Helpers.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Mvc.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Optimization.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Razor.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.WebPages.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.WebPages.Razor.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\WebGrease.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Persistencia.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Model.pdb
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Negocio.pdb
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Helpers.xml
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Mvc.xml
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Optimization.xml
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Razor.xml
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.WebPages.xml
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.WebPages.Razor.xml
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Antlr3.Runtime.pdb
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Newtonsoft.Json.xml
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.Web.xml
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\Persistencia.pdb
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\pt-br\System.Web.Optimization.resources.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\obj\Debug\PortalOdonto.csprojResolveAssemblyReference.cache
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\obj\Debug\PortalOdonto.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto\obj\Debug\PortalOdonto.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\ApplicationInsights.config
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\csc.exe
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\csc.exe.config
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\csc.rsp
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\csi.exe
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\csi.rsp
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\System.AppContext.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\vbc.exe
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\vbc.exe.config
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\vbc.rsp
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\VBCSCompiler.exe
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\PortalOdonto.dll.config
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\PortalOdonto.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\PortalOdonto.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Antlr3.Runtime.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.Web.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Model.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Negocio.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Newtonsoft.Json.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Helpers.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Mvc.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Optimization.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Razor.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.WebPages.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.WebPages.Razor.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\WebGrease.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Persistencia.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Model.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Negocio.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Helpers.xml
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Mvc.xml
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Optimization.xml
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.Razor.xml
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.WebPages.xml
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\System.Web.WebPages.Razor.xml
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Antlr3.Runtime.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Newtonsoft.Json.xml
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Microsoft.AI.Web.xml
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\Persistencia.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\pt-br\System.Web.Helpers.resources.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\pt-br\System.Web.Optimization.resources.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\pt-br\System.Web.Razor.resources.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\pt-br\System.Web.WebPages.resources.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\obj\Debug\PortalOdonto.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\obj\Debug\PortalOdonto.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\obj\Debug\PortalOdonto.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\PortalOdonto\obj\Debug\PortalOdonto.pdb

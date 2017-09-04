@@ -1,0 +1,12 @@
+packages/
+PortalOdonto/bin/
+PortalOdonto/obj/
+PortalOdonto.Testes/bin/
+PortalOdonto.Testes/obj/
+Model/bin/
+Model/obj/
+Negocio/bin/
+Negocio/obj/
+Persistencia/bin/
+Persistencia/obj/
+.vs/

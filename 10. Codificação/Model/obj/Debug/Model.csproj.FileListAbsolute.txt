@@ -1,0 +1,10 @@
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Model\bin\Debug\Model.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Model\bin\Debug\Model.pdb
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Model\obj\Debug\Model.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Model\obj\Debug\Model.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Model\bin\Debug\Model.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Model\bin\Debug\Model.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Model\obj\Debug\Model.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Model\obj\Debug\Model.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
