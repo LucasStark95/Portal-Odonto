@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Model.Models;
 using Negocio.Business;
@@ -18,18 +16,26 @@ namespace PortalOdonto.Controllers
         }
         public ActionResult Index()
         {
-            return View();
+            List<Usuario> usuarios = usuarioGerenciador.ObterTodos();
+            if (usuarios == null || usuarios.Count == 0)
+                usuarios = null;
+            return View(usuarios);
         }
 
         // GET: Usuario/Details/5
-        public ActionResult Details (int id)
-        {          
-            return View();
+        public ActionResult Details (int? id)
+        {
+            if (id.HasValue)
+            {
+                Usuario user = usuarioGerenciador.Obter(id);
+                if (user != null)
+                    return View(user);
+            }
+            return RedirectToAction("Index");
         }       
 
         public ActionResult Create()
         {
-           
             return View();
         }
 
@@ -42,6 +48,7 @@ namespace PortalOdonto.Controllers
                 if (ModelState.IsValid)
                 {
                     Usuario u = new Usuario();
+                    
                     int tipo = Convert.ToInt32(dadosForm["TipoUsuario"]);
                     tipo--;
                     switch (tipo)
@@ -50,7 +57,7 @@ namespace PortalOdonto.Controllers
                              Professor p = new Professor();
                              TryUpdateModel<Professor>(p, dadosForm.ToValueProvider());
                              TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
-                            usuarioGerenciador.Adicionar(u);
+                             usuarioGerenciador.Adicionar(u);
                              break;
                         case ((int)TipoUsuario.ALUNO):
                             Aluno a = new Aluno();
@@ -65,7 +72,7 @@ namespace PortalOdonto.Controllers
                             usuarioGerenciador.Adicionar(u);
                             break;                                                                         
                     }                    
-                    return RedirectToAction("ListaDeUsuario");
+                    return RedirectToAction("Index");
                 }
                 else
                 {
@@ -79,57 +86,72 @@ namespace PortalOdonto.Controllers
             return View();
         }
 
-        // GET: Usuario/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
-            return View();
+            if (id.HasValue)
+            {
+                Usuario user = usuarioGerenciador.Obter(id);
+                if (user!= null)
+                    return View(user);
+            }
+            return RedirectToAction("Index");
         }
 
-        // POST: Usuario/Edit/5
+
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Usuario user)
         {
             try
             {
-                // TODO: Add update logic here
-
+                usuarioGerenciador.Editar(user);
                 return RedirectToAction("Index");
+                
             }
             catch
             {
-                return View();
+                //TODO
             }
+            return RedirectToAction("Index");
         }
+
 
         // GET: Usuario/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            return View();
-        }
-
-        public ActionResult ListaDeUsuario()
-        {
-            List<Usuario> usuarios = usuarioGerenciador.ObterTodos();
-            if (usuarios == null || usuarios.Count == 0)
-                usuarios = null;
-
-            return View(usuarios);
+            if (id.HasValue)
+            {
+                Usuario user = usuarioGerenciador.Obter(id);
+                if (user!= null)
+                    return View(user);
+                return RedirectToAction("Index");
+            }
+            return RedirectToAction("Index");
         }
 
         // POST: Usuario/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, Usuario user)
         {
             try
             {
-                // TODO: Add delete logic here
-
+                usuarioGerenciador.Remover(usuarioGerenciador.Obter(id));
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                
             }
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult Buscar(int? matricula)
+        {
+            List<Usuario> usuarios = usuarioGerenciador.Buscar(matricula);
+            if (usuarios == null)
+                usuarios = null;
+
+            return View("Index", usuarios);
         }
     }
 }

@@ -150,6 +150,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\SessionHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -174,6 +175,8 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Views\Administrador\Delete.cshtml" />
+    <Content Include="Views\Administrador\Details.cshtml" />
     <Content Include="Views\Administrador\Index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -190,15 +193,15 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Administrador\Create.cshtml" />
-    <Content Include="Views\Administrador\Edit.cshtml" />
-    <Content Include="Views\Administrador\Details.cshtml" />
     <Content Include="Views\Tecnico\Index.cshtml" />
-    <Content Include="Views\Administrador\ListaDeUsuario.cshtml" />
-    <Content Include="Views\Administrador\Delete.cshtml" />
+    <Content Include="Views\Administrador\Edit.cshtml" />
+    <Content Include="Views\Tecnico\CadastrarPaciente.cshtml" />
+    <Content Include="Views\Tecnico\VisualizarPaciente.cshtml" />
+    <Content Include="Views\Tecnico\CadastrarTriagem.cshtml" />
+    <Content Include="Views\Tecnico\ListarPacientes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Util\" />
     <Folder Include="Views\Aluno\" />
     <Folder Include="Views\Usuario\" />
   </ItemGroup>

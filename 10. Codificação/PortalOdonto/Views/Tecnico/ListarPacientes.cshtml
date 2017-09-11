@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Model.Models.Paciente>
+
+@{
+    ViewBag.Title = "ListarPacientes";
+}
+
+<div>
+    <p>
+        Pacientes
+    </p>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Matricula</span>
+                <input type="text" class="form-control" placeholder="Buscar" aria-label="Seacher" aria-describedby="basic-addon1">
+            </div>
+            <br />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </div>
+        <div class="bs-example">
+            <ul class="nav nav-tabs">
+                <li role="presentation" ><a href="@Url.Action("CadastrarPaciente")">Cadastrar Paciente</a></li>
+                <li role="presentation" ><a href="@Url.Action("CadastrarTriagem")">Cadastrar Triagem</a></li>
+                <li role="presentation" class="active"><a href="@Url.Action("ListarPacientes")">Pacientes</a></li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            @if (Model != null)
+            {
+                WebGrid tabela = new WebGrid(source: Model, rowsPerPage: 4, canPage: true,
+                            canSort: true, defaultSort: "Paciente");
+                @tabela.GetHtml(caption: "", displayHeader: true, fillEmptyRows: true,
+                            emptyRowCellValue: "___", mode: WebGridPagerModes.All, numericLinksCount: 2, tableStyle: "table",
+                            columns: tabela.Columns(
+                                tabela.Column("NomePaciente", "Nome"),
+                                tabela.Column("Contato", "Contato"),
+                                tabela.Column("Ações", "Ações", canSort: false,
+                                    format: (item) =>
+                                        (true) ?
+                                            new HtmlString(String.Format("{0}|{1}|{2}", new object[] {
+                                                Html.ActionLink("Editar", "VisualizarPaciente", new { id = item.IdPaciente }).ToString(),
+                                                Html.ActionLink("Remover", "Delete", new { id = item.IdPaciente }).ToString(),
+                                                Html.ActionLink("Detalhes", "VisualizarPaciente", new { id = item.IdPaciente }).ToString(),
+                                            }))
+                                        : null
+                                )
+                            )
+                        );
+            }
+            else
+            {
+                <p>Nenhum Paciente Cadastrado</p>
+            }
+        </div>
+    </div>
+</div>

@@ -33,7 +33,7 @@ namespace Negocio.Business
             pacPersistencia.Remover(paciente);
         }
 
-        public Paciente Obter(int id)
+        public Paciente Obter(int? id)
         {
             return pacPersistencia.Obter(e => e.IdPaciente == id);
         }

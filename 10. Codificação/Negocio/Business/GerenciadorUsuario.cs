@@ -34,9 +34,15 @@ namespace Negocio.Business
             usuarioPersistencia.Remover(usuario);
         }
 
-        public Usuario Obter(int id)
+
+        public Usuario Obter(int? id)
         {
             return usuarioPersistencia.Obter(e => e.IdUsuario == id);
+        }
+
+        public List<Usuario> Buscar(int? matricula)
+        {
+            return usuarioPersistencia.Buscar(e => e.MatriculaUsuario == matricula);
         }
 
         public List<Usuario> ObterTodos()

@@ -59,8 +59,7 @@ namespace Model.Models
         }
         [Required]
         [DataType(DataType.Date)]
-        [Display(Name = "Data")]
-        [DisplayFormat(DataFormatString = "dd/mm/yyyy")]
+        [Display(Name = "Data")]       
         public DateTime DataTriagem
         {
             get { return dataTriagem; }

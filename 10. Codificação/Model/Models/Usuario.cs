@@ -12,6 +12,7 @@ namespace Model.Models
         private int idUsuario;
         private string nomeUsuario;
         private int matriculaUsuario;
+        private int tipoUsuario;
         private string emailUsuario;
         private string senhaUsuario;
         private string nomeMae;
@@ -23,7 +24,7 @@ namespace Model.Models
 
         public Usuario() { }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [StringLength(300, MinimumLength = 2)]
         [Display(Name = "Nome Completo")]
         public string NomeUsuario
@@ -32,14 +33,13 @@ namespace Model.Models
             set { nomeUsuario = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "Matricula")]
         public int MatriculaUsuario
         {
             get { return matriculaUsuario; }
             set { matriculaUsuario = value; }
         }
-
         
         [Key]
         [Display(Name = "ID Usuário")]
@@ -66,7 +66,7 @@ namespace Model.Models
         }
 
         [StringLength(40, MinimumLength = 10)]
-        [Display(Name = "Cep")]
+        [Display(Name = "CEP")]
         public string Cep
         {
             get { return cep; }
@@ -89,8 +89,9 @@ namespace Model.Models
             set { nomeMae = value; }
         }
 
-        [Required]
-        [StringLength(30, MinimumLength = 10)]
+        [Required(ErrorMessage = "Campo Obrigatório")]
+        [StringLength(60, MinimumLength = 10)]
+        [RegularExpression(@"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]
         [DataType (DataType.EmailAddress) ]
         [Display(Name = "Email")]
         public string EmailUsuario
@@ -99,7 +100,7 @@ namespace Model.Models
             set { emailUsuario = value; }
         }
 
-        
+        [Required]
         [StringLength(20, MinimumLength = 8)]
         [DataType(DataType.Password)]
         [Display (Name = "Senha")]
@@ -109,14 +110,20 @@ namespace Model.Models
             set { senhaUsuario = value; }
         }
 
-        
-        [DataType(DataType.Date)]
-        [Display (Name = "Data Nascimento")]
-        [DisplayFormat(DataFormatString = "dd/mm/yyyy")]
+        [Required]
+        [DataType(DataType.DateTime)]
+        [Display (Name = "Data de Nascimento")]
         public DateTime DataNascimento
         {
             get { return dataNascimento; }
             set { dataNascimento = value; }
+        }
+
+        [Display(Name = "Nivel de Usuário")]
+        public int TipoUsuario
+        {
+            get { return tipoUsuario; }
+            set { tipoUsuario = value; }
         }
     }
 }

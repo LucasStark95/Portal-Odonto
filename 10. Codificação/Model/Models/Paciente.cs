@@ -94,8 +94,7 @@ namespace Model.Models
 
         [Required]
         [DataType(DataType.Date)]
-        [Display(Name = "Data Nascimento")]
-        [DisplayFormat(DataFormatString = "dd/mm/yyyy")]
+        [Display(Name = "Data Nascimento")]       
         public string Dt_nascimentoPaciente
         {
             get { return dtNascimentoPaciente; }

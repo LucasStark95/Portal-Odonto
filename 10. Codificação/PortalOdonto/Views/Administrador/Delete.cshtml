@@ -1,81 +1,57 @@
-﻿@model IEnumerable<Model.Models.Usuario>
+﻿@model Model.Models.Usuario
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NomeUsuario)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MatriculaUsuario)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Endereco)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Bairro)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Cep)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Cidade)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NomeMae)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EmailUsuario)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SenhaUsuario)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DataNascimento)
-        </th>
-        <th></th>
-    </tr>
+<h3>Você relamente deseja remover: @Html.DisplayFor(model => model.NomeUsuario)?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal"></dl>
+    <div class="form-horizontal">
+        <div class="container text-center">
+            <div class="row thumbnail">
+                <hr />
+                <div class="form-group">
+                    <div>
+                        @Html.LabelFor(model => model.NomeUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-3">
+                            @Html.EditorFor(model => model.NomeUsuario, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                        </div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NomeUsuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MatriculaUsuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Endereco)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Bairro)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cep)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cidade)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NomeMae)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EmailUsuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SenhaUsuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DataNascimento)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdUsuario }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdUsuario }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdUsuario })
-        </td>
-    </tr>
-}
+                        @Html.LabelFor(model => model.NomeMae, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-3">
+                            @Html.EditorFor(model => model.NomeMae, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                        </div>
+                        <div class="col-md-2"> </div>
+                    </div>
+                </div>
 
-</table>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EmailUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-3">
+                        @Html.EditorFor(model => model.EmailUsuario, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    </div>
+                    @Html.LabelFor(model => model.DataNascimento, htmlAttributes: new { @class = "control-labeul col-md-2" })
+                    <div class="col-md-3">
+                        @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    </div>
+                    <div class="col-md-4"> </div>
+                </div>
+                <br />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-4"> </div>
+        <div class="col-md-2">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-actions no-color">
+                    <input type="submit" value="Remover" class="btn btn-default" />
+                </div>
+            }
+        </div>
+        <div class="col-md-12">
+            @Html.ActionLink("Cancelar", "Index")
+        </div>
+    </div>
+</div>

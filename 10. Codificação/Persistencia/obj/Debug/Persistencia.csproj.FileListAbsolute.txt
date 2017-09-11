@@ -1,10 +1,3 @@
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Persistencia\bin\Debug\Persistencia.dll
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Persistencia\bin\Debug\Persistencia.pdb
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Persistencia\bin\Debug\Model.dll
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Persistencia\bin\Debug\Model.pdb
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Persistencia\obj\Debug\Persistencia.dll
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Persistencia\obj\Debug\Persistencia.pdb
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Persistencia\bin\Debug\Persistencia.dll
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Persistencia\bin\Debug\Persistencia.pdb
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Persistencia\bin\Debug\Model.dll
@@ -13,3 +6,18 @@ C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\Por
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Persistencia\bin\Debug\Model.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Persistencia\bin\Debug\Model.pdb
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Persistencia\bin\Debug\Model.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Persistencia\bin\Debug\Model.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Persistencia\obj\Debug\Persistencia.pdb

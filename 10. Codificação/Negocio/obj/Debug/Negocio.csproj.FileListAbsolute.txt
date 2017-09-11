@@ -1,12 +1,3 @@
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\bin\Debug\Negocio.dll
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\bin\Debug\Negocio.pdb
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\bin\Debug\Model.dll
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\bin\Debug\Persistencia.dll
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\bin\Debug\Model.pdb
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\bin\Debug\Persistencia.pdb
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.dll
-C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.pdb
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Negocio\bin\Debug\Negocio.dll
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Negocio\bin\Debug\Negocio.pdb
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Negocio\bin\Debug\Model.dll
@@ -17,3 +8,22 @@ C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\Por
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.dll
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codificacao\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\bin\Debug\Negocio.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\bin\Debug\Model.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\bin\Debug\Persistencia.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\bin\Debug\Model.pdb
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\bin\Debug\Persistencia.pdb
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.dll
+C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Negocio\bin\Debug\Negocio.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Negocio\bin\Debug\Model.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Negocio\bin\Debug\Persistencia.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Negocio\bin\Debug\Model.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Negocio\bin\Debug\Persistencia.pdb
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.dll
+C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.pdb
