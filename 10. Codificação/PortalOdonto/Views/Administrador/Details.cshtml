@@ -26,7 +26,7 @@
                 </div>
                 @Html.LabelFor(model => model.DataNascimento, htmlAttributes: new { @class = "control-labeul col-md-2" })
                 <div class="col-md-3">
-                    @Html.EditorFor(model => model.DataNascimento, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+                    @Html.DisplayFor(model => model.DataNascimento.Date)
                 </div>
                 <div class="col-md-4"> </div>
             </div>

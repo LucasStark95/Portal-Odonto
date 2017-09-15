@@ -13,3 +13,9 @@ C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOd
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Model\obj\Debug\Model.dll
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Model\obj\Debug\Model.pdb
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Model\bin\Debug\Model.dll
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Model\bin\Debug\Model.pdb
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Model\obj\Debug\Model.dll
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Model\obj\Debug\Model.pdb
