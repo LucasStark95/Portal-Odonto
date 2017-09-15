@@ -30,21 +30,9 @@
                     <br/>
                 </div>
             }
-            <p>
-                Filtro
-                <br/>
-                </p>
-            <div class="form-group">
-                <div class="col-md-3">
-                    <span class="input-group-addon" id="basic-addon1"> Nome </span>
-                 </div>
-                <div class="col-md-3" id="filtro-nome">
-                    @Html.Editor("Nome", new { htmlAttributes = new { @id = "filtro-nome", @onchange = "filtro()" } })
-                </div>
             </div>
-            </div>
-
             <div class="col-md-9">
+
 
                 <p>
                     @Html.ActionLink("Cadastrar", "Create", "", new { @class = "btn btn-default" })

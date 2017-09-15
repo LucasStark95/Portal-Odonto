@@ -111,8 +111,9 @@ namespace Model.Models
         }
 
         [Required]
-        [DataType(DataType.DateTime)]
+        [DataType(DataType.Date)]
         [Display (Name = "Data de Nascimento")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DataNascimento
         {
             get { return dataNascimento; }
