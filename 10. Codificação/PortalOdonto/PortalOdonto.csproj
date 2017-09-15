@@ -139,6 +139,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\Mensagem_PT_BR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mensagem_PT_BR.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -229,6 +234,12 @@
       <Project>{41f1868c-0cd0-41ac-925b-57f595791a21}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Mensagem_PT_BR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Mensagem_PT_BR.Designer.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

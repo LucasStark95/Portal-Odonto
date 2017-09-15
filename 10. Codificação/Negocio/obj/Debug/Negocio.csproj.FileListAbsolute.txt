@@ -27,3 +27,12 @@ C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOd
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.dll
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Negocio\bin\Debug\Negocio.dll
+C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Negocio\bin\Debug\Model.dll
+C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Negocio\bin\Debug\Persistencia.dll
+C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Negocio\bin\Debug\Model.pdb
+C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Negocio\bin\Debug\Persistencia.pdb
+C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Negocio\obj\Debug\Negocio.dll
+C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Negocio\obj\Debug\Negocio.pdb

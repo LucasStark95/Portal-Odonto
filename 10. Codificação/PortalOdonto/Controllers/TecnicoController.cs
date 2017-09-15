@@ -11,16 +11,18 @@ namespace PortalOdonto.Controllers
     public class TecnicoController : Controller
     {
         private GerenciadorTriagem triagem;
-        private GerenciadorTecnico tecnico;
+        private GerenciadorUsuario tecnico;
         private GerenciadorPaciente paciente;
-        private GerenciadorConsulta consulta;
+        private GerenciadorConsulta consulta;     
 
         public TecnicoController()
         {
-            triagem = new GerenciadorTriagem();
-            tecnico = new GerenciadorTecnico();
+            tecnico = new GerenciadorUsuario();
+            triagem = new GerenciadorTriagem();           
             paciente = new GerenciadorPaciente();
             consulta = new GerenciadorConsulta();
+          
+
         }
         
         // GET: Tecnico
@@ -34,19 +36,27 @@ namespace PortalOdonto.Controllers
 
         // GET: Tecnico/CadastroTriagem
         public ActionResult CadastrarTriagem()
-        {
+        {           
             return View();
         }
 
         // POST: Tecnico/CadastroTriagem
         [HttpPost]
-        public ActionResult CadastrarTriagem(Triagem tria)
+        public ActionResult CadastrarTriagem(FormCollection dados)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    triagem.Adicionar(tria);
+                    var model = new UsuarioExterno();
+
+                    Paciente p = new Paciente();
+                    Triagem t = new Triagem();
+                    TryUpdateModel<Paciente>(p, dados.ToValueProvider());
+                    paciente.Adicionar(p);
+                    TryUpdateModel<Triagem>(t, dados.ToValueProvider());
+                    t.Paciente = p;
+                    triagem.Adicionar(t);                   
                     return RedirectToAction("Index");
                 }
             }
@@ -75,7 +85,7 @@ namespace PortalOdonto.Controllers
                 if (ModelState.IsValid)
                 {
                     paciente.Adicionar(pac);
-                    return RedirectToAction("CadastrarTriagem");
+                    return RedirectToAction("Index");
                 }
             }
             catch
@@ -110,7 +120,7 @@ namespace PortalOdonto.Controllers
             return View();
         }
 
-        public ActionResult CadastrarTecnico(Tecnico t)
+        public ActionResult CadastrarTecnico(Usuario t)
         {
             try
             {

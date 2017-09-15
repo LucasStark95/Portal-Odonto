@@ -37,6 +37,7 @@ namespace Model.Models
         private bool protesePpr;
         private bool proteseFixa;
         private int idTriagem;
+        private Paciente paciente;
 
         public Triagem()
         {
@@ -235,6 +236,12 @@ namespace Model.Models
         {
             get { return proteseFixa; }
             set { proteseFixa = value; }
+        }
+
+        public Paciente Paciente
+        {
+            get { return paciente; }
+            set { paciente = value; }
         }
     }
 }

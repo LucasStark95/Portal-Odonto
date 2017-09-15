@@ -33,7 +33,7 @@ namespace Model.Models
         private string cidade;
         private double pressaoArterial;
         private double batimentoCardiaco;
-        private int idPaciente;
+        private int idPaciente;       
 
         public Paciente()
         {
@@ -256,6 +256,6 @@ namespace Model.Models
         {
             get { return batimentoCardiaco; }
             set { batimentoCardiaco = value; }
-        }
+        }      
     }
 }
