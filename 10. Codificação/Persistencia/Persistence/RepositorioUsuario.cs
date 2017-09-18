@@ -14,6 +14,16 @@ namespace Persistencia.Persistence
         static RepositorioUsuario()
         {
             listaUsuarios = new List<Usuario>();
+
+            Usuario adm = new Usuario("lucas.d1995@gmail.com", "lp1995lp", 0);
+            Usuario tec = new Usuario("lucas.d1995@gmail.com", "lucas1995", 2);
+            
+            if(!listaUsuarios.Contains(adm) && !listaUsuarios.Contains(tec))
+            {
+                listaUsuarios.Add(adm);
+                listaUsuarios.Add(tec);
+            }
+                
         }
 
         public Usuario Adicionar(Usuario usuario)
@@ -26,6 +36,7 @@ namespace Persistencia.Persistence
         public void Editar(Usuario usuario)
         {
             int posicao = listaUsuarios.FindIndex(e => e.IdUsuario == usuario.IdUsuario);
+            usuario.TipoUsuario = listaUsuarios[posicao].TipoUsuario;
             listaUsuarios[posicao] = usuario;
         }
 

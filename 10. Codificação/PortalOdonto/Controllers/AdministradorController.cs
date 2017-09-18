@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using Model.Models;
 using Negocio.Business;
+using PortalOdonto.Util;
 namespace PortalOdonto.Controllers
 {
+    
     public class AdministradorController : Controller
     {
         
@@ -50,24 +52,18 @@ namespace PortalOdonto.Controllers
                     Usuario u = new Usuario();
                     
                     int tipo = Convert.ToInt32(dadosForm["TipoUsuario"]);
-                    tipo--;
+                    
                     switch (tipo)
                     {
-                        case ((int) TipoUsuario.PROFESSOR):                            
-                             Professor p = new Professor();
-                             TryUpdateModel<Professor>(p, dadosForm.ToValueProvider());
+                        case ((int) Model.Models.TipoUsuario.PROFESSOR):                            
                              TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
                              usuarioGerenciador.Adicionar(u);
                              break;
-                        case ((int)TipoUsuario.ALUNO):
-                            Aluno a = new Aluno();
-                            TryUpdateModel<Aluno>(a, dadosForm.ToValueProvider());
+                        case ((int)Model.Models.TipoUsuario.ALUNO):
                             TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
                             usuarioGerenciador.Adicionar(u);
                             break;
-                        case ((int)TipoUsuario.TECNICO):
-                            Tecnico t = new Tecnico();
-                            TryUpdateModel<Tecnico>(t, dadosForm.ToValueProvider());
+                        case ((int)Model.Models.TipoUsuario.TECNICO):
                             TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
                             usuarioGerenciador.Adicionar(u);
                             break;                                                                         

@@ -34,6 +34,11 @@ namespace Negocio.Business
             usuarioPersistencia.Remover(usuario);
         }
 
+        public Usuario ObterByLoginSenha(string login, string senha)
+        {
+            return usuarioPersistencia.Obter(e => e.EmailUsuario.ToLowerInvariant().Equals(login.ToLowerInvariant()) &&
+                e.SenhaUsuario.ToLowerInvariant().Equals(senha.ToLowerInvariant()));
+        }
 
         public Usuario Obter(int? id)
         {

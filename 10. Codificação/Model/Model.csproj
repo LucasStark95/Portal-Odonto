@@ -41,15 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Account\AccountModel.cs" />
     <Compile Include="Models\Administrador.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\Anamnese.cs" />
     <Compile Include="Models\Consulta_M.cs" />
     <Compile Include="Models\Paciente.cs" />
     <Compile Include="Models\Periograma.cs" />
-    <Compile Include="Models\Professor.cs" />
     <Compile Include="Models\Prontuario.cs" />
-    <Compile Include="Models\Tecnico.cs" />
     <Compile Include="Models\Triagem.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

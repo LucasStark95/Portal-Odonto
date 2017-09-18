@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Model.Models
 {
-    public enum TipoUsuario { PROFESSOR, TECNICO, ALUNO }
+    public enum TipoUsuario {ADMINISTRADOR, PROFESSOR, TECNICO, ALUNO }
 
     public class Usuario
     {
@@ -24,6 +24,13 @@ namespace Model.Models
 
         public Usuario() { }
 
+        public Usuario(string email, string senha, int tipo)
+        {
+            emailUsuario = email;
+            senhaUsuario = senha;
+            tipoUsuario = tipo;
+        }
+
         [Required(ErrorMessage = "Campo Obrigatório")]
         [StringLength(300, MinimumLength = 2)]
         [Display(Name = "Nome Completo")]
@@ -40,7 +47,7 @@ namespace Model.Models
             get { return matriculaUsuario; }
             set { matriculaUsuario = value; }
         }
-        
+
         [Key]
         [Display(Name = "ID Usuário")]
         public int IdUsuario
@@ -49,8 +56,8 @@ namespace Model.Models
             set { idUsuario = value; }
         }
 
-        [StringLength (200, MinimumLength = 5)]
-        [Display (Name = "Endereço")]
+        [StringLength(200, MinimumLength = 5)]
+        [Display(Name = "Endereço")]
         public string Endereco
         {
             get { return endereco; }
@@ -80,7 +87,7 @@ namespace Model.Models
             get { return cidade; }
             set { cidade = value; }
         }
-       
+
         [StringLength(60, MinimumLength = 10)]
         [Display(Name = "Mãe")]
         public string NomeMae
@@ -92,7 +99,7 @@ namespace Model.Models
         [Required(ErrorMessage = "Campo Obrigatório")]
         [StringLength(60, MinimumLength = 10)]
         [RegularExpression(@"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]
-        [DataType (DataType.EmailAddress) ]
+        [DataType(DataType.EmailAddress)]
         [Display(Name = "Email")]
         public string EmailUsuario
         {
@@ -103,7 +110,7 @@ namespace Model.Models
         [Required]
         [StringLength(20, MinimumLength = 8)]
         [DataType(DataType.Password)]
-        [Display (Name = "Senha")]
+        [Display(Name = "Senha")]
         public string SenhaUsuario
         {
             get { return senhaUsuario; }
@@ -112,7 +119,7 @@ namespace Model.Models
 
         [Required]
         [DataType(DataType.Date)]
-        [Display (Name = "Data de Nascimento")]
+        [Display(Name = "Data de Nascimento")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime DataNascimento
         {
