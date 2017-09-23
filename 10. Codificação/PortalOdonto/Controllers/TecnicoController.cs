@@ -2,9 +2,11 @@
 using System.Web.Mvc;
 using Model.Models;
 using Negocio.Business;
+using PortalOdonto.Util;
 
 namespace PortalOdonto.Controllers
 {
+    
     public class TecnicoController : Controller
     {
         private GerenciadorTriagem triagem;

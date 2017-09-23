@@ -42,13 +42,21 @@ namespace PortalOdonto.Util
         /// <returns> Booleano que indica se o usuário está autorizado. </returns>
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
-            Usuario usuario = SessionHelper.Get(SessionKey.USUARIO) as Usuario;
-            if(usuario == null)
-                return false;
-            if (httpContext.Request.IsAuthenticated && (usuario.TipoUsuario == ((int) NivelAcesso + 1) || AllowAccess))
-                return true;
-            else
-                return false;
+            try
+            {
+                Usuario usuario = SessionHelper.Get(SessionKey.USUARIO) as Usuario;
+                if (usuario == null)
+                    return false;
+                if ((usuario.TipoUsuario == ((int)NivelAcesso+1) || AllowAccess))
+                    return true;
+                else
+                    return false;
+            }
+            catch
+            {
+                //TODO Implementar
+            }
+            return false;
         }
 
         /// <summary>

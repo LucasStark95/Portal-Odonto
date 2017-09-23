@@ -49,26 +49,19 @@ namespace PortalOdonto.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    
                     Usuario u = new Usuario();
-                    
-                    int tipo = Convert.ToInt32(dadosForm["TipoUsuario"]);
-                    
-                    switch (tipo)
+                    TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
+                    if (!usuarioGerenciador.BuscarMatricula(u.MatriculaUsuario))
                     {
-                        case ((int) Model.Models.TipoUsuario.PROFESSOR):                            
-                             TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
-                             usuarioGerenciador.Adicionar(u);
-                             break;
-                        case ((int)Model.Models.TipoUsuario.ALUNO):
-                            TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
-                            usuarioGerenciador.Adicionar(u);
-                            break;
-                        case ((int)Model.Models.TipoUsuario.TECNICO):
-                            TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
-                            usuarioGerenciador.Adicionar(u);
-                            break;                                                                         
-                    }                    
-                    return RedirectToAction("Index");
+                        usuarioGerenciador.Adicionar(u);
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Matricula já existente.");
+                    }
+                    
                 }
                 else
                 {

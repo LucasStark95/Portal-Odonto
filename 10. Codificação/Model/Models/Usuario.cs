@@ -24,11 +24,13 @@ namespace Model.Models
 
         public Usuario() { }
 
-        public Usuario(string email, string senha, int tipo)
+        public Usuario( string email, string senha, int tipo, int matricula, int identificador)
         {
+            idUsuario = identificador;
             emailUsuario = email;
             senhaUsuario = senha;
             tipoUsuario = tipo;
+            matriculaUsuario = matricula;
         }
 
         [Required(ErrorMessage = "Campo Obrigatório")]

@@ -45,9 +45,24 @@ namespace Negocio.Business
             return usuarioPersistencia.Obter(e => e.IdUsuario == id);
         }
 
+        public Usuario ObterByMatricula(int? matricula)
+        {
+            return usuarioPersistencia.Obter(e => e.MatriculaUsuario == matricula);
+        }
+
         public List<Usuario> Buscar(int? matricula)
         {
             return usuarioPersistencia.Buscar(e => e.MatriculaUsuario == matricula);
+        }
+
+        public bool BuscarMatricula(int? matricula)
+        {
+            return usuarioPersistencia.BuscarMatricula(e => e.MatriculaUsuario == matricula);
+        }
+
+        public bool BuscarMatricula(int? matricula, string email)
+        {
+            return usuarioPersistencia.BuscarMatricula(matricula, email);
         }
 
         public List<Usuario> ObterTodos()

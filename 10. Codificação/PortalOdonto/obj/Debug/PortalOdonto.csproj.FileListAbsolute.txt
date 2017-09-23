@@ -240,8 +240,6 @@ C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOd
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\PortalOdonto\obj\Debug\PortalOdonto.csproj.CoreCompileInputs.cache
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\PortalOdonto\obj\Debug\PortalOdonto.dll
 C:\Users\Lucas\Documents\Visual Studio 2017\Projects\Codigo\Codificacao\PortalOdonto\PortalOdonto\obj\Debug\PortalOdonto.pdb
-C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\ApplicationInsights.config
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\csc.exe
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\csc.exe.config
@@ -251,9 +249,11 @@ C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto\bin\roslyn\System.AppContext.dll

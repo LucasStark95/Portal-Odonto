@@ -74,6 +74,7 @@ namespace PortalOdonto.Controllers
             return View();
         }
 
+
         [Authenticated]
         public ActionResult Logout()
         {
@@ -113,6 +114,11 @@ namespace PortalOdonto.Controllers
             return View();
         }
 
+        public ActionResult Cadastrar()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Cadastrar(FormCollection collection)
@@ -124,10 +130,23 @@ namespace PortalOdonto.Controllers
                     collection["Senha"] = Criptografia.GerarHashSenha(collection["Login"] + collection["Senha"]);
                     Usuario usuario = new Usuario();
                     TryUpdateModel<Usuario>(usuario, collection.ToValueProvider());
+                    if(gerenciador.BuscarMatricula(usuario.MatriculaUsuario))
+                    {
+                        Usuario auxiliar = usuario;
+                        auxiliar.IdUsuario = gerenciador.ObterByMatricula(usuario.MatriculaUsuario).IdUsuario;
+                        gerenciador.Editar(auxiliar);
 
-                    gerenciador.Adicionar(usuario);
-                    return RedirectToAction("Index");
+
+                        return RedirectToAction("Login");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Usuário sem Pré-cadastro.");
+                        return RedirectToAction("Login");   
+                    }
+                    
                 }
+                
                 return View();
             }
             catch
