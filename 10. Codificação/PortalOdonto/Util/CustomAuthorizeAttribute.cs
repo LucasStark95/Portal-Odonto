@@ -46,8 +46,16 @@ namespace PortalOdonto.Util
             {
                 Usuario usuario = SessionHelper.Get(SessionKey.USUARIO) as Usuario;
                 if (usuario == null)
+                {
+                    usuario = SessionHelper.Get(SessionKey.ADMINISTRADOR) as Usuario;
+                    if (httpContext.Request.IsAuthenticated && (usuario.TipoUsuario == ((int)NivelAcesso) || AllowAccess))
+                    {
+                        return true;
+                    }
                     return false;
-                if ((usuario.TipoUsuario == ((int)NivelAcesso+1) || AllowAccess))
+                }
+
+                if (httpContext.Request.IsAuthenticated && (usuario.TipoUsuario == ((int)NivelAcesso + 1) || AllowAccess))
                     return true;
                 else
                     return false;

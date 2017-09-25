@@ -60,9 +60,18 @@ namespace Negocio.Business
             return usuarioPersistencia.BuscarMatricula(e => e.MatriculaUsuario == matricula);
         }
 
-        public bool BuscarMatricula(int? matricula, string email)
+        public bool BuscarPreCadastro(int? matricula, string email)
         {
-            return usuarioPersistencia.BuscarMatricula(matricula, email);
+            if(usuarioPersistencia.Obter(e => e.EmailUsuario.ToLowerInvariant().Equals(email.ToLowerInvariant()) &&
+                e.MatriculaUsuario == matricula) != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
 
         public List<Usuario> ObterTodos()
