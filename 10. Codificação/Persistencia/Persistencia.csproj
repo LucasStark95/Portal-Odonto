@@ -46,9 +46,7 @@
     <Compile Include="Persistence\RepositorioConsulta.cs" />
     <Compile Include="Persistence\RepositorioPaciente.cs" />
     <Compile Include="Persistence\RepositorioPeriograma.cs" />
-    <Compile Include="Persistence\RepositorioProfessor.cs" />
     <Compile Include="Persistence\RepositorioProntuario.cs" />
-    <Compile Include="Persistence\RepositorioTecnico.cs" />
     <Compile Include="Persistence\RepositorioTriagem.cs" />
     <Compile Include="Persistence\RepositorioUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

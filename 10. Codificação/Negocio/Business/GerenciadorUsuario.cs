@@ -34,15 +34,44 @@ namespace Negocio.Business
             usuarioPersistencia.Remover(usuario);
         }
 
+        public Usuario ObterByLoginSenha(string login, string senha)
+        {
+            return usuarioPersistencia.Obter(e => e.EmailUsuario.ToLowerInvariant().Equals(login.ToLowerInvariant()) &&
+                e.SenhaUsuario.ToLowerInvariant().Equals(senha.ToLowerInvariant()));
+        }
 
         public Usuario Obter(int? id)
         {
             return usuarioPersistencia.Obter(e => e.IdUsuario == id);
         }
 
+        public Usuario ObterByMatricula(int? matricula)
+        {
+            return usuarioPersistencia.Obter(e => e.MatriculaUsuario == matricula);
+        }
+
         public List<Usuario> Buscar(int? matricula)
         {
             return usuarioPersistencia.Buscar(e => e.MatriculaUsuario == matricula);
+        }
+
+        public bool BuscarMatricula(int? matricula)
+        {
+            return usuarioPersistencia.BuscarMatricula(e => e.MatriculaUsuario == matricula);
+        }
+
+        public bool BuscarPreCadastro(int? matricula, string email)
+        {
+            if(usuarioPersistencia.Obter(e => e.EmailUsuario.ToLowerInvariant().Equals(email.ToLowerInvariant()) &&
+                e.MatriculaUsuario == matricula) != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
 
         public List<Usuario> ObterTodos()

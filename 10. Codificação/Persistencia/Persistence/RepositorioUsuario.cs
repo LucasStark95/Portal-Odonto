@@ -14,6 +14,20 @@ namespace Persistencia.Persistence
         static RepositorioUsuario()
         {
             listaUsuarios = new List<Usuario>();
+
+            Usuario adm = new Usuario("lucas.d1995@gmail.com", "lp1995lp", 0,0,1);
+            Usuario tec = new Usuario("lucas.d1995@gmail.com", "lucas1995", 2,123,2);
+            Usuario pro = new Usuario("lucas.d1995@live.com", "lucas95", 1,222,3);
+            Usuario alu = new Usuario("lucas.d1995@hotmail.com", "lp1995lp", 3,333,4);
+
+            if (!listaUsuarios.Contains(adm) && !listaUsuarios.Contains(tec))
+            {
+                listaUsuarios.Add(adm);
+                listaUsuarios.Add(tec);
+                listaUsuarios.Add(pro);
+                listaUsuarios.Add(alu);
+            }
+                
         }
 
         public Usuario Adicionar(Usuario usuario)
@@ -26,8 +40,10 @@ namespace Persistencia.Persistence
         public void Editar(Usuario usuario)
         {
             int posicao = listaUsuarios.FindIndex(e => e.IdUsuario == usuario.IdUsuario);
+            usuario.TipoUsuario = listaUsuarios[posicao].TipoUsuario;
             listaUsuarios[posicao] = usuario;
         }
+
 
         public void Remover(Usuario usuario)
         {
@@ -48,6 +64,22 @@ namespace Persistencia.Persistence
         public List<Usuario> ObterTodos()
         {
             return listaUsuarios;
+        }
+
+        public bool BuscarMatricula(int? matricula, string email)
+        {
+            if (listaUsuarios.Find(e => e.EmailUsuario == email && e.MatriculaUsuario == matricula) == null)
+                return true;
+            else
+                return false;
+        }
+
+        public bool BuscarMatricula(Func<Usuario, bool> where)
+        {
+            if (listaUsuarios.Where(where).FirstOrDefault() == null)
+                return false;
+            else
+                return true;
         }
     }
 }

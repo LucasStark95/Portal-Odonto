@@ -3,7 +3,7 @@ using System.Web;
 
 namespace PortalOdonto.Util
 {
-    public enum SessionKey { USUARIO, ADMINISTRADOR, TECNICO, ALUNO}
+    public enum SessionKey { ADMINISTRADOR, USUARIO}
 
     public static class SessionHelper
     {

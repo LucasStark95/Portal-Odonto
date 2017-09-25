@@ -1,24 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿
 using System.Web.Mvc;
 using Model.Models;
 using Negocio.Business;
+using PortalOdonto.Util;
 
 namespace PortalOdonto.Controllers
 {
+    
     public class TecnicoController : Controller
     {
         private GerenciadorTriagem triagem;
-        private GerenciadorTecnico tecnico;
         private GerenciadorPaciente paciente;
         private GerenciadorConsulta consulta;
 
         public TecnicoController()
         {
             triagem = new GerenciadorTriagem();
-            tecnico = new GerenciadorTecnico();
             paciente = new GerenciadorPaciente();
             consulta = new GerenciadorConsulta();
         }
@@ -102,54 +99,7 @@ namespace PortalOdonto.Controllers
             }
             return RedirectToAction("index");
         }
-        // ============================ Perfil =========================================== //
-
-        // GET: Tecnico/Perfil/
-        public ActionResult CadastarTecnico()
-        {
-            return View();
-        }
-
-        public ActionResult CadastrarTecnico(Tecnico t)
-        {
-            try
-            {
-                if (ModelState.IsValid) {
-                    tecnico.Editar(t);
-                    return RedirectToAction("Index");
-                }
-               
-            }
-            catch
-            {
-                
-            }
-            return View();
-        }
-        public ActionResult Perfil(int id)
-        {
-            return View();
-        }
-
-        // GET: Tecnico/EditarPerfil/
-        public ActionResult EditarPerfil(int id)
-        {
-            return View();
-        }
-
-        // POST: Te
-        [HttpPost]
-        public ActionResult EditarPerfil(int id, FormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        
 
         // ============================ Consulta =========================================== //
         public ActionResult CadastrarConsulta()

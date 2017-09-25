@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using Model.Models;
 using Negocio.Business;
+using PortalOdonto.Util;
 namespace PortalOdonto.Controllers
 {
+    
     public class AdministradorController : Controller
     {
         
@@ -47,32 +49,19 @@ namespace PortalOdonto.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    Usuario u = new Usuario();
                     
-                    int tipo = Convert.ToInt32(dadosForm["TipoUsuario"]);
-                    tipo--;
-                    switch (tipo)
+                    Usuario u = new Usuario();
+                    TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
+                    if (!usuarioGerenciador.BuscarMatricula(u.MatriculaUsuario))
                     {
-                        case ((int) TipoUsuario.PROFESSOR):                            
-                             Professor p = new Professor();
-                             TryUpdateModel<Professor>(p, dadosForm.ToValueProvider());
-                             TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
-                             usuarioGerenciador.Adicionar(u);
-                             break;
-                        case ((int)TipoUsuario.ALUNO):
-                            Aluno a = new Aluno();
-                            TryUpdateModel<Aluno>(a, dadosForm.ToValueProvider());
-                            TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
-                            usuarioGerenciador.Adicionar(u);
-                            break;
-                        case ((int)TipoUsuario.TECNICO):
-                            Tecnico t = new Tecnico();
-                            TryUpdateModel<Tecnico>(t, dadosForm.ToValueProvider());
-                            TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
-                            usuarioGerenciador.Adicionar(u);
-                            break;                                                                         
-                    }                    
-                    return RedirectToAction("Index");
+                        usuarioGerenciador.Adicionar(u);
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Matricula já existente.");
+                    }
+                    
                 }
                 else
                 {

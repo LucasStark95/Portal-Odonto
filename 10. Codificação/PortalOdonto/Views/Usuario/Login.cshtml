@@ -1,0 +1,69 @@
+﻿@model Model.Models.Account.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<h2> Autenticação </h2>
+
+<div class="col-md-3"></div>
+<div class="col-md-9">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4> Informações do Usuário </h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Login, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Senha, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                
+                @Html.LabelFor(model => model.LembrarMe, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-2">
+                    <div class="checkbox">
+                        @Html.CheckBoxFor(model => model.LembrarMe)
+                        @Html.ValidationMessageFor(model => model.LembrarMe, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    @Html.ActionLink("Cadastre-se", "Cadastrar", "Usuario")
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-3"></div>
+                <div class="col-md-2">
+                    <input type="submit" value="Acessar" class="btn btn-default" />
+                </div>
+                <div class="col-md-2">
+                    @Html.ActionLink("Voltar", "Index", "Home", new { @class = "btn btn-default" })
+                </div>
+                <div class="col-md-3"></div>
+                
+            </div>
+        </div>
+
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
