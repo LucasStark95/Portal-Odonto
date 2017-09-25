@@ -16,7 +16,7 @@ namespace Model.Models
         {
         }
 
-        [Required]       
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "Professor")]
         public int IdProfessor
         {

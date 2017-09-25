@@ -3,9 +3,10 @@ using System;
 using System.ComponentModel.DataAnnotations;
 
 
+
 namespace Model.Models
 {
-    public enum TipoUsuario { PROFESSOR, TECNICO, ALUNO }
+    public enum TipoUsuario { ADMINISTRADOR, PROFESSOR, TECNICO, ALUNO }
 
     public class Usuario
     {

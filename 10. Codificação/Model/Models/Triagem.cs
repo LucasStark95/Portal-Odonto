@@ -43,7 +43,7 @@ namespace Model.Models
         {
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "ID do Paciente")]
         public int IdPaciente
         {
@@ -51,14 +51,15 @@ namespace Model.Models
             set { idPaciente = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "ID da Triagem ")]
         public int IdTriagem
         {
             get { return idTriagem; }
             set { idTriagem = value; }
         }
-        [Required]
+
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [DataType(DataType.Date)]
         [Display(Name = "Data")]       
         public DateTime DataTriagem
@@ -66,22 +67,14 @@ namespace Model.Models
             get { return dataTriagem; }
             set { dataTriagem = value; }
         }
-        [Required]
+
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "Motivo da Consulta")]
         [StringLength(200, MinimumLength = 0)]
         public string MotivoConsulta
         {
             get { return motivoConsulta; }
             set { motivoConsulta = value; }
-        }
-
-        [Required]
-        [Display(Name = "Nome do Paciente")]
-        [StringLength(50, MinimumLength = 0)]
-        public string NomePaciente
-        {
-            get { return nomePaciente; }
-            set { nomePaciente = value; }
         }
 
         [Display(Name = "Procedimento")]        

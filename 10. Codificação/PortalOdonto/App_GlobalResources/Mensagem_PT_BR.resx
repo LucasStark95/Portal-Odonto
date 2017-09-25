@@ -144,4 +144,28 @@
   <data name="SenhaTamanhoInvalido" xml:space="preserve">
     <value>A senha deve possuir entre 8 a 100 caracteres</value>
   </data>
+  <data name="CpfExistente" xml:space="preserve">
+    <value>CPF existente</value>
+  </data>
+  <data name="CpfRequerido" xml:space="preserve">
+    <value>O CPF é obrigatório</value>
+  </data>
+  <data name="EmailRequerido" xml:space="preserve">
+    <value>O email é obrigatório</value>
+  </data>
+  <data name="MatriculaExistente" xml:space="preserve">
+    <value>Matrícula Existente</value>
+  </data>
+  <data name="MatriculaRequerida" xml:space="preserve">
+    <value>A Matrícula é obrigatória</value>
+  </data>
+  <data name="MotivoConsultaRequerido" xml:space="preserve">
+    <value>Motivo da consulta é obrigatório</value>
+  </data>
+  <data name="RgExistente" xml:space="preserve">
+    <value>Rg existente</value>
+  </data>
+  <data name="RgRequerido" xml:space="preserve">
+    <value>O RG é obrigatório</value>
+  </data>
 </root>

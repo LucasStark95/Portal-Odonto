@@ -36,3 +36,13 @@ C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\
 C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Negocio\obj\Debug\Negocio.dll
 C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Negocio\obj\Debug\Negocio.pdb
+C:\Portal-Odonto\10. Codificação\Negocio\bin\Debug\Negocio.dll
+C:\Portal-Odonto\10. Codificação\Negocio\bin\Debug\Negocio.pdb
+C:\Portal-Odonto\10. Codificação\Negocio\bin\Debug\Model.dll
+C:\Portal-Odonto\10. Codificação\Negocio\bin\Debug\Persistencia.dll
+C:\Portal-Odonto\10. Codificação\Negocio\bin\Debug\Model.pdb
+C:\Portal-Odonto\10. Codificação\Negocio\bin\Debug\Persistencia.pdb
+C:\Portal-Odonto\10. Codificação\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Portal-Odonto\10. Codificação\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Portal-Odonto\10. Codificação\Negocio\obj\Debug\Negocio.dll
+C:\Portal-Odonto\10. Codificação\Negocio\obj\Debug\Negocio.pdb

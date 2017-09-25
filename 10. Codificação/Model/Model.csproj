@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Execptions\AplicacaoException.cs" />
+    <Compile Include="Execptions\ControllerException.cs" />
+    <Compile Include="Execptions\ModelException.cs" />
+    <Compile Include="Execptions\NegocioException.cs" />
+    <Compile Include="Execptions\PersistenceException.cs" />
     <Compile Include="Models\Administrador.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\Anamnese.cs" />
@@ -52,7 +57,6 @@
     <Compile Include="Models\Tecnico.cs" />
     <Compile Include="Models\Triagem.cs" />
     <Compile Include="Models\Usuario.cs" />
-    <Compile Include="Models\UsuarioExterno.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

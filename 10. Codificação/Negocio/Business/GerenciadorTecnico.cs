@@ -33,7 +33,7 @@ namespace Negocio.Business
             tecPersistencia.Remover(tecnico);
         }
 
-        public Tecnico Obter(int id)
+        public Tecnico Obter(int? id)
         {
             return tecPersistencia.Obter(e => e.IdTecnico == id);
         }

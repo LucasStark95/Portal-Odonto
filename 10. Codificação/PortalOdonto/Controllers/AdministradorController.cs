@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using Model.Models;
 using Negocio.Business;
+using Model.Models.Exceptions;
 namespace PortalOdonto.Controllers
 {
     public class AdministradorController : Controller
@@ -79,11 +80,10 @@ namespace PortalOdonto.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            catch
+            catch(Exception e)
             {
-                //implementar uma menssagem de erro
-            }
-            return View();
+                throw new ControllerException("Usuário não foi cadastrado",e);               
+            }            
         }
 
         public ActionResult Edit(int? id)
@@ -107,11 +107,10 @@ namespace PortalOdonto.Controllers
                 return RedirectToAction("Index");
                 
             }
-            catch
+            catch (Exception e)
             {
-                //TODO
-            }
-            return RedirectToAction("Index");
+                throw new ControllerException("Não é possível editar esse usuário", e);                
+            }            
         }
 
 
@@ -137,9 +136,9 @@ namespace PortalOdonto.Controllers
                 usuarioGerenciador.Remover(usuarioGerenciador.Obter(id));
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception e)
             {
-                
+                throw new ControllerException("Não é possível deletar esse usuário", e);
             }
             return RedirectToAction("Index");
         }

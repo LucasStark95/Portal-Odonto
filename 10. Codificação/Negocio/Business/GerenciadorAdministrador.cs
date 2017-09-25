@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Model.Models;
 using Persistencia.Persistence;
+using Model.Models.Exceptions;
 
 namespace Negocio.Business
 {
@@ -20,13 +18,19 @@ namespace Negocio.Business
 
             public Administrador Adicionar(Administrador administrador)
             {
-            admPersistencia.Adicionar(administrador);
-                return administrador;
+                try {
+                    admPersistencia.Adicionar(administrador);
+                    return administrador;
+                }
+                catch (Exception e)
+                {
+                    throw new NegocioException("Não foi possivél adicionar", e);
+                }                
             }
 
             public void Editar(Administrador administrador)
             {
-            admPersistencia.Editar(administrador);
+                admPersistencia.Editar(administrador);
             }
 
             public void Remover(Administrador administrador)

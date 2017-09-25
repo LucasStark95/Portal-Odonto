@@ -28,7 +28,7 @@ namespace Model.Models
             set { idConsulta = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [DataType(DataType.Date)]
         [Display(Name = "Data da Consulta")]
         [DisplayFormat(DataFormatString = "dd/mm/yyyy")]
@@ -38,7 +38,7 @@ namespace Model.Models
             set { dataConsulta = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display (Name = "Nome do Aluno")]
         public string NomeAluno
         {
@@ -46,7 +46,7 @@ namespace Model.Models
             set { nomeAluno = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display (Name = "Nome do Paciente")]
         public string NomePaciente
         {

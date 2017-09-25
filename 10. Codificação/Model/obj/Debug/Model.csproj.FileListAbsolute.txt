@@ -18,3 +18,9 @@ C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\
 C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Model\obj\Debug\Model.dll
 C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\Model\obj\Debug\Model.pdb
+C:\Portal-Odonto\10. Codificação\Model\bin\Debug\Model.dll
+C:\Portal-Odonto\10. Codificação\Model\bin\Debug\Model.pdb
+C:\Portal-Odonto\10. Codificação\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Portal-Odonto\10. Codificação\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Portal-Odonto\10. Codificação\Model\obj\Debug\Model.dll
+C:\Portal-Odonto\10. Codificação\Model\obj\Debug\Model.pdb

@@ -1,23 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿
 using System.Web.Mvc;
 using Model.Models;
 using Negocio.Business;
+using Model.Models.Exceptions;
+using System;
 
 namespace PortalOdonto.Controllers
 {
     public class TecnicoController : Controller
     {
         private GerenciadorTriagem triagem;
-        private GerenciadorUsuario tecnico;
+        private GerenciadorTecnico tecnico;
         private GerenciadorPaciente paciente;
         private GerenciadorConsulta consulta;     
 
         public TecnicoController()
         {
-            tecnico = new GerenciadorUsuario();
+            tecnico = new GerenciadorTecnico();
             triagem = new GerenciadorTriagem();           
             paciente = new GerenciadorPaciente();
             consulta = new GerenciadorConsulta();
@@ -48,8 +47,6 @@ namespace PortalOdonto.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var model = new UsuarioExterno();
-
                     Paciente p = new Paciente();
                     Triagem t = new Triagem();
                     TryUpdateModel<Paciente>(p, dados.ToValueProvider());
@@ -60,9 +57,10 @@ namespace PortalOdonto.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            catch
+            catch (Exception e)
             {
-                //Tratamento de exceção para controladoras
+                throw new ControllerException("Não foi possivél cadastrar", e);
+
             }
             return View();
         }
@@ -75,7 +73,7 @@ namespace PortalOdonto.Controllers
         {
             return View();
         }
-
+        //Ainda será analisado se esse metodo vai permancer
         // POST: Tecnico/CadastroPaciente
         [HttpPost]
         public ActionResult CadastrarPaciente(Paciente pac)
@@ -88,9 +86,9 @@ namespace PortalOdonto.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            catch
+            catch (Exception e)
             {
-                //Tratamento de exceção para controladoras
+                throw new ControllerException("Não foi possivél cadastrar", e);
             }
             return View();
         }
@@ -120,7 +118,7 @@ namespace PortalOdonto.Controllers
             return View();
         }
 
-        public ActionResult CadastrarTecnico(Usuario t)
+        public ActionResult CadastrarTecnico(Tecnico t)
         {
             try
             {
@@ -130,35 +128,39 @@ namespace PortalOdonto.Controllers
                 }
                
             }
-            catch
+            catch (Exception e)
             {
-                
+                throw new ControllerException("Não foi possivél cadastrar", e);
             }
             return View();
         }
-        public ActionResult Perfil(int id)
-        {
-            return View();
-        }
-
+      
         // GET: Tecnico/EditarPerfil/
-        public ActionResult EditarPerfil(int id)
+        public ActionResult EditarPerfil(int? id)
         {
-            return View();
+            if (id.HasValue)
+            {
+                Tecnico tec = tecnico.Obter(id);
+                if (tec != null)
+                    return View(tec);
+            }
+            return RedirectToAction("Index");
         }
 
         // POST: Te
         [HttpPost]
-        public ActionResult EditarPerfil(int id, FormCollection collection)
+        public ActionResult EditarPerfil(int id, Tecnico tec)
         {
             try
             {
+                tecnico.Editar(tec);
                 return RedirectToAction("Index");
+
             }
-            catch
+            catch (Exception e)
             {
-                return View();
-            }
+                throw new ControllerException("Não é possível editar esse usuário", e);                
+            }           
         }
 
         // ============================ Consulta =========================================== //

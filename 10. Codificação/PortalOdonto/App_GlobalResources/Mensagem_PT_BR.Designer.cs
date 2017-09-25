@@ -61,6 +61,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Pesquisa uma cadeia de caracteres localizada semelhante a CPF existente.
+        /// </summary>
+        internal static string CpfExistente {
+            get {
+                return ResourceManager.GetString("CpfExistente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Pesquisa uma cadeia de caracteres localizada semelhante a O CPF é obrigatório.
+        /// </summary>
+        internal static string CpfRequerido {
+            get {
+                return ResourceManager.GetString("CpfRequerido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Pesquisa uma cadeia de caracteres localizada semelhante a O email é obrigatório.
+        /// </summary>
+        internal static string EmailRequerido {
+            get {
+                return ResourceManager.GetString("EmailRequerido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Pesquisa uma cadeia de caracteres localizada semelhante a Login Existente.
         /// </summary>
         internal static string LoginExistente {
@@ -88,6 +115,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Pesquisa uma cadeia de caracteres localizada semelhante a Matrícula Existente.
+        /// </summary>
+        internal static string MatriculaExistente {
+            get {
+                return ResourceManager.GetString("MatriculaExistente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Pesquisa uma cadeia de caracteres localizada semelhante a A Matrícula é obrigatória.
+        /// </summary>
+        internal static string MatriculaRequerida {
+            get {
+                return ResourceManager.GetString("MatriculaRequerida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Pesquisa uma cadeia de caracteres localizada semelhante a Motivo da consulta é obrigatório.
+        /// </summary>
+        internal static string MotivoConsultaRequerido {
+            get {
+                return ResourceManager.GetString("MotivoConsultaRequerido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Pesquisa uma cadeia de caracteres localizada semelhante a O nome completo é obrigatório.
         /// </summary>
         internal static string NomeRequerido {
@@ -102,6 +156,24 @@ namespace Resources {
         internal static string NomeTamanhoInvalido {
             get {
                 return ResourceManager.GetString("NomeTamanhoInvalido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Pesquisa uma cadeia de caracteres localizada semelhante a Rg existente.
+        /// </summary>
+        internal static string RgExistente {
+            get {
+                return ResourceManager.GetString("RgExistente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Pesquisa uma cadeia de caracteres localizada semelhante a O RG é obrigatório.
+        /// </summary>
+        internal static string RgRequerido {
+            get {
+                return ResourceManager.GetString("RgRequerido", resourceCulture);
             }
         }
         

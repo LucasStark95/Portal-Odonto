@@ -21,7 +21,7 @@ namespace Model.Models
         {
         }
 
-        [Required]       
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "ID Prontuário")]
         public int IdProntuario
         {
@@ -46,7 +46,7 @@ namespace Model.Models
             set { diagnostico = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [DataType(DataType.Date)]
         [Display(Name = "Data Inicial")]
         [DisplayFormat(DataFormatString = "dd/mm/yyyy")]

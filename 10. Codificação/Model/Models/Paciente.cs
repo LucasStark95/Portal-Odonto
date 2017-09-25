@@ -39,7 +39,7 @@ namespace Model.Models
         {
         }
 
-        [Required]
+        [Required (ErrorMessage = "Campo Obrigatório")]
         [Display (Name = "ID Paciente")]
         public int IdPaciente
         {
@@ -47,7 +47,7 @@ namespace Model.Models
             set { idPaciente = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display (Name = "Nome Completo")]
         [StringLength (60, MinimumLength = 20)]
         public string NomePaciente
@@ -56,7 +56,7 @@ namespace Model.Models
             set { nomePaciente = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [StringLength(14, MinimumLength = 6)]
         [Display (Name = "RG")]
         public string RgPaciente
@@ -66,7 +66,7 @@ namespace Model.Models
             set { rgPaciente = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [StringLength(15, MinimumLength = 11)]
         [Display(Name = "CPF")]
         public string CpfPaciente
@@ -75,7 +75,7 @@ namespace Model.Models
             set { cpfPaciente = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display (Name = "Endereço")]
         [StringLength(60, MinimumLength = 20)]
         public string EnderecoPaciente
@@ -84,7 +84,7 @@ namespace Model.Models
             set { enderecoPaciente = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display (Name = "Responsavel")]
         public string ResponsavelPaciente
         {
@@ -92,7 +92,7 @@ namespace Model.Models
             set { responsavelPaciente = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [DataType(DataType.Date)]
         [Display(Name = "Data Nascimento")]       
         public string Dt_nascimentoPaciente
@@ -100,7 +100,6 @@ namespace Model.Models
             get { return dtNascimentoPaciente; }
             set { dtNascimentoPaciente = value; }
         }
-
         
         [Display(Name = "Sexo")]
         [StringLength(1, MinimumLength = 1)]
