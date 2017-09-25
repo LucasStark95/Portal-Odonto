@@ -49,18 +49,19 @@ namespace PortalOdonto.Controllers
 
                         if (usuario.TipoUsuario == ((int)Model.Models.TipoUsuario.ALUNO))
                         {
-                            return RedirectToAction("Index", "Aluno");
+                            return RedirectToAction("IndexAluno");
                         }
                         else if (usuario.TipoUsuario == ((int)Model.Models.TipoUsuario.PROFESSOR))
                         {
-                            return RedirectToAction("Index", "Professor");
+                            return RedirectToAction("IndexProfessor");
                         }
                         else if (usuario.TipoUsuario == ((int)Model.Models.TipoUsuario.TECNICO))
                         {
-                            return RedirectToAction("Index", "Tecnico");
+                            return RedirectToAction("IndexTecnico");
                         }
                         else
-                            return RedirectToAction("Index", "Administrador");
+
+                            return RedirectToAction("IndexAdmnistrador");
 
                     }
                 }
@@ -87,28 +88,28 @@ namespace PortalOdonto.Controllers
         }
 
         [Authenticated]
-        [CustomAuthorize(NivelAcesso = Util.TipoUsuario.ADMINISTRADOR, MetodoAcao = "Index", Controladora = "AdministradorController")]
+        [CustomAuthorize(NivelAcesso = Util.TipoUsuario.ADMINISTRADOR, MetodoAcao = "Index", Controladora = "Administrador")]
         public ActionResult IndexAdmnistrador()
         {
             return View();
         }
 
         [Authenticated]
-        [CustomAuthorize(NivelAcesso = Util.TipoUsuario.ALUNO, MetodoAcao = "Index", Controladora = "AlunoController")]
+        [CustomAuthorize(NivelAcesso = Util.TipoUsuario.ALUNO, MetodoAcao = "Index", Controladora = "Aluno")]
         public ActionResult IndexAluno()
         {
             return View();
         }
 
         [Authenticated]
-        [CustomAuthorize(NivelAcesso = Util.TipoUsuario.TECNICO, MetodoAcao = "Index", Controladora = "TecnicoController")]
+        [CustomAuthorize(NivelAcesso = Util.TipoUsuario.TECNICO, MetodoAcao = "Index", Controladora = "Tecnico")]
         public ActionResult IndexTecnico()
         {
             return View();
         }
 
         [Authenticated]
-        [CustomAuthorize(NivelAcesso = Util.TipoUsuario.PROFESSOR, MetodoAcao = "Index", Controladora = "ProfesorController")]
+        [CustomAuthorize(NivelAcesso = Util.TipoUsuario.PROFESSOR, MetodoAcao = "Index", Controladora = "Profesor")]
         public ActionResult IndexProfesor()
         {
             return View();
@@ -127,10 +128,10 @@ namespace PortalOdonto.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    collection["Senha"] = Criptografia.GerarHashSenha(collection["Login"] + collection["Senha"]);
+                    collection["SenhaUsuario"] = Criptografia.GerarHashSenha(collection["EmailUsuario"] + collection["SenhaUsuario"]);
                     Usuario usuario = new Usuario();
                     TryUpdateModel<Usuario>(usuario, collection.ToValueProvider());
-                    if(gerenciador.BuscarMatricula(usuario.MatriculaUsuario))
+                    if(gerenciador.BuscarPreCadastro(usuario.MatriculaUsuario, usuario.EmailUsuario))
                     {
                         Usuario auxiliar = usuario;
                         auxiliar.IdUsuario = gerenciador.ObterByMatricula(usuario.MatriculaUsuario).IdUsuario;
