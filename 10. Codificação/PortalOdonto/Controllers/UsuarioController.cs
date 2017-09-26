@@ -76,6 +76,36 @@ namespace PortalOdonto.Controllers
         }
 
 
+        public ActionResult AlterarSenha()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AlterarSenha(FormCollection dadosLogin)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    
+                    //dadosLogin.Senha = Criptografia.GerarHashSenha(dadosLogin.Login + dadosLogin.Senha);
+                    
+
+                }
+                
+                ModelState.AddModelError("", "Usuário e/ou senha inválidos.");
+            }
+            catch
+            {
+                ModelState.AddModelError("", "A autenticação falhou. Forneça informações válidas e tente novamente.");
+            }
+            // Se ocorrer algum erro, reexibe o formulário.
+            return View();
+        }
+
+
         [Authenticated]
         public ActionResult Logout()
         {
