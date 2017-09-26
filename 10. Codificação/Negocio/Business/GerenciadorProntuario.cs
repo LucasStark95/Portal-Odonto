@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Model.Models;
 using Persistencia.Persistence;
+using Model.Models.Exceptions;
 
 namespace Negocio.Business
 {
@@ -19,18 +17,41 @@ namespace Negocio.Business
 
         public Prontuario Adicionar(Prontuario prontuario)
         {
-            proPersistencia.Adicionar(prontuario);
-            return prontuario;
+            try {
+                proPersistencia.Adicionar(prontuario);
+                return prontuario;
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public Prontuario Obter(int id)
         {
-            return proPersistencia.Obter(e => e.IdProntuario == id);
+            try
+            {
+                return proPersistencia.Obter(e => e.IdProntuario == id);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public List<Prontuario> ObterTodos()
         {
-            return proPersistencia.ObterTodos();
+            try
+            {
+                return proPersistencia.ObterTodos();
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+            
         }
     }
 }

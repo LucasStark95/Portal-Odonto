@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Model.Models;
 using Persistencia.Persistence;
+using Model.Models.Exceptions;
 
 namespace Negocio.Business
 {
@@ -19,28 +17,68 @@ namespace Negocio.Business
 
         public Tecnico Adicionar(Tecnico tecnico)
         {
-            tecPersistencia.Adicionar(tecnico);
-            return tecnico;
+            try
+            {
+                tecPersistencia.Adicionar(tecnico);
+                return tecnico;
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public void Editar(Tecnico tecnico)
         {
-            tecPersistencia.Editar(tecnico);
+            try
+            {
+                tecPersistencia.Editar(tecnico);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public void Remover(Tecnico tecnico)
         {
-            tecPersistencia.Remover(tecnico);
+            try
+            {
+                tecPersistencia.Remover(tecnico);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public Tecnico Obter(int? id)
         {
-            return tecPersistencia.Obter(e => e.IdTecnico == id);
+            try
+            {
+                return tecPersistencia.Obter(e => e.IdTecnico == id);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public List<Tecnico> ObterTodos()
         {
-            return tecPersistencia.ObterTodos();
+            try
+            {
+                return tecPersistencia.ObterTodos();
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+            
         }
     }
 }

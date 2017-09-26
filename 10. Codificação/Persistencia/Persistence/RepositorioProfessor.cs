@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model.Models;
+using Model.Models.Exceptions;
 
 
 namespace Persistencia.Persistence
@@ -19,31 +20,69 @@ namespace Persistencia.Persistence
 
         public Professor Adicionar(Professor professor)
         {
-            professor.MatriculaUsuario = listaProfessores.Count + 1;
-            listaProfessores.Add(professor);
-            return professor;
+            try {
+                professor.MatriculaUsuario = listaProfessores.Count + 1;
+                listaProfessores.Add(professor);
+                return professor;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public void Editar(Professor professor)
         {
-            int posicao = listaProfessores.FindIndex(e => e.MatriculaUsuario == professor.MatriculaUsuario);
-            listaProfessores[posicao] =professor;
+            try
+            {
+                int posicao = listaProfessores.FindIndex(e => e.MatriculaUsuario == professor.MatriculaUsuario);
+                listaProfessores[posicao] = professor;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public void Remover(Professor professor)
         {
-            int posicao = listaProfessores.FindIndex(e => e.MatriculaUsuario == professor.MatriculaUsuario);
-            listaProfessores.RemoveAt(posicao);
+            try {
+                int posicao = listaProfessores.FindIndex(e => e.MatriculaUsuario == professor.MatriculaUsuario);
+                listaProfessores.RemoveAt(posicao);
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public Professor Obter(Func<Professor, bool> where)
         {
-            return listaProfessores.Where(where).FirstOrDefault();
+            try
+            {
+                return listaProfessores.Where(where).FirstOrDefault();
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public List<Professor> ObterTodos()
         {
-            return listaProfessores;
+            try
+            {
+                return listaProfessores;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+           
         }
     }
 }

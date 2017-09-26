@@ -8,45 +8,75 @@ namespace Negocio.Business
 {
     public class GerenciadorAdministrador
     {
-        
-            private RepositorioAdministrador admPersistencia;
 
-            public GerenciadorAdministrador()
-            {
+        private RepositorioAdministrador admPersistencia;
+
+        public GerenciadorAdministrador()
+        {
             admPersistencia = new RepositorioAdministrador();
-            }
+        }
 
-            public Administrador Adicionar(Administrador administrador)
+        public Administrador Adicionar(Administrador administrador)
+        {
+            try
             {
-                try {
-                    admPersistencia.Adicionar(administrador);
-                    return administrador;
-                }
-                catch (Exception e)
-                {
-                    throw new NegocioException("Não foi possivél adicionar", e);
-                }                
+                admPersistencia.Adicionar(administrador);
+                return administrador;
             }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+        }
 
-            public void Editar(Administrador administrador)
+        public void Editar(Administrador administrador)
+        {
+            try
             {
                 admPersistencia.Editar(administrador);
             }
-
-            public void Remover(Administrador administrador)
+            catch (Exception e)
             {
-            admPersistencia.Remover(administrador);
+                throw new NegocioException("Não foi possivél completar a ação", e);
             }
 
-            public Administrador Obter(int id)
+        }
+
+        public void Remover(Administrador administrador)
+        {
+            try
+            {
+                admPersistencia.Remover(administrador);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
+        }
+
+        public Administrador Obter(int id)
+        {
+            try
             {
                 return admPersistencia.Obter(e => e.IdAdministrador == id);
             }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+        }
 
-            public List<Administrador> ObterTodos()
+        public List<Administrador> ObterTodos()
+        {
+            try
             {
                 return admPersistencia.ObterTodos();
             }
-        
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+        }
     }
 }

@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Model.Models;
 using Persistencia.Persistence;
+using Model.Models.Exceptions;
 
 namespace Negocio.Business
 {
@@ -19,28 +17,68 @@ namespace Negocio.Business
 
         public Triagem Adicionar(Triagem triagem)
         {
-            triPersistencia.Adicionar(triagem);
-            return triagem;
+            try
+            {
+                triPersistencia.Adicionar(triagem);
+                return triagem;
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public void Editar(Triagem triagem)
         {
-            triPersistencia.Editar(triagem);
+            try
+            {
+                triPersistencia.Editar(triagem);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public void Remover(Triagem triagem)
         {
-            triPersistencia.Remover(triagem);
+            try
+            {
+                triPersistencia.Remover(triagem);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public Triagem Obter(int id)
         {
-            return triPersistencia.Obter(e => e.IdTriagem == id);
+            try
+            {
+                return triPersistencia.Obter(e => e.IdTriagem == id);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+         
         }
 
         public List<Triagem> ObterTodos()
         {
-            return triPersistencia.ObterTodos();
+            try
+            {
+                return triPersistencia.ObterTodos();
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+          
         }
     }
 }

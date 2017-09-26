@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Model.Models;
 using Persistencia.Persistence;
+using Model.Models.Exceptions;
 
 namespace Negocio.Business
 {
@@ -19,28 +17,68 @@ namespace Negocio.Business
 
         public Paciente Adicionar(Paciente paciente)
         {
-            pacPersistencia.Adicionar(paciente);
-            return paciente;
+            try
+            {
+                pacPersistencia.Adicionar(paciente);
+                return paciente;
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public void Editar(Paciente paciente)
         {
-            pacPersistencia.Editar(paciente);
+            try
+            {
+                pacPersistencia.Editar(paciente);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public void Remover(Paciente paciente)
         {
-            pacPersistencia.Remover(paciente);
+            try
+            {
+                pacPersistencia.Remover(paciente);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public Paciente Obter(int? id)
         {
-            return pacPersistencia.Obter(e => e.IdPaciente == id);
+            try
+            {
+                return pacPersistencia.Obter(e => e.IdPaciente == id);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public List<Paciente> ObterTodos()
         {
-            return pacPersistencia.ObterTodos();
+            try
+            {
+                return pacPersistencia.ObterTodos();
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
     }

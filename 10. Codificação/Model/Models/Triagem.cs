@@ -12,8 +12,7 @@ namespace Model.Models
 
         private int idPaciente;
         private DateTime dataTriagem;
-        private string motivoConsulta;
-        private string nomePaciente;
+        private string motivoConsulta;   
         private bool procedimento;
         private bool radiologia;
         private bool periapical;
@@ -61,7 +60,7 @@ namespace Model.Models
 
         [Required(ErrorMessage = "Campo Obrigatório")]
         [DataType(DataType.Date)]
-        [Display(Name = "Data")]       
+        [Display(Name = "Data da Triagem")]       
         public DateTime DataTriagem
         {
             get { return dataTriagem; }

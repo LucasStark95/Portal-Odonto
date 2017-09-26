@@ -59,7 +59,7 @@ namespace PortalOdonto.Controllers
             }
             catch (Exception e)
             {
-                throw new ControllerException("Não foi possivél cadastrar", e);
+                throw new ControllerException("Não foi possivél completar a acão", e);
 
             }
             return View();
@@ -88,7 +88,7 @@ namespace PortalOdonto.Controllers
             }
             catch (Exception e)
             {
-                throw new ControllerException("Não foi possivél cadastrar", e);
+                throw new ControllerException("Não foi possivél completar a acão", e);
             }
             return View();
         }
@@ -130,7 +130,7 @@ namespace PortalOdonto.Controllers
             }
             catch (Exception e)
             {
-                throw new ControllerException("Não foi possivél cadastrar", e);
+                throw new ControllerException("Não foi possivél completar a acão", e);
             }
             return View();
         }
@@ -159,7 +159,7 @@ namespace PortalOdonto.Controllers
             }
             catch (Exception e)
             {
-                throw new ControllerException("Não é possível editar esse usuário", e);                
+                throw new ControllerException("Não foi possivél completar a acão", e);
             }           
         }
 
@@ -181,9 +181,9 @@ namespace PortalOdonto.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            catch
+            catch (Exception e)
             {
-                //Tratamento de exceção para controladoras
+                throw new ControllerException("Não foi possivél completar a acão", e);
             }
             return View();
         }
@@ -219,9 +219,10 @@ namespace PortalOdonto.Controllers
 
                 return RedirectToAction("Index");
             }
-            catch
+            catch(Exception e)
             {
-                return View();
+                throw new ControllerException("Não foi possivél completar a acão", e);
+                
             }
         }
     }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model.Models;
+using Model.Models.Exceptions;
 
 
 namespace Persistencia.Persistence
@@ -19,31 +20,68 @@ namespace Persistencia.Persistence
 
         public Anamnese Adicionar(Anamnese anamnese)
         {
-            anamnese.IdAnamnese = listaAnamneses.Count + 1;
-            listaAnamneses.Add(anamnese);
-            return anamnese;
+            try {
+                anamnese.IdAnamnese = listaAnamneses.Count + 1;
+                listaAnamneses.Add(anamnese);
+                return anamnese;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public void Editar(Anamnese anamnese)
         {
-            int posicao = listaAnamneses.FindIndex(e => e.IdAnamnese == anamnese.IdAnamnese);
-            listaAnamneses[posicao] = anamnese;
+            try {
+                int posicao = listaAnamneses.FindIndex(e => e.IdAnamnese == anamnese.IdAnamnese);
+                listaAnamneses[posicao] = anamnese;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public void Remover(Anamnese anamnese)
         {
-            int posicao = listaAnamneses.FindIndex(e => e.IdAnamnese == anamnese.IdAnamnese);
-            listaAnamneses.RemoveAt(posicao);
+            try {
+                int posicao = listaAnamneses.FindIndex(e => e.IdAnamnese == anamnese.IdAnamnese);
+                listaAnamneses.RemoveAt(posicao);
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public Anamnese Obter(Func<Anamnese, bool> where)
         {
-            return listaAnamneses.Where(where).FirstOrDefault();
+            try
+            {
+                return listaAnamneses.Where(where).FirstOrDefault();
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public List<Anamnese> ObterTodos()
         {
-            return listaAnamneses;
+            try
+            {
+                return listaAnamneses;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+           
         }
     }
 }

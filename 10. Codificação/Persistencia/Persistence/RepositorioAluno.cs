@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Model.Models;
+using Model.Models.Exceptions;
 
 
 
@@ -20,31 +19,69 @@ namespace Persistencia.Persistence
 
         public Aluno Adicionar(Aluno aluno)
         {
-            aluno.IdAluno =listaAlunos.Count + 1;
-            listaAlunos.Add(aluno);
-            return aluno;
+            try
+            {
+                aluno.IdAluno = listaAlunos.Count + 1;
+                listaAlunos.Add(aluno);
+                return aluno;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public void Editar(Aluno aluno)
         {
-            int posicao = listaAlunos.FindIndex(e => e.IdAluno == aluno.IdAluno);
-            listaAlunos[posicao] = aluno;
+            try {
+                int posicao = listaAlunos.FindIndex(e => e.IdAluno == aluno.IdAluno);
+                listaAlunos[posicao] = aluno;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public void Remover(Aluno aluno)
         {
-            int posicao = listaAlunos.FindIndex(e => e.IdAluno == aluno.IdAluno);
-            listaAlunos.RemoveAt(posicao);
+            try {
+                int posicao = listaAlunos.FindIndex(e => e.IdAluno == aluno.IdAluno);
+                listaAlunos.RemoveAt(posicao);
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public Aluno Obter(Func<Aluno, bool> where)
         {
-            return listaAlunos.Where(where).FirstOrDefault();
+            try
+            {
+                return listaAlunos.Where(where).FirstOrDefault();
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public List<Aluno> ObterTodos()
         {
-            return listaAlunos;
+            try
+            {
+                return listaAlunos;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
     }

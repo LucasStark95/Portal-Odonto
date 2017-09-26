@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Model.Models;
 using Persistencia.Persistence;
+using Model.Models.Exceptions;
 
 namespace Negocio.Business
 {
@@ -19,28 +17,67 @@ namespace Negocio.Business
 
         public Professor Adicionar(Professor professor)
         {
-            proPersistencia.Adicionar(professor);
-            return professor;
+            try {
+                proPersistencia.Adicionar(professor);
+                return professor;
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public void Editar(Professor professor)
         {
-            proPersistencia.Editar(professor);
+            try
+            {
+                proPersistencia.Editar(professor);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public void Remover(Professor professor)
         {
-            proPersistencia.Remover(professor);
+            try
+            {
+                proPersistencia.Remover(professor);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public Professor Obter(int id)
         {
-            return proPersistencia.Obter(e => e.IdProfessor == id);
+            try
+            {
+                return proPersistencia.Obter(e => e.IdProfessor == id);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public List<Professor> ObterTodos()
         {
-            return proPersistencia.ObterTodos();
+            try
+            {
+                return proPersistencia.ObterTodos();
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
     }
