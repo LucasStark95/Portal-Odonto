@@ -4,12 +4,13 @@ using Model.Models;
 using Negocio.Business;
 using Model.Models.Exceptions;
 using System;
+using System.Collections.Generic;
 
 namespace PortalOdonto.Controllers
 {
     public class TecnicoController : Controller
     {
-        private GerenciadorTriagem triagem;
+        private GerenciadorTriagem triagemGerenciador;
         private GerenciadorTecnico tecnico;
         private GerenciadorPaciente paciente;
         private GerenciadorConsulta consulta;
@@ -17,7 +18,7 @@ namespace PortalOdonto.Controllers
         public TecnicoController()
         {
             tecnico = new GerenciadorTecnico();
-            triagem = new GerenciadorTriagem();
+            triagemGerenciador = new GerenciadorTriagem();
             paciente = new GerenciadorPaciente();
             consulta = new GerenciadorConsulta();
 
@@ -49,7 +50,7 @@ namespace PortalOdonto.Controllers
                 {
                     Paciente p = triagemD.Paciente;                    
                     paciente.Adicionar(p);
-                    triagem.Adicionar(triagemD);
+                    triagemGerenciador.Adicionar(triagemD);
                     return RedirectToAction("Index");
                 }
             }
@@ -90,7 +91,10 @@ namespace PortalOdonto.Controllers
 
         public ActionResult ListarPacientes()
         {
-            return View();
+            List<Triagem> triagem = triagemGerenciador.ObterTodos();
+            if (triagem == null || triagem.Count == 0)
+                triagem = null;
+            return View(triagem);
         }
 
         //Visualizar Paciente
