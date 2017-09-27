@@ -31,7 +31,7 @@ namespace PortalOdonto.Controllers
                 if (ModelState.IsValid)
                 {
                     // Obtendo o usuário.
-                    //dadosLogin.Senha = Criptografia.GerarHashSenha(dadosLogin.Login + dadosLogin.Senha);
+                    dadosLogin.Senha = Criptografia.GerarHashSenha(dadosLogin.Login + dadosLogin.Senha);
                     Usuario usuario = gerenciador.ObterByLoginSenha(dadosLogin.Login, dadosLogin.Senha);
 
                     // Autenticando.
@@ -89,19 +89,28 @@ namespace PortalOdonto.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    
-                    //dadosLogin.Senha = Criptografia.GerarHashSenha(dadosLogin.Login + dadosLogin.Senha);
-                    
+                    dadosLogin["NovaSenha"] = Criptografia.GerarHashSenha(dadosLogin["email"] + dadosLogin["NovaSenha"]);
+
+                    if (gerenciador.BuscarUsuario(dadosLogin["email"], dadosLogin["mae"], int.Parse(dadosLogin["matricula"])))
+                    {
+                        Usuario auxiliar = gerenciador.ObterByMatricula(int.Parse(dadosLogin["matricula"]));
+                        auxiliar.SenhaUsuario = dadosLogin["NovaSenha"];
+                        gerenciador.Editar(auxiliar);
+                        return RedirectToAction("Login");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Usuário não Encontrado.");
+                    }
 
                 }
-                
-                ModelState.AddModelError("", "Usuário e/ou senha inválidos.");
             }
             catch
             {
                 ModelState.AddModelError("", "A autenticação falhou. Forneça informações válidas e tente novamente.");
             }
             // Se ocorrer algum erro, reexibe o formulário.
+            ModelState.AddModelError("", "Preencha todos os dados de Forma Correta.");
             return View();
         }
 

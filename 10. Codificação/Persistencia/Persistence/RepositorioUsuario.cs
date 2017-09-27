@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Model.Models;
 
 namespace Persistencia.Persistence
@@ -64,14 +62,6 @@ namespace Persistencia.Persistence
         public List<Usuario> ObterTodos()
         {
             return listaUsuarios;
-        }
-
-        public bool BuscarMatricula(int? matricula, string email)
-        {
-            if (listaUsuarios.Find(e => e.EmailUsuario == email && e.MatriculaUsuario == matricula) == null)
-                return true;
-            else
-                return false;
         }
 
         public bool BuscarMatricula(Func<Usuario, bool> where)
