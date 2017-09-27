@@ -74,7 +74,7 @@ namespace Model.Models
             set { bairro = value; }
         }
 
-        [StringLength(40, MinimumLength = 10)]
+        [StringLength(40, MinimumLength = 6)]
         [Display(Name = "CEP")]
         public string Cep
         {

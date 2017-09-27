@@ -33,13 +33,14 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Portal Odonto", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <div style="margin-left: 1100px;">@Html.ActionLink("Logout", "Logout", "Usuario", new { @class = "navbar-brand" })</div>
+             
             </div>            
-            <!----<div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
-                </ul>-->
+                    <!--<li>@Html.ActionLink("Logout", "Logout", "Usuario")</li>-->
+                </ul>
+            </div>
             </div>
         </div>    
     <div class="container body-content">        

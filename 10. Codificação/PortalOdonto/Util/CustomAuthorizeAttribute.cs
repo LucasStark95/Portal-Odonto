@@ -45,17 +45,8 @@ namespace PortalOdonto.Util
             try
             {
                 Usuario usuario = SessionHelper.Get(SessionKey.USUARIO) as Usuario;
-                if (usuario == null)
-                {
-                    usuario = SessionHelper.Get(SessionKey.ADMINISTRADOR) as Usuario;
-                    if (httpContext.Request.IsAuthenticated && (usuario.TipoUsuario == ((int)NivelAcesso) || AllowAccess))
-                    {
-                        return true;
-                    }
-                    return false;
-                }
 
-                if (httpContext.Request.IsAuthenticated && (usuario.TipoUsuario == ((int)NivelAcesso + 1) || AllowAccess))
+                if (httpContext.Request.IsAuthenticated && (usuario.TipoUsuario == ((int)NivelAcesso) || AllowAccess))
                     return true;
                 else
                     return false;
@@ -75,9 +66,7 @@ namespace PortalOdonto.Util
         ///     para o redirecionamento do usuário. </param>
         protected override void HandleUnauthorizedRequest(AuthorizationContext filterContext)
         {
-            Usuario usuario = SessionHelper.Get(SessionKey.USUARIO) as Usuario;
-            if (usuario == null)
-                HttpContext.Current.Session.Abandon();
+            Usuario usuario = SessionHelper.Get(SessionKey.USUARIO) as Usuario;   
             RouteValueDictionary rota = new RouteValueDictionary();
             rota["controller"] = Controladora;
             rota["action"] = MetodoAcao;

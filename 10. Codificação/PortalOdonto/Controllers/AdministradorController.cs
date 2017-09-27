@@ -6,7 +6,9 @@ using Negocio.Business;
 using PortalOdonto.Util;
 namespace PortalOdonto.Controllers
 {
-    
+
+    [Authenticated]
+    [CustomAuthorize(NivelAcesso = Util.TipoUsuario.ADMINISTRADOR, MetodoAcao = "Login", Controladora = "Usuario")]
     public class AdministradorController : Controller
     {
         
@@ -16,6 +18,8 @@ namespace PortalOdonto.Controllers
         {           
             usuarioGerenciador = new GerenciadorUsuario();
         }
+
+        
         public ActionResult Index()
         {
             List<Usuario> usuarios = usuarioGerenciador.ObterTodos();
@@ -24,7 +28,7 @@ namespace PortalOdonto.Controllers
             return View(usuarios);
         }
 
-        // GET: Usuario/Details/5
+       
         public ActionResult Details (int? id)
         {
             if (id.HasValue)
@@ -34,14 +38,13 @@ namespace PortalOdonto.Controllers
                     return View(user);
             }
             return RedirectToAction("Index");
-        }       
+        }
 
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Usuario/Create
         [HttpPost]
         public ActionResult Create(FormCollection dadosForm)
         {
@@ -86,7 +89,6 @@ namespace PortalOdonto.Controllers
             return RedirectToAction("Index");
         }
 
-
         [HttpPost]
         public ActionResult Edit(int id, Usuario user)
         {
@@ -103,8 +105,6 @@ namespace PortalOdonto.Controllers
             return RedirectToAction("Index");
         }
 
-
-        // GET: Usuario/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id.HasValue)
@@ -117,7 +117,7 @@ namespace PortalOdonto.Controllers
             return RedirectToAction("Index");
         }
 
-        // POST: Usuario/Delete/5
+       
         [HttpPost]
         public ActionResult Delete(int id, Usuario user)
         {
