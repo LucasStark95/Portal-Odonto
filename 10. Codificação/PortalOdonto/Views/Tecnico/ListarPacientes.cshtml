@@ -37,7 +37,7 @@
                                     format: (item) =>
                                         (true) ?
                                             new HtmlString(String.Format("{0}|{1}", new object[] {
-                                                Html.ActionLink("Editar", "VisualizarPaciente", new { id = item.IdTriagem }).ToString(),                                               
+                                                Html.ActionLink("Editar", "EditarTriagem", new { id = item.IdTriagem }).ToString(),                                               
                                                 Html.ActionLink("Detalhes", "VisualizarPaciente", new { id = item.IdTriagem }).ToString(),
                                             }))
                                         : null

@@ -100,9 +100,9 @@ namespace Model.Models
             get { return dtNascimentoPaciente; }
             set { dtNascimentoPaciente = value; }
         }
-        
+
         [Display(Name = "Sexo")]
-        [StringLength(1, MinimumLength = 1)]
+        [StringLength(10, MinimumLength = 1)]
         public string Sexo
         {
             get { return sexo ; }

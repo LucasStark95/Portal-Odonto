@@ -55,7 +55,7 @@ namespace Negocio.Business
             
         }
 
-        public Triagem Obter(int id)
+        public Triagem Obter(int? id)
         {
             try
             {

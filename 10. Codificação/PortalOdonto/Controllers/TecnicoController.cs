@@ -11,17 +11,17 @@ namespace PortalOdonto.Controllers
     public class TecnicoController : Controller
     {
         private GerenciadorTriagem triagemGerenciador;
-        private GerenciadorTecnico tecnico;
+        private GerenciadorTecnico tecnicoGerenciador;
         private GerenciadorPaciente paciente;
-        private GerenciadorConsulta consulta;
+        private GerenciadorConsulta consulta;     
+
 
         public TecnicoController()
         {
-            tecnico = new GerenciadorTecnico();
+            tecnicoGerenciador = new GerenciadorTecnico();
             triagemGerenciador = new GerenciadorTriagem();
             paciente = new GerenciadorPaciente();
             consulta = new GerenciadorConsulta();
-
 
         }
 
@@ -37,6 +37,7 @@ namespace PortalOdonto.Controllers
         // GET: Tecnico/CadastroTriagem
         public ActionResult CadastrarTriagem()
         {
+            //ViewBag.Sexo = new SelectList(, "");
             return View();
         }
 
@@ -48,7 +49,7 @@ namespace PortalOdonto.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    Paciente p = triagemD.Paciente;                    
+                    Paciente p = triagemD.Paciente;
                     paciente.Adicionar(p);
                     triagemGerenciador.Adicionar(triagemD);
                     return RedirectToAction("Index");
@@ -61,33 +62,35 @@ namespace PortalOdonto.Controllers
             return View();
         }
 
-
-        // ============================ Paciente =========================================== //
-
-        // GET: Tecnico/CadastroPaciente
-        public ActionResult CadastrarPaciente()
+        //GET: Triagem
+        public ActionResult EditarTriagem(int? id)
         {
-            return View();
+            if (id.HasValue)
+            {
+                Triagem triagem = triagemGerenciador.Obter(id);
+                if (triagem != null)
+                    return View(triagem);
+            }
+            return RedirectToAction("Index");
         }
-        //Ainda será analisado se esse metodo vai permancer
-        // POST: Tecnico/CadastroPaciente
+
+        // POST: Triagem
         [HttpPost]
-        public ActionResult CadastrarPaciente(Paciente pac)
+        public ActionResult EditarTriagem(int id, Triagem triagem)
         {
             try
             {
-                if (ModelState.IsValid)
-                {
-                    paciente.Adicionar(pac);
-                    return RedirectToAction("Index");
-                }
+                triagemGerenciador.Editar(triagem);
+                return RedirectToAction("Index");
+
             }
             catch (Exception e)
             {
                 throw new ControllerException("Não foi possivél completar a acão", e);
             }
-            return View();
         }
+
+        // ============================ Paciente =========================================== //
 
         public ActionResult ListarPacientes()
         {
@@ -97,18 +100,17 @@ namespace PortalOdonto.Controllers
             return View(triagem);
         }
 
-        //Visualizar Paciente
+        //GET: Visualizar Paciente AINDA SERÁ ANALISADO SE É UTIL
         public ActionResult VisualizarPaciente(int? id)
         {
-            if (id.HasValue)
-            {
-                Paciente pac = paciente.Obter(id);
-                if (paciente != null)
-                    return View(pac);
-
-            }
-            return RedirectToAction("index");
-        }
+            //if (id.HasValue)
+           // {
+                Triagem triagem = triagemGerenciador.Obter(id);
+                //if (triagem != null)
+                    return View(triagem);
+           // }
+            //return RedirectToAction("index");
+        }   
         // ============================ Perfil =========================================== //
 
         // GET: Tecnico/Perfil/
@@ -123,7 +125,7 @@ namespace PortalOdonto.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    tecnico.Editar(t);
+                    tecnicoGerenciador.Editar(t);
                     return RedirectToAction("Index");
                 }
 
@@ -140,7 +142,7 @@ namespace PortalOdonto.Controllers
         {
             if (id.HasValue)
             {
-                Tecnico tec = tecnico.Obter(id);
+                Tecnico tec = tecnicoGerenciador.Obter(id);
                 if (tec != null)
                     return View(tec);
             }
@@ -153,7 +155,7 @@ namespace PortalOdonto.Controllers
         {
             try
             {
-                tecnico.Editar(tec);
+                tecnicoGerenciador.Editar(tec);
                 return RedirectToAction("Index");
 
             }

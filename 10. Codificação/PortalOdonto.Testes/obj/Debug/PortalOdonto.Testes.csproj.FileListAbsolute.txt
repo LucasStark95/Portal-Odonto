@@ -66,3 +66,7 @@ C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStu
 C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.csprojResolveAssemblyReference.cache
 C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.dll
 C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.pdb
+C:\Portal-Odonto\10. Codificação\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.csprojResolveAssemblyReference.cache
+C:\Portal-Odonto\10. Codificação\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.csproj.CoreCompileInputs.cache
+C:\Portal-Odonto\10. Codificação\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.dll
+C:\Portal-Odonto\10. Codificação\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.pdb
