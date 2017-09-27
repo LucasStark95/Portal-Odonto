@@ -6,7 +6,7 @@
 
 <h2>CadastrarTriagem2</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("CadastrarTriagem", "Tecnico", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 

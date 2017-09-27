@@ -13,7 +13,7 @@ namespace Model.Models
         private string rgPaciente;
         private string responsavelPaciente;
         private string dtNascimentoPaciente;
-        private char sexo;
+        private string sexo;
         private string naturalidade;
         private string estado;
         private string nacionalidade;
@@ -49,7 +49,7 @@ namespace Model.Models
 
         [Required(ErrorMessage = "Campo Obrigatório")]
         [Display (Name = "Nome Completo")]
-        [StringLength (60, MinimumLength = 20)]
+        [StringLength (60, MinimumLength = 2)]
         public string NomePaciente
         {
             get { return nomePaciente; }
@@ -57,7 +57,7 @@ namespace Model.Models
         }
 
         [Required(ErrorMessage = "Campo Obrigatório")]
-        [StringLength(14, MinimumLength = 6)]
+        [StringLength(14, MinimumLength = 2)]
         [Display (Name = "RG")]
         public string RgPaciente
         {
@@ -77,7 +77,7 @@ namespace Model.Models
 
         [Required(ErrorMessage = "Campo Obrigatório")]
         [Display (Name = "Endereço")]
-        [StringLength(60, MinimumLength = 20)]
+        [StringLength(60, MinimumLength = 2)]
         public string EnderecoPaciente
         {
             get { return enderecoPaciente; }
@@ -103,14 +103,14 @@ namespace Model.Models
         
         [Display(Name = "Sexo")]
         [StringLength(1, MinimumLength = 1)]
-        public char Sexo
+        public string Sexo
         {
-            get { return sexo; }
+            get { return sexo ; }
             set { sexo = value; }
         }
 
         [Display (Name = "Naturalidade")]
-        [StringLength(40, MinimumLength = 20)]
+        [StringLength(40, MinimumLength = 2)]
         public string Naturalidade
         {
             get { return naturalidade; }
@@ -118,7 +118,7 @@ namespace Model.Models
         }
 
         [Display(Name = "Estado")]
-        [StringLength(40, MinimumLength = 20)]
+        [StringLength(40, MinimumLength = 2)]
         public string Estado
         {
             get { return estado; }
@@ -126,7 +126,7 @@ namespace Model.Models
         }
 
         [Display(Name = "Nacionalidade")]
-        [StringLength(40, MinimumLength = 20)]
+        [StringLength(40, MinimumLength = 2)]
         public string Nacionalidade
         {
             get { return nacionalidade; }
@@ -134,7 +134,7 @@ namespace Model.Models
         }
 
         [Display(Name = "Estado Civil")]
-        [StringLength(40, MinimumLength = 20)]
+        [StringLength(40, MinimumLength = 2)]
         public string EstadoCivil
         {
             get { return estadoCivil; }
@@ -142,7 +142,7 @@ namespace Model.Models
         }
 
         [Display(Name = "Raça")]
-        [StringLength(40, MinimumLength = 20)]
+        [StringLength(40, MinimumLength = 2)]
         public string Raca
         {
             get { return raca; }
@@ -150,7 +150,7 @@ namespace Model.Models
         }
 
         [Display(Name = "Religião")]
-        [StringLength(40, MinimumLength = 20)]
+        [StringLength(40, MinimumLength = 2)]
         public string Religiao
         {
             get { return religiao; }
@@ -172,7 +172,7 @@ namespace Model.Models
         }
 
         [Display(Name = "Escolaridade")]
-        [StringLength(40, MinimumLength = 20)]
+        [StringLength(40, MinimumLength = 2)]
         public string GrauDeInstrucao
         {
             get { return grauDeInstrucao; }
@@ -180,7 +180,7 @@ namespace Model.Models
         }
 
         [Display(Name = "Pai")]
-        [StringLength(60, MinimumLength = 20)]
+        [StringLength(60, MinimumLength = 2)]
         public string Pai
         {
             get { return pai; }
@@ -188,7 +188,7 @@ namespace Model.Models
         }
 
         [Display(Name = "Mãe")]
-        [StringLength(60, MinimumLength = 20)]
+        [StringLength(60, MinimumLength = 2)]
         public string Mae
         {
             get { return mae; }
@@ -196,7 +196,7 @@ namespace Model.Models
         }
 
         [Display(Name = "Nacionalidade do Pai")]
-        [StringLength(40, MinimumLength = 20)]
+        [StringLength(40, MinimumLength = 2)]
         public string NacionalidadePai
         {
             get { return nacionalidadePai; }
@@ -204,7 +204,7 @@ namespace Model.Models
         }
 
         [Display(Name = "Nacionalidade da Mãe")]
-        [StringLength(40, MinimumLength = 20)]
+        [StringLength(40, MinimumLength = 2)]
         public string NacionalidadeMae
         {
             get { return nacionalidadeMae; }
@@ -212,7 +212,7 @@ namespace Model.Models
         }
 
         [Display(Name = "Profissão")]
-        [StringLength(40, MinimumLength = 20)]
+        [StringLength(40, MinimumLength = 2)]
         public string Profissao
         {
             get { return profissao; }
@@ -220,7 +220,7 @@ namespace Model.Models
         }
 
         [Display(Name = "Zona")]
-        [StringLength(40, MinimumLength = 20)]
+        [StringLength(40, MinimumLength = 2)]
         public string Zona
         {
             get { return zona; }
@@ -228,7 +228,7 @@ namespace Model.Models
         }
 
         [Display(Name = "Contato")]
-        [StringLength(20, MinimumLength = 20)]
+        [StringLength(20, MinimumLength = 2)]
         public string Contato
         {
             get { return contato; }
@@ -236,7 +236,7 @@ namespace Model.Models
         }
 
         [Display(Name = "Cidade")]
-        [StringLength(60, MinimumLength = 20)]
+        [StringLength(60, MinimumLength = 2)]
         public string Cidade
         {
             get { return cidade; }

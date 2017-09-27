@@ -140,7 +140,7 @@ namespace PortalOdonto.Controllers
             {
                 throw new ControllerException("Não é possível deletar esse usuário", e);
             }
-            return RedirectToAction("Index");
+            
         }
 
         [HttpPost]
