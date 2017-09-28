@@ -22,11 +22,11 @@ namespace Negocio.Business
                 triPersistencia.Adicionar(triagem);
                 return triagem;
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
         public void Editar(Triagem triagem)
@@ -35,11 +35,11 @@ namespace Negocio.Business
             {
                 triPersistencia.Editar(triagem);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
         public void Remover(Triagem triagem)
@@ -48,11 +48,10 @@ namespace Negocio.Business
             {
                 triPersistencia.Remover(triagem);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-            
         }
 
         public Triagem Obter(int? id)
@@ -61,11 +60,11 @@ namespace Negocio.Business
             {
                 return triPersistencia.Obter(e => e.IdTriagem == id);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-         
+
         }
 
         public List<Triagem> ObterTodos()
@@ -74,11 +73,11 @@ namespace Negocio.Business
             {
                 return triPersistencia.ObterTodos();
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-          
+
         }
     }
 }

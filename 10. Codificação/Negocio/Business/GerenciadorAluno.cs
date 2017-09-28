@@ -22,7 +22,7 @@ namespace Negocio.Business
                 aluPersistencia.Adicionar(aluno);
                 return aluno;
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
@@ -35,7 +35,7 @@ namespace Negocio.Business
             {
                 aluPersistencia.Editar(aluno);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
@@ -48,7 +48,7 @@ namespace Negocio.Business
             {
                 aluPersistencia.Remover(aluno);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
@@ -61,7 +61,7 @@ namespace Negocio.Business
             {
                 return aluPersistencia.Obter(e => e.IdAluno == id);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
@@ -74,7 +74,7 @@ namespace Negocio.Business
             {
                 return aluPersistencia.ObterTodos();
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }

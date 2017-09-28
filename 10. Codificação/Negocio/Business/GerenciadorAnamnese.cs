@@ -22,7 +22,7 @@ namespace Negocio.Business
                 anaPersistencia.Adicionar(anamnese);
                 return anamnese;
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
@@ -35,7 +35,7 @@ namespace Negocio.Business
             {
                 anaPersistencia.Editar(anamnese);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
@@ -48,7 +48,7 @@ namespace Negocio.Business
             {
                 anaPersistencia.Remover(anamnese);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
@@ -61,7 +61,7 @@ namespace Negocio.Business
             {
                 return anaPersistencia.Obter(e => e.IdAnamnese == id);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
@@ -74,7 +74,7 @@ namespace Negocio.Business
             {
                 return anaPersistencia.ObterTodos();
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }

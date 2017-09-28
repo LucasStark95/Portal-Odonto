@@ -39,7 +39,7 @@ namespace Persistencia.Persistence
             }
             catch (Exception e)
             {
-                throw new NegocioException("Não foi possivél completar a ação", e);
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
             }
            
         }
@@ -53,7 +53,7 @@ namespace Persistencia.Persistence
             }
             catch (Exception e)
             {
-                throw new NegocioException("Não foi possivél completar a ação", e);
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
             }
            
         }
@@ -66,7 +66,7 @@ namespace Persistencia.Persistence
             }
             catch (Exception e)
             {
-                throw new NegocioException("Não foi possivél completar a ação", e);
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
             }
             
         }
@@ -79,7 +79,7 @@ namespace Persistencia.Persistence
             }
             catch (Exception e)
             {
-                throw new NegocioException("Não foi possivél completar a ação", e);
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
             }
            
         }

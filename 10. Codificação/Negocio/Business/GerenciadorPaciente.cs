@@ -22,11 +22,11 @@ namespace Negocio.Business
                 pacPersistencia.Adicionar(paciente);
                 return paciente;
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
         public void Editar(Paciente paciente)
@@ -35,11 +35,11 @@ namespace Negocio.Business
             {
                 pacPersistencia.Editar(paciente);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
         public void Remover(Paciente paciente)
@@ -48,11 +48,11 @@ namespace Negocio.Business
             {
                 pacPersistencia.Remover(paciente);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
         public Paciente Obter(int? id)
@@ -61,11 +61,11 @@ namespace Negocio.Business
             {
                 return pacPersistencia.Obter(e => e.IdPaciente == id);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-            
+
         }
 
         public List<Paciente> ObterTodos()
@@ -74,11 +74,10 @@ namespace Negocio.Business
             {
                 return pacPersistencia.ObterTodos();
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
         }
 
     }

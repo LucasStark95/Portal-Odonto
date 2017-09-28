@@ -22,11 +22,10 @@ namespace Negocio.Business
                 conPersistencia.Adicionar(consulta);
                 return consulta;
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-
         }
 
         public void Editar(Consulta_M consulta)
@@ -35,7 +34,7 @@ namespace Negocio.Business
             {
                 conPersistencia.Editar(consulta);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
@@ -48,7 +47,7 @@ namespace Negocio.Business
             {
                 conPersistencia.Remover(consulta);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
@@ -61,7 +60,7 @@ namespace Negocio.Business
             {
                 return conPersistencia.Obter(e => e.IdConsulta == id);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
@@ -74,7 +73,7 @@ namespace Negocio.Business
             {
                 return conPersistencia.ObterTodos();
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }

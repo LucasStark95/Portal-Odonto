@@ -22,11 +22,11 @@ namespace Negocio.Business
                 tecPersistencia.Adicionar(tecnico);
                 return tecnico;
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
         public void Editar(Tecnico tecnico)
@@ -35,11 +35,11 @@ namespace Negocio.Business
             {
                 tecPersistencia.Editar(tecnico);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-            
+
         }
 
         public void Remover(Tecnico tecnico)
@@ -48,11 +48,11 @@ namespace Negocio.Business
             {
                 tecPersistencia.Remover(tecnico);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
         public Tecnico Obter(int? id)
@@ -61,11 +61,11 @@ namespace Negocio.Business
             {
                 return tecPersistencia.Obter(e => e.IdTecnico == id);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-            
+
         }
 
         public List<Tecnico> ObterTodos()
@@ -74,11 +74,11 @@ namespace Negocio.Business
             {
                 return tecPersistencia.ObterTodos();
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-            
+
         }
     }
 }

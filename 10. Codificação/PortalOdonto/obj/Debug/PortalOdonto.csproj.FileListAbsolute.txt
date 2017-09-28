@@ -320,8 +320,6 @@ C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\
 C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\PortalOdonto\obj\Debug\PortalOdonto.csprojResolveAssemblyReference.cache
 C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\PortalOdonto\obj\Debug\PortalOdonto.dll
 C:\Users\Fabricia\Desktop\Projeto Engenharia II\Portal-Odonto\10. Codificação\PortalOdonto\obj\Debug\PortalOdonto.pdb
-C:\Portal-Odonto\10. Codificação\PortalOdonto\obj\Debug\PortalOdonto.csprojResolveAssemblyReference.cache
-C:\Portal-Odonto\10. Codificação\PortalOdonto\obj\Debug\PortalOdonto.csproj.CoreCompileInputs.cache
 C:\Portal-Odonto\10. Codificação\PortalOdonto\bin\ApplicationInsights.config
 C:\Portal-Odonto\10. Codificação\PortalOdonto\bin\roslyn\csc.exe
 C:\Portal-Odonto\10. Codificação\PortalOdonto\bin\roslyn\csc.exe.config
@@ -399,5 +397,7 @@ C:\Portal-Odonto\10. Codificação\PortalOdonto\bin\pt-br\System.Web.Razor.resou
 C:\Portal-Odonto\10. Codificação\PortalOdonto\bin\pt-br\System.Web.WebPages.resources.dll
 C:\Portal-Odonto\10. Codificação\PortalOdonto\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Portal-Odonto\10. Codificação\PortalOdonto\bin\pt-br\System.Web.WebPages.Razor.resources.dll
+C:\Portal-Odonto\10. Codificação\PortalOdonto\obj\Debug\PortalOdonto.csprojResolveAssemblyReference.cache
+C:\Portal-Odonto\10. Codificação\PortalOdonto\obj\Debug\PortalOdonto.csproj.CoreCompileInputs.cache
 C:\Portal-Odonto\10. Codificação\PortalOdonto\obj\Debug\PortalOdonto.dll
 C:\Portal-Odonto\10. Codificação\PortalOdonto\obj\Debug\PortalOdonto.pdb

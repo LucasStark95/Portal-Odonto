@@ -17,6 +17,8 @@
         <fieldset>
             <legend>Dados do Paciente</legend>
             <div class="form-group">
+                @Html.HiddenFor(model => model.Paciente.IdPaciente)
+                @Html.HiddenFor(model => model.IdTriagem)
                 @Html.LabelFor(model => model.Paciente.NomePaciente, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-3">
                     @Html.EditorFor(model => model.Paciente.NomePaciente, new { htmlAttributes = new { @class = "form-control" } })
@@ -52,8 +54,8 @@
                 </div>
                 @Html.LabelFor(model => model.Paciente.Dt_nascimentoPaciente, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-3">
-                    @Html.EditorFor(model => model.Paciente.Dt_nascimentoPaciente, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Paciente.Dt_nascimentoPaciente, "", new { @class = "text-danger" })
+                    @Html.TextBoxFor(model => model.Paciente.Dt_nascimentoPaciente, new { @Value = Model.Paciente.Dt_nascimentoPaciente.ToString("dd/MM/yyyy"), @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Paciente.Dt_nascimentoPaciente)
                 </div>
                 <div class="col-md-2"></div>
             </div>
@@ -200,8 +202,8 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.DataTriagem, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-8">
-                    @Html.EditorFor(model => model.DataTriagem, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.DataTriagem, "", new { @class = "text-danger" })
+                    @Html.TextBoxFor(model => model.DataTriagem, new {@Value = Model.DataTriagem.ToString("dd/MM/yyyy"), @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.DataTriagem)
                 </div>
                 <div class="col-md-4"></div>
             </div>

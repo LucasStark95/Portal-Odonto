@@ -22,11 +22,11 @@ namespace Negocio.Business
                 periPersistencia.Adicionar(periograma);
                 return periograma;
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
         public void Editar(Periograma periograma)
@@ -35,11 +35,11 @@ namespace Negocio.Business
             {
                 periPersistencia.Editar(periograma);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
         public Periograma Obter(int id)
@@ -48,11 +48,11 @@ namespace Negocio.Business
             {
                 return periPersistencia.Obter(e => e.IdPeriograma == id);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
         public List<Periograma> ObterTodos()
@@ -61,11 +61,11 @@ namespace Negocio.Business
             {
                 return periPersistencia.ObterTodos();
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-            
+
         }
     }
 }

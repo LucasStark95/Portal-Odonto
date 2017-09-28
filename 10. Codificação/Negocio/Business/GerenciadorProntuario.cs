@@ -21,11 +21,11 @@ namespace Negocio.Business
                 proPersistencia.Adicionar(prontuario);
                 return prontuario;
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-            
+
         }
 
         public Prontuario Obter(int id)
@@ -34,11 +34,11 @@ namespace Negocio.Business
             {
                 return proPersistencia.Obter(e => e.IdProntuario == id);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-            
+
         }
 
         public List<Prontuario> ObterTodos()
@@ -47,11 +47,11 @@ namespace Negocio.Business
             {
                 return proPersistencia.ObterTodos();
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-            
+
         }
     }
 }

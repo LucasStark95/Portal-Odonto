@@ -41,16 +41,14 @@ namespace Model.Models
         public Triagem()
         {
         }
-
-        [Required(ErrorMessage = "Campo Obrigatório")]
+                
         [Display(Name = "ID do Paciente")]
         public int IdPaciente
         {
             get { return idPaciente; }
             set { idPaciente = value; }
         }
-
-        [Required(ErrorMessage = "Campo Obrigatório")]
+                
         [Display(Name = "ID da Triagem ")]
         public int IdTriagem
         {
@@ -60,7 +58,8 @@ namespace Model.Models
 
         [Required(ErrorMessage = "Campo Obrigatório")]
         [DataType(DataType.Date)]
-        [Display(Name = "Data da Triagem")]       
+        [Display(Name = "Data da Triagem")]   
+        [DisplayFormat(DataFormatString ="{0:dd/MM/yyyy}")]
         public DateTime DataTriagem
         {
             get { return dataTriagem; }

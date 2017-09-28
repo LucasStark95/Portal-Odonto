@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -12,7 +13,7 @@ namespace Model.Models
         private string cpfPaciente;
         private string rgPaciente;
         private string responsavelPaciente;
-        private string dtNascimentoPaciente;
+        private DateTime dtNascimentoPaciente;
         private string sexo;
         private string naturalidade;
         private string estado;
@@ -103,8 +104,9 @@ namespace Model.Models
 
         [Required(ErrorMessage = "Campo Obrigatório")]
         [DataType(DataType.Date)]
-        [Display(Name = "Data Nascimento")]       
-        public string Dt_nascimentoPaciente
+        [Display(Name = "Data Nascimento")] 
+        [DisplayFormat(DataFormatString ="{0:dd/MM/yyyy}")]
+        public DateTime Dt_nascimentoPaciente
         {
             get { return dtNascimentoPaciente; }
             set { dtNascimentoPaciente = value; }

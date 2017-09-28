@@ -21,11 +21,11 @@ namespace Negocio.Business
                 proPersistencia.Adicionar(professor);
                 return professor;
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-            
+
         }
 
         public void Editar(Professor professor)
@@ -34,11 +34,11 @@ namespace Negocio.Business
             {
                 proPersistencia.Editar(professor);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-            
+
         }
 
         public void Remover(Professor professor)
@@ -47,11 +47,11 @@ namespace Negocio.Business
             {
                 proPersistencia.Remover(professor);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
         public Professor Obter(int id)
@@ -60,11 +60,11 @@ namespace Negocio.Business
             {
                 return proPersistencia.Obter(e => e.IdProfessor == id);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
         public List<Professor> ObterTodos()
@@ -73,11 +73,11 @@ namespace Negocio.Business
             {
                 return proPersistencia.ObterTodos();
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
     }

@@ -80,10 +80,14 @@ namespace PortalOdonto.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            catch(Exception e)
+            catch (NegocioException e)
             {
-                throw new ControllerException("Usuário não foi cadastrado",e);               
-            }            
+                throw new ControllerException("Não foi possivél completar a acão", e);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a acão", e);
+            }
         }
 
         public ActionResult Edit(int? id)
@@ -107,10 +111,14 @@ namespace PortalOdonto.Controllers
                 return RedirectToAction("Index");
                 
             }
+            catch (NegocioException e)
+            {
+                throw new ControllerException("Não foi possivél completar a acão", e);
+            }
             catch (Exception e)
             {
-                throw new ControllerException("Não é possível editar esse usuário", e);                
-            }            
+                throw new NegocioException("Não foi possivél completar a acão", e);
+            }
         }
 
 
@@ -136,11 +144,15 @@ namespace PortalOdonto.Controllers
                 usuarioGerenciador.Remover(usuarioGerenciador.Obter(id));
                 return RedirectToAction("Index");
             }
+            catch (NegocioException e)
+            {
+                throw new ControllerException("Não foi possivél completar a acão", e);
+            }
             catch (Exception e)
             {
-                throw new ControllerException("Não é possível deletar esse usuário", e);
+                throw new NegocioException("Não foi possivél completar a acão", e);
             }
-            
+
         }
 
         [HttpPost]

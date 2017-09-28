@@ -45,17 +45,23 @@ namespace PortalOdonto.Controllers
 
         // POST: Tecnico/CadastroTriagem
         [HttpPost]
-        public ActionResult CadastrarTriagem(Triagem triagemD)
+        public ActionResult CadastrarTriagem(FormCollection triagemD)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    Paciente p = triagemD.Paciente;
-                    paciente.Adicionar(p);
-                    triagemGerenciador.Adicionar(triagemD);
+                    Triagem tria = new Triagem();                   
+                    TryUpdateModel<Triagem>(tria, triagemD.ToValueProvider());
+                    Paciente pac = tria.Paciente;
+                    paciente.Adicionar(pac);
+                    triagemGerenciador.Adicionar(tria);                 
                     return RedirectToAction("Index");
                 }
+            }
+            catch (ControllerException e)
+            {
+                throw new ControllerException("Não foi possivél completar a acão", e);
             }
             catch (Exception e)
             {
@@ -86,9 +92,13 @@ namespace PortalOdonto.Controllers
                 return RedirectToAction("Index");
 
             }
-            catch (Exception e)
+            catch (ControllerException e)
             {
                 throw new ControllerException("Não foi possivél completar a acão", e);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a acão", e);
             }
         }
 
@@ -132,9 +142,13 @@ namespace PortalOdonto.Controllers
                 }
 
             }
-            catch (Exception e)
+            catch (ControllerException e)
             {
                 throw new ControllerException("Não foi possivél completar a acão", e);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a acão", e);
             }
             return View();
         }
@@ -161,9 +175,13 @@ namespace PortalOdonto.Controllers
                 return RedirectToAction("Index");
 
             }
-            catch (Exception e)
+            catch (ControllerException e)
             {
                 throw new ControllerException("Não foi possivél completar a acão", e);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a acão", e);
             }
         }
 
@@ -185,9 +203,13 @@ namespace PortalOdonto.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            catch (Exception e)
+            catch (ControllerException e)
             {
                 throw new ControllerException("Não foi possivél completar a acão", e);
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a acão", e);
             }
             return View();
         }
@@ -223,10 +245,13 @@ namespace PortalOdonto.Controllers
 
                 return RedirectToAction("Index");
             }
-            catch (Exception e)
+            catch (ControllerException e)
             {
                 throw new ControllerException("Não foi possivél completar a acão", e);
-
+            }
+            catch (Exception e)
+            {
+                throw new NegocioException("Não foi possivél completar a acão", e);
             }
         }
     }

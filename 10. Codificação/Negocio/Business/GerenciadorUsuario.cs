@@ -23,11 +23,11 @@ namespace Negocio.Business
                 usuarioPersistencia.Adicionar(usuario);
                 return usuario;
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-          
+
         }
 
         public void Editar(Usuario usuario)
@@ -36,11 +36,11 @@ namespace Negocio.Business
             {
                 usuarioPersistencia.Editar(usuario);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-            
+
         }
 
         public void Remover(Usuario usuario)
@@ -49,11 +49,11 @@ namespace Negocio.Business
             {
                 usuarioPersistencia.Remover(usuario);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-            
+
         }
 
 
@@ -63,11 +63,11 @@ namespace Negocio.Business
             {
                 return usuarioPersistencia.Obter(e => e.IdUsuario == id);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
         public List<Usuario> Buscar(int? matricula)
@@ -76,11 +76,11 @@ namespace Negocio.Business
             {
                 return usuarioPersistencia.Buscar(e => e.MatriculaUsuario == matricula);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
 
         public List<Usuario> ObterTodos()
@@ -89,11 +89,11 @@ namespace Negocio.Business
             {
                 return usuarioPersistencia.ObterTodos();
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
-           
+
         }
     }
 }

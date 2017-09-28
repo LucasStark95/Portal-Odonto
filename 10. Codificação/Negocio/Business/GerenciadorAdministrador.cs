@@ -23,10 +23,10 @@ namespace Negocio.Business
                 admPersistencia.Adicionar(administrador);
                 return administrador;
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
-            }
+            }         
         }
 
         public void Editar(Administrador administrador)
@@ -35,7 +35,7 @@ namespace Negocio.Business
             {
                 admPersistencia.Editar(administrador);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
@@ -48,7 +48,7 @@ namespace Negocio.Business
             {
                 admPersistencia.Remover(administrador);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
@@ -61,10 +61,10 @@ namespace Negocio.Business
             {
                 return admPersistencia.Obter(e => e.IdAdministrador == id);
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
-            }
+            }           
         }
 
         public List<Administrador> ObterTodos()
@@ -73,7 +73,7 @@ namespace Negocio.Business
             {
                 return admPersistencia.ObterTodos();
             }
-            catch (Exception e)
+            catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
             }
