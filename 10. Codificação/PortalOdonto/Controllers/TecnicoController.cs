@@ -7,7 +7,7 @@ using PortalOdonto.Util;
 namespace PortalOdonto.Controllers
 {
     [Authenticated]
-    [CustomAuthorize(NivelAcesso = Util.TipoUsuario.TECNICO, MetodoAcao = "Login", Controladora = "Usuario")]
+    [CustomAuthorize(NivelAcesso = Util.TipoUsuario.TECNICO)]
     public class TecnicoController : Controller
     {
         private GerenciadorTriagem triagem;

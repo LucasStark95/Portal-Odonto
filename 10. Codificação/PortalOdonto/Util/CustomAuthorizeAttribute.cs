@@ -68,8 +68,35 @@ namespace PortalOdonto.Util
         {
             Usuario usuario = SessionHelper.Get(SessionKey.USUARIO) as Usuario;   
             RouteValueDictionary rota = new RouteValueDictionary();
-            rota["controller"] = Controladora;
-            rota["action"] = MetodoAcao;
+
+            if(usuario == null)
+            {
+                rota["controller"] = Controladora;
+                rota["action"] = MetodoAcao;
+            }
+            else
+            {
+                int tipo = usuario.TipoUsuario;
+                switch (tipo)
+                {
+                    case 1:
+                        rota["controller"] = "Professor";
+                        rota["action"] = "Index";
+                        break;
+                    case 2:
+                        rota["controller"] = "Tecnico";
+                        rota["action"] = "Index";
+                        break;
+                    case 3:
+                        rota["controller"] = "Aluno";
+                        rota["action"] = "Index";
+                        break;
+                    default:
+                        rota["controller"] = "Administrador";
+                        rota["action"] = "Index";
+                        break;
+                }
+            }
             filterContext.Result = new RedirectToRouteResult(rota);
         }
     }

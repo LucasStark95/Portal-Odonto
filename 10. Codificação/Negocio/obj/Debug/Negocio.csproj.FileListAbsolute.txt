@@ -37,3 +37,7 @@ C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Negocio\obj\Debug\Negoci
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Negocio\obj\Debug\Negocio.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Negocio\bin\Debug\Model.dll.config
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Negocio\bin\Debug\Persistencia.dll.config
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Negocio\bin\Debug\EntityFramework.xml

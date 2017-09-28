@@ -8,7 +8,7 @@ namespace PortalOdonto.Controllers
 {
 
     [Authenticated]
-    [CustomAuthorize(NivelAcesso = Util.TipoUsuario.ADMINISTRADOR, MetodoAcao = "Login", Controladora = "Usuario")]
+    [CustomAuthorize(NivelAcesso = Util.TipoUsuario.ADMINISTRADOR)]
     public class AdministradorController : Controller
     {
         

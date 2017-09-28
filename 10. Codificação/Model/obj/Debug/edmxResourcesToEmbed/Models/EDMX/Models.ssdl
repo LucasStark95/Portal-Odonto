@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TB_Paciente">
+    <Key>
+      <PropertyRef Name="SQC_Paciente" />
+    </Key>
+    <Property Name="SQC_Paciente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pac_Nome" Type="varchar" MaxLength="60" />
+    <Property Name="Pac_Rg" Type="varchar" MaxLength="12" />
+    <Property Name="Pac_Endereco" Type="varchar" MaxLength="60" />
+    <Property Name="Pac_DataNascimento" Type="date" />
+    <Property Name="Pac_Telefone" Type="varchar" MaxLength="13" />
+    <Property Name="Pac_Responsavel" Type="varchar" MaxLength="60" />
+    <Property Name="Pac_MotivoConsulta" Type="varchar" MaxLength="225" />
+    <Property Name="Pac_EstadoCivil" Type="varchar" MaxLength="15" />
+    <Property Name="Pac_Cpf" Type="varchar" MaxLength="14" />
+  </EntityType>
+  <EntityContainer Name="ModelModelsStoreContainer">
+    <EntitySet Name="TB_Paciente" EntityType="Self.TB_Paciente" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

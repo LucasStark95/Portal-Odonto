@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelModelsStoreContainer" CdmEntityContainer="PortalOdontoEntities">
+    <EntitySetMapping Name="TB_Paciente">
+      <EntityTypeMapping TypeName="Model.Models.TB_Paciente">
+        <MappingFragment StoreEntitySet="TB_Paciente">
+          <ScalarProperty Name="SQC_Paciente" ColumnName="SQC_Paciente" />
+          <ScalarProperty Name="Pac_Nome" ColumnName="Pac_Nome" />
+          <ScalarProperty Name="Pac_Rg" ColumnName="Pac_Rg" />
+          <ScalarProperty Name="Pac_Endereco" ColumnName="Pac_Endereco" />
+          <ScalarProperty Name="Pac_DataNascimento" ColumnName="Pac_DataNascimento" />
+          <ScalarProperty Name="Pac_Telefone" ColumnName="Pac_Telefone" />
+          <ScalarProperty Name="Pac_Responsavel" ColumnName="Pac_Responsavel" />
+          <ScalarProperty Name="Pac_MotivoConsulta" ColumnName="Pac_MotivoConsulta" />
+          <ScalarProperty Name="Pac_EstadoCivil" ColumnName="Pac_EstadoCivil" />
+          <ScalarProperty Name="Pac_Cpf" ColumnName="Pac_Cpf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

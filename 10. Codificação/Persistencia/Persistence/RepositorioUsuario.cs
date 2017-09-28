@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Model.Models;
 
+
 namespace Persistencia.Persistence
 {
     public class RepositorioUsuario
@@ -17,6 +18,8 @@ namespace Persistencia.Persistence
             Usuario tec = new Usuario("nada.d1995@gmail.com", "lucas1995", 2,123,2);
             Usuario pro = new Usuario("aqui.d1995@live.com", "lucas95", 1,222,3);
             Usuario alu = new Usuario("ali.d1995@hotmail.com", "lp1995lp", 3,333,4);
+
+            
 
             if (!listaUsuarios.Contains(adm) && !listaUsuarios.Contains(tec))
             {

@@ -31,7 +31,7 @@ namespace PortalOdonto.Controllers
                 if (ModelState.IsValid)
                 {
                     // Obtendo o usuário.
-                    //dadosLogin.Senha = Criptografia.GerarHashSenha(dadosLogin.Login + dadosLogin.Senha);
+                    dadosLogin.Senha = Criptografia.GerarHashSenha(dadosLogin.Login + dadosLogin.Senha);
                     Usuario usuario = gerenciador.ObterByLoginSenha(dadosLogin.Login, dadosLogin.Senha);
 
                     // Autenticando.
@@ -148,7 +148,7 @@ namespace PortalOdonto.Controllers
                     else
                     {
                         ModelState.AddModelError("", "Usuário sem Pré-cadastro.");
-                        return RedirectToAction("Login");   
+                        return View();   
                     }
                     
                 }
