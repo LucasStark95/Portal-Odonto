@@ -148,7 +148,7 @@ namespace PortalOdonto.Controllers
                     else
                     {
                         ModelState.AddModelError("", "Usuário sem Pré-cadastro.");
-                        return RedirectToAction("Login");   
+                        return View();   
                     }
                     
                 }
