@@ -38,30 +38,24 @@ namespace PortalOdonto.Controllers
                     if (usuario != null)
                     {
                         FormsAuthentication.SetAuthCookie(usuario.EmailUsuario, dadosLogin.LembrarMe);
-                        if (usuario.TipoUsuario == 0)
-                        {
-                            SessionHelper.Set(SessionKey.ADMINISTRADOR, usuario);
-                        }
-                        else
-                        {
-                            SessionHelper.Set(SessionKey.USUARIO, usuario);
-                        }
+                        SessionHelper.Set(SessionKey.USUARIO, usuario);
+                        
 
                         if (usuario.TipoUsuario == ((int)Model.Models.TipoUsuario.ALUNO))
                         {
-                            return RedirectToAction("IndexAluno");
+                            return RedirectToAction("Index","Aluno");
                         }
                         else if (usuario.TipoUsuario == ((int)Model.Models.TipoUsuario.PROFESSOR))
                         {
-                            return RedirectToAction("IndexProfessor");
+                            return RedirectToAction("Index","Professor");
                         }
                         else if (usuario.TipoUsuario == ((int)Model.Models.TipoUsuario.TECNICO))
                         {
-                            return RedirectToAction("IndexTecnico");
+                            return RedirectToAction("Index","Tecnico");
                         }
                         else
 
-                            return RedirectToAction("IndexAdmnistrador");
+                            return RedirectToAction("Index","Administrador");
 
                     }
                 }
@@ -76,6 +70,45 @@ namespace PortalOdonto.Controllers
         }
 
 
+        public ActionResult AlterarSenha()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AlterarSenha(FormCollection dadosLogin)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    dadosLogin["NovaSenha"] = Criptografia.GerarHashSenha(dadosLogin["email"] + dadosLogin["NovaSenha"]);
+
+                    if (gerenciador.BuscarUsuario(dadosLogin["email"], dadosLogin["mae"], int.Parse(dadosLogin["matricula"])))
+                    {
+                        Usuario auxiliar = gerenciador.ObterByMatricula(int.Parse(dadosLogin["matricula"]));
+                        auxiliar.SenhaUsuario = dadosLogin["NovaSenha"];
+                        gerenciador.Editar(auxiliar);
+                        return RedirectToAction("Login");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Usuário não Encontrado.");
+                    }
+
+                }
+            }
+            catch
+            {
+                ModelState.AddModelError("", "A autenticação falhou. Forneça informações válidas e tente novamente.");
+            }
+            // Se ocorrer algum erro, reexibe o formulário.
+            ModelState.AddModelError("", "Preencha todos os dados de Forma Correta.");
+            return View();
+        }
+
+
         [Authenticated]
         public ActionResult Logout()
         {
@@ -85,34 +118,6 @@ namespace PortalOdonto.Controllers
                 Session.Abandon();
             }
             return RedirectToAction("Index", "Home");
-        }
-
-        [Authenticated]
-        [CustomAuthorize(NivelAcesso = Util.TipoUsuario.ADMINISTRADOR, MetodoAcao = "Index", Controladora = "Administrador")]
-        public ActionResult IndexAdmnistrador()
-        {
-            return View();
-        }
-
-        [Authenticated]
-        [CustomAuthorize(NivelAcesso = Util.TipoUsuario.ALUNO, MetodoAcao = "Index", Controladora = "Aluno")]
-        public ActionResult IndexAluno()
-        {
-            return View();
-        }
-
-        [Authenticated]
-        [CustomAuthorize(NivelAcesso = Util.TipoUsuario.TECNICO, MetodoAcao = "Index", Controladora = "Tecnico")]
-        public ActionResult IndexTecnico()
-        {
-            return View();
-        }
-
-        [Authenticated]
-        [CustomAuthorize(NivelAcesso = Util.TipoUsuario.PROFESSOR, MetodoAcao = "Index", Controladora = "Profesor")]
-        public ActionResult IndexProfesor()
-        {
-            return View();
         }
 
         public ActionResult Cadastrar()
@@ -143,7 +148,7 @@ namespace PortalOdonto.Controllers
                     else
                     {
                         ModelState.AddModelError("", "Usuário sem Pré-cadastro.");
-                        return RedirectToAction("Login");   
+                        return View();   
                     }
                     
                 }

@@ -34,19 +34,29 @@
             </div>
 
             <div class="form-group">
-                
                 @Html.LabelFor(model => model.LembrarMe, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <div class="checkbox">
                         @Html.CheckBoxFor(model => model.LembrarMe)
                         @Html.ValidationMessageFor(model => model.LembrarMe, "", new { @class = "text-danger" })
                     </div>
                 </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-2"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-2"></div>
                 <div class="col-md-2">
                     @Html.ActionLink("Cadastre-se", "Cadastrar", "Usuario")
                 </div>
-                <div class="col-md-6"></div>
+                <div class="col-md-4">
+                    @Html.ActionLink("Esqueceu a senha?", "AlterarSenha", "Usuario");
+                </div>
+                <div class="col-md-2"></div>
             </div>
+            
+
 
             <div class="form-group">
                 <div class="col-md-3"></div>
@@ -54,7 +64,7 @@
                     <input type="submit" value="Acessar" class="btn btn-default" />
                 </div>
                 <div class="col-md-2">
-                    @Html.ActionLink("Voltar", "Index", "Home", new { @class = "btn btn-default" })
+                    @Html.ActionLink("Voltar", "Index", new { controller = "Home" }, new { @class = "btn btn-default" })
                 </div>
                 <div class="col-md-3"></div>
                 

@@ -6,7 +6,8 @@ using PortalOdonto.Util;
 
 namespace PortalOdonto.Controllers
 {
-    
+    [Authenticated]
+    [CustomAuthorize(NivelAcesso = Util.TipoUsuario.TECNICO)]
     public class TecnicoController : Controller
     {
         private GerenciadorTriagem triagem;
@@ -19,8 +20,9 @@ namespace PortalOdonto.Controllers
             paciente = new GerenciadorPaciente();
             consulta = new GerenciadorConsulta();
         }
-        
+
         // GET: Tecnico
+        
         public ActionResult Index()
         {
             return View();
@@ -29,13 +31,13 @@ namespace PortalOdonto.Controllers
 
         // ============================ Triagem =========================================== //
 
-        // GET: Tecnico/CadastroTriagem
+       
         public ActionResult CadastrarTriagem()
         {
             return View();
         }
 
-        // POST: Tecnico/CadastroTriagem
+        
         [HttpPost]
         public ActionResult CadastrarTriagem(Triagem tria)
         {
@@ -56,14 +58,13 @@ namespace PortalOdonto.Controllers
 
 
         // ============================ Paciente =========================================== //
-
-        // GET: Tecnico/CadastroPaciente
+        
         public ActionResult CadastrarPaciente()
         {
             return View();
         }
 
-        // POST: Tecnico/CadastroPaciente
+       
         [HttpPost]
         public ActionResult CadastrarPaciente(Paciente pac)
         {
@@ -87,7 +88,7 @@ namespace PortalOdonto.Controllers
             return View();
         }
 
-        //Visualizar Paciente
+       
         public ActionResult VisualizarPaciente(int? id)
         {
             if (id.HasValue)
@@ -99,15 +100,19 @@ namespace PortalOdonto.Controllers
             }
             return RedirectToAction("index");
         }
-        
+
 
         // ============================ Consulta =========================================== //
+
+        
         public ActionResult CadastrarConsulta()
         {
             return View();
         }
 
         // POST: Tecnico/CadastroPaciente
+
+        
         [HttpPost]
         public ActionResult CadastrarConsulta(Consulta_M con)
         {
@@ -126,13 +131,16 @@ namespace PortalOdonto.Controllers
             return View();
         }
 
-        //Visualizar Consulta
+        
+
+        
         public ActionResult VisualizarConsulta(int id)
         {
             return View();
         }
 
-        //Visualizar Consultas
+
+        
         public ActionResult VisualizarConsultas()
         {
             return View();

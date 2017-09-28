@@ -1,8 +1,5 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Persistencia.Persistence;
 using Model.Models;
 
@@ -72,6 +69,20 @@ namespace Negocio.Business
                 return false;
             }
             
+        }
+
+        public bool BuscarUsuario(string email, string mae, int matricula)
+        {
+            if (usuarioPersistencia.Obter(e => e.EmailUsuario.ToLowerInvariant().Equals(email.ToLowerInvariant()) &&
+                 (e.MatriculaUsuario == matricula) && e.NomeMae.ToLowerInvariant().Equals(mae.ToLowerInvariant())) != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         public List<Usuario> ObterTodos()

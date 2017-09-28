@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Model.Models;
 
 namespace Persistencia.Persistence
@@ -16,9 +14,9 @@ namespace Persistencia.Persistence
             listaUsuarios = new List<Usuario>();
 
             Usuario adm = new Usuario("lucas.d1995@gmail.com", "lp1995lp", 0,0,1);
-            Usuario tec = new Usuario("lucas.d1995@gmail.com", "lucas1995", 2,123,2);
-            Usuario pro = new Usuario("lucas.d1995@live.com", "lucas95", 1,222,3);
-            Usuario alu = new Usuario("lucas.d1995@hotmail.com", "lp1995lp", 3,333,4);
+            Usuario tec = new Usuario("nada.d1995@gmail.com", "lucas1995", 2,123,2);
+            Usuario pro = new Usuario("aqui.d1995@live.com", "lucas95", 1,222,3);
+            Usuario alu = new Usuario("ali.d1995@hotmail.com", "lp1995lp", 3,333,4);
 
             if (!listaUsuarios.Contains(adm) && !listaUsuarios.Contains(tec))
             {
@@ -64,14 +62,6 @@ namespace Persistencia.Persistence
         public List<Usuario> ObterTodos()
         {
             return listaUsuarios;
-        }
-
-        public bool BuscarMatricula(int? matricula, string email)
-        {
-            if (listaUsuarios.Find(e => e.EmailUsuario == email && e.MatriculaUsuario == matricula) == null)
-                return true;
-            else
-                return false;
         }
 
         public bool BuscarMatricula(Func<Usuario, bool> where)
