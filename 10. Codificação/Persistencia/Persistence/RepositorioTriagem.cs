@@ -35,13 +35,14 @@ namespace Persistencia.Persistence
 
         public void Editar(Triagem triagem)
         {
-            try {
+           // try {               
                 int posicao = listaTriagens.FindIndex(e => e.IdTriagem == triagem.IdTriagem);
                 listaTriagens[posicao] = triagem;
-            }
-            catch (Exception e)
-            { throw new PersistenciaException("Não foi possivél completar a ação", e);
-            }
+           // }
+           // catch (Exception e)
+           // {
+             //   throw new PersistenciaException("Não foi possivél completar a ação", e);
+          //  }
             
         }
 

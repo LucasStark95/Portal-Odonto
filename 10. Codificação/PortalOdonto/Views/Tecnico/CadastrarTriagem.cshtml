@@ -61,7 +61,7 @@
 
                 @Html.LabelFor(model => model.Paciente.Sexo, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-3">
-                    @Html.EditorFor(model => model.Paciente.Sexo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.DropDownListFor(model => model.Paciente.Sexo, (SelectList)ViewBag.Sexo, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Paciente.Sexo, "", new { @class = "text-danger" })
                 </div>
                 @Html.LabelFor(model => model.Paciente.Naturalidade, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -89,7 +89,8 @@
 
                 @Html.LabelFor(model => model.Paciente.EstadoCivil, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-3">
-                    @Html.EditorFor(model => model.Paciente.EstadoCivil, new { htmlAttributes = new { @class = "form-control" } })
+                    <!--Verificar se esta setanto-->
+                    @Html.DropDownListFor(model => model.Paciente.EstadoCivil, (SelectList)ViewBag.EstadoCivil,new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Paciente.EstadoCivil, "", new { @class = "text-danger" })
                 </div>
                 @Html.LabelFor(model => model.Paciente.Raca, htmlAttributes: new { @class = "control-label col-md-2" })

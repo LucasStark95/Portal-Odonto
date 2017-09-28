@@ -1,12 +1,12 @@
-
-
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Model.Models
 {
     public class Paciente
     {
-
+        public List<string> tipoSexo = new List<string>();
+        public List<string> tipoEstadoCivil = new List<string>();
         private string nomePaciente;
         private string enderecoPaciente;
         private string cpfPaciente;
@@ -37,6 +37,15 @@ namespace Model.Models
 
         public Paciente()
         {
+            this.tipoSexo = new List<string>();
+            this.tipoEstadoCivil = new List<string>();
+            tipoSexo.Add("Feminino");
+            tipoSexo.Add("Masculino");
+
+            tipoEstadoCivil.Add("Casado(a)");
+            tipoEstadoCivil.Add("Solteiro(a)");
+            tipoEstadoCivil.Add("Divorciado(a)");
+            tipoEstadoCivil.Add("Viúvo(a)");
         }
 
         [Required (ErrorMessage = "Campo Obrigatório")]

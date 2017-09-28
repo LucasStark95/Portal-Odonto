@@ -55,7 +55,6 @@
     <Compile Include="Models\Professor.cs" />
     <Compile Include="Models\Prontuario.cs" />
     <Compile Include="Models\Tecnico.cs" />
-    <Compile Include="Models\Tipos.cs" />
     <Compile Include="Models\Triagem.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -37,7 +37,9 @@ namespace PortalOdonto.Controllers
         // GET: Tecnico/CadastroTriagem
         public ActionResult CadastrarTriagem()
         {
-            //ViewBag.Sexo = new SelectList(, "");
+            Paciente p = new Paciente();
+           ViewBag.Sexo = new SelectList(p.tipoSexo);
+           ViewBag.EstadoCivil = new SelectList(p.tipoEstadoCivil);
             return View();
         }
 
