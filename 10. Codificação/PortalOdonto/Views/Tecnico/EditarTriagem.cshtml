@@ -1,12 +1,12 @@
 ﻿@model Model.Models.Triagem
 
 @{
-    ViewBag.Title = "CadastrarTriagem";
+    ViewBag.Title = "EditarTriagem";
 }
 
-<h2>CadastrarTriagem2</h2>
+<h2>EditarTriagem</h2>
 
-@using (Html.BeginForm("CadastrarTriagem", "Tecnico", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
@@ -52,17 +52,17 @@
                     @Html.EditorFor(model => model.Paciente.ResponsavelPaciente, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Paciente.ResponsavelPaciente, "", new { @class = "text-danger" })
                 </div>
-                @Html.LabelFor(model => model.Paciente.Dt_nascimentoPaciente,htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.LabelFor(model => model.Paciente.Dt_nascimentoPaciente, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-3">
-                    @Html.EditorFor(model => model.Paciente.Dt_nascimentoPaciente, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Paciente.Dt_nascimentoPaciente, "", new { @class = "text-danger" })
+                    @Html.TextBoxFor(model => model.Paciente.Dt_nascimentoPaciente, new { @Value = Model.Paciente.Dt_nascimentoPaciente.ToString("dd/MM/yyyy"), @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Paciente.Dt_nascimentoPaciente)
                 </div>
                 <div class="col-md-2"></div>
             </div>
             <div class="form-group">
+
                 @Html.LabelFor(model => model.Paciente.Sexo, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-3">
-                    <!--Verificar se está setando (SelectList)ViewBag.Sexo-->
                     @Html.EditorFor(model => model.Paciente.Sexo, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Paciente.Sexo, "", new { @class = "text-danger" })
                 </div>
@@ -91,7 +91,6 @@
 
                 @Html.LabelFor(model => model.Paciente.EstadoCivil, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-3">
-                    <!--Verificar se esta setanto (SelectList)ViewBag.EstadoCivil-->
                     @Html.EditorFor(model => model.Paciente.EstadoCivil, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.Paciente.EstadoCivil, "", new { @class = "text-danger" })
                 </div>
@@ -200,11 +199,11 @@
         </fieldset>
         <fieldset>
             <legend>Triagem</legend>
-            <div class="form-group">               
+            <div class="form-group">
                 @Html.LabelFor(model => model.DataTriagem, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-8">
-                    @Html.EditorFor(model => model.DataTriagem, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.DataTriagem, "", new { @class = "text-danger" })
+                    @Html.TextBoxFor(model => model.DataTriagem, new {@Value = Model.DataTriagem.ToString("dd/MM/yyyy"), @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.DataTriagem)
                 </div>
                 <div class="col-md-4"></div>
             </div>
@@ -397,7 +396,6 @@
         </div>
     </div>
 }
-
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar", "Index")
 </div>

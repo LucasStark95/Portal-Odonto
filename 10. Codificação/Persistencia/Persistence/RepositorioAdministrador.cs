@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Model.Models;
+using Model.Models.Exceptions;
+
 
 namespace Persistencia.Persistence
 {
@@ -18,31 +18,70 @@ namespace Persistencia.Persistence
 
         public Administrador Adicionar(Administrador administrador)
         {
-            administrador.IdAdministrador = listaAdministradores.Count + 1;
-            listaAdministradores.Add(administrador);
-            return administrador;
+            try {
+                administrador.IdAdministrador = listaAdministradores.Count + 1;
+                listaAdministradores.Add(administrador);
+                return administrador;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public void Editar(Administrador administrador)
         {
-            int posicao = listaAdministradores.FindIndex(e => e.IdAdministrador == administrador.IdAdministrador);
-            listaAdministradores[posicao] = administrador;
+            try
+            {
+                int posicao = listaAdministradores.FindIndex(e => e.IdAdministrador == administrador.IdAdministrador);
+                listaAdministradores[posicao] = administrador;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public void Remover(Administrador administrador)
         {
-            int posicao = listaAdministradores.FindIndex(e => e.IdAdministrador == administrador.IdAdministrador);
-            listaAdministradores.RemoveAt(posicao);
+            try
+            {
+                int posicao = listaAdministradores.FindIndex(e => e.IdAdministrador == administrador.IdAdministrador);
+                listaAdministradores.RemoveAt(posicao);
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public Administrador Obter(Func<Administrador, bool> where)
         {
-            return listaAdministradores.Where(where).FirstOrDefault();
+            try
+            {
+                return listaAdministradores.Where(where).FirstOrDefault();
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public List<Administrador> ObterTodos()
         {
-            return listaAdministradores;
+            try
+            {
+                return listaAdministradores;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+           
         }
     }
 }

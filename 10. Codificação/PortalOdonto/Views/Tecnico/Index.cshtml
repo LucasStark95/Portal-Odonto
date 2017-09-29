@@ -2,24 +2,28 @@
     <div>
         <h2>Tecnico</h2>
     </div>
-    <div class="container">
+    <div class="container">    
         <div class="col-md-3">
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">Matricula</span>
                 <input type="text" class="form-control" placeholder="Buscar" aria-label="Seacher" aria-describedby="basic-addon1">
             </div>
             <br />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-        </div>
-        <div class="col-md-9">
-            <div class="bs-example">
-                <ul class="nav nav-tabs">
-                    <li role="presentation" class="active"><a href="@Url.Action("CadastrarPaciente")">Cadastrar Paciente</a></li>
-                    <li role="presentation" class="active"><a href="@Url.Action("CadastrarTriagem")">Cadastrar Triagem</a></li>
-                    <li role="presentation" ><a href="@Url.Action("ListarPacientes")">Pacientes</a></li>
-                </ul>
+            <div class="col-md-2">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                <br/>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="@Url.Action("EditarPerfil")">Editar Perfil</a></button>
             </div>
-           <br>           
+        </div>
+        <div class="col-md-7">
+            <div class="bs-example">
+                <ul class="nav nav-tabs">                    
+                    <li role="presentation" class="active"><a href="@Url.Action("CadastrarTriagem")">Cadastrar Triagem</a></li>
+                    <li role="presentation"><a href="@Url.Action("ListarPacientes")">Pacientes</a></li>
+                </ul>
+                josefina
+            </div>
+            <br>
         </div>
     </div>
 </div>

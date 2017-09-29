@@ -9,21 +9,35 @@ using Model.Models.Exceptions;
 
 namespace Persistencia.Persistence
 {
-    public class RepositorioPaciente
+    public class RepositorioTecnico
     {
-        private static List<Paciente> listaPacientes;
+        private static List<Tecnico> listaTecnicos;
 
-        static RepositorioPaciente()
+        static RepositorioTecnico()
         {
-            listaPacientes = new List<Paciente>();
+            listaTecnicos = new List<Tecnico>();
         }
 
-        public Paciente Adicionar(Paciente paciente)
+        public Tecnico Adicionar(Tecnico tecnico)
+        {
+            try
+            {
+                tecnico.IdTecnico = listaTecnicos.Count + 1;
+                listaTecnicos.Add(tecnico);
+                return tecnico;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+           
+        }
+
+        public void Editar(Tecnico tecnico)
         {
             try {
-                paciente.IdPaciente = listaPacientes.Count + 1;
-                listaPacientes.Add(paciente);
-                return paciente;
+                int posicao = listaTecnicos.FindIndex(e => e.IdTecnico == tecnico.IdTecnico);
+                listaTecnicos[posicao] = tecnico;
             }
             catch (Exception e)
             {
@@ -32,12 +46,12 @@ namespace Persistencia.Persistence
             
         }
 
-        public void Editar(Paciente paciente)
+        public void Remover(Tecnico tecnico)
         {
             try
             {
-                int posicao = listaPacientes.FindIndex(e => e.IdPaciente == paciente.IdPaciente);
-                listaPacientes[posicao] = paciente;
+                int posicao = listaTecnicos.FindIndex(e => e.IdTecnico == tecnico.IdTecnico);
+                listaTecnicos.RemoveAt(posicao);
             }
             catch (Exception e)
             {
@@ -46,25 +60,11 @@ namespace Persistencia.Persistence
            
         }
 
-        public void Remover(Paciente paciente)
+        public Tecnico Obter(Func<Tecnico, bool> where)
         {
             try
             {
-                int posicao = listaPacientes.FindIndex(e => e.IdPaciente == paciente.IdPaciente);
-                listaPacientes.RemoveAt(posicao);
-            }
-            catch (Exception e)
-            {
-                throw new PersistenciaException("Não foi possivél completar a ação", e);
-            }
-           
-        }
-
-        public Paciente Obter(Func<Paciente, bool> where)
-        {
-            try
-            {
-                return listaPacientes.Where(where).FirstOrDefault();
+                return listaTecnicos.Where(where).FirstOrDefault();
             }
             catch (Exception e)
             {
@@ -73,11 +73,11 @@ namespace Persistencia.Persistence
             
         }
 
-        public List<Paciente> ObterTodos()
+        public List<Tecnico> ObterTodos()
         {
             try
             {
-                return listaPacientes;
+                return listaTecnicos;
             }
             catch (Exception e)
             {
@@ -85,7 +85,5 @@ namespace Persistencia.Persistence
             }
             
         }
-
     }
 }
-

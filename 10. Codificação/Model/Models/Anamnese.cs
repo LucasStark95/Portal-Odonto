@@ -24,7 +24,7 @@ namespace Model.Models
             set { idAnamnese = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display (Name = "Codigo Pergunta")]
         public int CodPergunta
         {
@@ -32,7 +32,7 @@ namespace Model.Models
             set { cod_pergunta = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display (Name = "Resposta")]
         public string RespostaPergunta
         {
@@ -40,7 +40,7 @@ namespace Model.Models
             set { respostaPergunta = value; }
         }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display (Name = "Conclusão")]
         public string Conclusao
         {

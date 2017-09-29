@@ -9,8 +9,7 @@ namespace Model.Models
 
         private int idPaciente;
         private DateTime dataTriagem;
-        private string motivoConsulta;
-        private string nomePaciente;
+        private string motivoConsulta;   
         private bool procedimento;
         private bool radiologia;
         private bool periapical;
@@ -34,50 +33,43 @@ namespace Model.Models
         private bool protesePpr;
         private bool proteseFixa;
         private int idTriagem;
+        private Paciente paciente;
 
         public Triagem()
         {
         }
-
-        [Required]
+                
         [Display(Name = "ID do Paciente")]
         public int IdPaciente
         {
             get { return idPaciente; }
             set { idPaciente = value; }
         }
-
-        [Required]
+                
         [Display(Name = "ID da Triagem ")]
         public int IdTriagem
         {
             get { return idTriagem; }
             set { idTriagem = value; }
         }
-        [Required]
+
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [DataType(DataType.Date)]
-        [Display(Name = "Data")]       
+        [Display(Name = "Data da Triagem")]   
+        [DisplayFormat(DataFormatString ="{0:dd/MM/yyyy}")]
         public DateTime DataTriagem
         {
             get { return dataTriagem; }
             set { dataTriagem = value; }
         }
-        [Required]
+
+        [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "Motivo da Consulta")]
         [StringLength(200, MinimumLength = 0)]
         public string MotivoConsulta
         {
             get { return motivoConsulta; }
             set { motivoConsulta = value; }
-        }
-
-        [Required]
-        [Display(Name = "Nome do Paciente")]
-        [StringLength(50, MinimumLength = 0)]
-        public string NomePaciente
-        {
-            get { return nomePaciente; }
-            set { nomePaciente = value; }
         }
 
         [Display(Name = "Procedimento")]        
@@ -232,6 +224,12 @@ namespace Model.Models
         {
             get { return proteseFixa; }
             set { proteseFixa = value; }
+        }
+
+        public Paciente Paciente
+        {
+            get { return paciente; }
+            set { paciente = value; }
         }
     }
 }

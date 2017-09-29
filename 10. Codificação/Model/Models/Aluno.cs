@@ -13,8 +13,8 @@ namespace Model.Models
         {
         }
 
-       [Required]
-       [Display (Name = "Ciclo")]
+        [Required(ErrorMessage = "Campo Obrigatório")]
+        [Display (Name = "Ciclo")]
         public int Ciclo
         {
             get { return ciclo; }

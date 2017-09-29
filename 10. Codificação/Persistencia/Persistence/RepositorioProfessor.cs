@@ -9,21 +9,21 @@ using Model.Models.Exceptions;
 
 namespace Persistencia.Persistence
 {
-    public class RepositorioPaciente
+    public class RepositorioProfessor
     {
-        private static List<Paciente> listaPacientes;
+        private static List<Professor> listaProfessores;
 
-        static RepositorioPaciente()
+        static RepositorioProfessor()
         {
-            listaPacientes = new List<Paciente>();
+            listaProfessores = new List<Professor>();
         }
 
-        public Paciente Adicionar(Paciente paciente)
+        public Professor Adicionar(Professor professor)
         {
             try {
-                paciente.IdPaciente = listaPacientes.Count + 1;
-                listaPacientes.Add(paciente);
-                return paciente;
+                professor.MatriculaUsuario = listaProfessores.Count + 1;
+                listaProfessores.Add(professor);
+                return professor;
             }
             catch (Exception e)
             {
@@ -32,12 +32,12 @@ namespace Persistencia.Persistence
             
         }
 
-        public void Editar(Paciente paciente)
+        public void Editar(Professor professor)
         {
             try
             {
-                int posicao = listaPacientes.FindIndex(e => e.IdPaciente == paciente.IdPaciente);
-                listaPacientes[posicao] = paciente;
+                int posicao = listaProfessores.FindIndex(e => e.MatriculaUsuario == professor.MatriculaUsuario);
+                listaProfessores[posicao] = professor;
             }
             catch (Exception e)
             {
@@ -46,12 +46,37 @@ namespace Persistencia.Persistence
            
         }
 
-        public void Remover(Paciente paciente)
+        public void Remover(Professor professor)
+        {
+            try {
+                int posicao = listaProfessores.FindIndex(e => e.MatriculaUsuario == professor.MatriculaUsuario);
+                listaProfessores.RemoveAt(posicao);
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
+        }
+
+        public Professor Obter(Func<Professor, bool> where)
         {
             try
             {
-                int posicao = listaPacientes.FindIndex(e => e.IdPaciente == paciente.IdPaciente);
-                listaPacientes.RemoveAt(posicao);
+                return listaProfessores.Where(where).FirstOrDefault();
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
+        }
+
+        public List<Professor> ObterTodos()
+        {
+            try
+            {
+                return listaProfessores;
             }
             catch (Exception e)
             {
@@ -59,33 +84,5 @@ namespace Persistencia.Persistence
             }
            
         }
-
-        public Paciente Obter(Func<Paciente, bool> where)
-        {
-            try
-            {
-                return listaPacientes.Where(where).FirstOrDefault();
-            }
-            catch (Exception e)
-            {
-                throw new PersistenciaException("Não foi possivél completar a ação", e);
-            }
-            
-        }
-
-        public List<Paciente> ObterTodos()
-        {
-            try
-            {
-                return listaPacientes;
-            }
-            catch (Exception e)
-            {
-                throw new PersistenciaException("Não foi possivél completar a ação", e);
-            }
-            
-        }
-
     }
 }
-

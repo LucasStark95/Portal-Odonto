@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Persistencia.Persistence;
 using Model.Models;
+using Model.Models.Exceptions;
 
 
 namespace Negocio.Business
@@ -17,18 +18,42 @@ namespace Negocio.Business
 
         public Usuario Adicionar(Usuario usuario)
         {
-            usuarioPersistencia.Adicionar(usuario);
-            return usuario;
+            try
+            {
+                usuarioPersistencia.Adicionar(usuario);
+                return usuario;
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
 
         public void Editar(Usuario usuario)
         {
-            usuarioPersistencia.Editar(usuario);
+            try
+            {
+                usuarioPersistencia.Editar(usuario);
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
 
         public void Remover(Usuario usuario)
         {
-            usuarioPersistencia.Remover(usuario);
+            try
+            {
+                usuarioPersistencia.Remover(usuario);
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
 
         public Usuario ObterByLoginSenha(string login, string senha)
@@ -39,7 +64,15 @@ namespace Negocio.Business
 
         public Usuario Obter(int? id)
         {
-            return usuarioPersistencia.Obter(e => e.IdUsuario == id);
+            try
+            {
+                return usuarioPersistencia.Obter(e => e.IdUsuario == id);
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
 
         public Usuario ObterByMatricula(int? matricula)
@@ -49,7 +82,15 @@ namespace Negocio.Business
 
         public List<Usuario> Buscar(int? matricula)
         {
-            return usuarioPersistencia.Buscar(e => e.MatriculaUsuario == matricula);
+            try
+            {
+                return usuarioPersistencia.Buscar(e => e.MatriculaUsuario == matricula);
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
 
         public bool BuscarMatricula(int? matricula)
@@ -87,7 +128,15 @@ namespace Negocio.Business
 
         public List<Usuario> ObterTodos()
         {
-            return usuarioPersistencia.ObterTodos();
+            try
+            {
+                return usuarioPersistencia.ObterTodos();
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
     }
 }

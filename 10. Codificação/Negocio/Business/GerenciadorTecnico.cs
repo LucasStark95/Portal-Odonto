@@ -1,26 +1,26 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Model.Models;
 using Persistencia.Persistence;
 using Model.Models.Exceptions;
-using System;
 
 namespace Negocio.Business
 {
-    public class GerenciadorAnamnese
+    public class GerenciadorTecnico
     {
-        private RepositorioAnamnese anaPersistencia;
+        private RepositorioTecnico tecPersistencia;
 
-        public GerenciadorAnamnese()
+        public GerenciadorTecnico()
         {
-            anaPersistencia = new RepositorioAnamnese();
+            tecPersistencia = new RepositorioTecnico();
         }
 
-        public Anamnese Adicionar(Anamnese anamnese)
+        public Tecnico Adicionar(Tecnico tecnico)
         {
             try
             {
-                anaPersistencia.Adicionar(anamnese);
-                return anamnese;
+                tecPersistencia.Adicionar(tecnico);
+                return tecnico;
             }
             catch (PersistenciaException e)
             {
@@ -29,11 +29,11 @@ namespace Negocio.Business
 
         }
 
-        public void Editar(Anamnese anamnese)
+        public void Editar(Tecnico tecnico)
         {
             try
             {
-                anaPersistencia.Editar(anamnese);
+                tecPersistencia.Editar(tecnico);
             }
             catch (PersistenciaException e)
             {
@@ -42,11 +42,11 @@ namespace Negocio.Business
 
         }
 
-        public void Remover(Anamnese anamnese)
+        public void Remover(Tecnico tecnico)
         {
             try
             {
-                anaPersistencia.Remover(anamnese);
+                tecPersistencia.Remover(tecnico);
             }
             catch (PersistenciaException e)
             {
@@ -55,11 +55,11 @@ namespace Negocio.Business
 
         }
 
-        public Anamnese Obter(int id)
+        public Tecnico Obter(int? id)
         {
             try
             {
-                return anaPersistencia.Obter(e => e.IdAnamnese == id);
+                return tecPersistencia.Obter(e => e.IdTecnico == id);
             }
             catch (PersistenciaException e)
             {
@@ -68,11 +68,11 @@ namespace Negocio.Business
 
         }
 
-        public List<Anamnese> ObterTodos()
+        public List<Tecnico> ObterTodos()
         {
             try
             {
-                return anaPersistencia.ObterTodos();
+                return tecPersistencia.ObterTodos();
             }
             catch (PersistenciaException e)
             {
