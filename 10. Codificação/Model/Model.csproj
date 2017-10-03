@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Execptions\AplicacaoException.cs" />
-    <Compile Include="Execptions\ControllerException.cs" />
-    <Compile Include="Execptions\ModelException.cs" />
-    <Compile Include="Execptions\NegocioException.cs" />
-    <Compile Include="Execptions\PersistenceException.cs" />
+    <Compile Include="Models\Execptions\AplicacaoException.cs" />
+    <Compile Include="Models\Execptions\ControllerException.cs" />
+    <Compile Include="Models\Execptions\ModelException.cs" />
+    <Compile Include="Models\Execptions\NegocioException.cs" />
+    <Compile Include="Models\Execptions\PersistenceException.cs" />
     <Compile Include="Models\Administrador.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\Anamnese.cs" />
