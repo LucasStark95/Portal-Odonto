@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using Model.Models;
 using Negocio.Business;
+
 using PortalOdonto.Util;
-namespace PortalOdonto.Controllers
+=========using Model.Models.Exceptions;
+>>>>>>>>> Temporary merge branch 2namespace PortalOdonto.Controllers
 {
 
     [Authenticated]
@@ -13,7 +15,8 @@ namespace PortalOdonto.Controllers
     {
         
         private GerenciadorUsuario usuarioGerenciador;
-        // GET: Usuario
+        
+
         public AdministradorController()
         {           
             usuarioGerenciador = new GerenciadorUsuario();
@@ -71,9 +74,9 @@ namespace PortalOdonto.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            catch
+
             {
-                //implementar uma menssagem de erro
+
             }
             return View();
         }
@@ -98,9 +101,9 @@ namespace PortalOdonto.Controllers
                 return RedirectToAction("Index");
                 
             }
-            catch
+            
             {
-                //TODO
+                //
             }
             return RedirectToAction("Index");
         }
@@ -126,7 +129,7 @@ namespace PortalOdonto.Controllers
                 usuarioGerenciador.Remover(usuarioGerenciador.Obter(id));
                 return RedirectToAction("Index");
             }
-            catch
+            
             {
                 
             }

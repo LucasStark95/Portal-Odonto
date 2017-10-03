@@ -3,10 +3,12 @@ using System;
 using System.ComponentModel.DataAnnotations;
 
 
+
 namespace Model.Models
 {
-    
-    public enum TipoUsuario {ADMINISTRADOR, PROFESSOR, TECNICO, ALUNO }
+
+    public enum TipoUsuario { ADMINISTRADOR, PROFESSOR, TECNICO, ALUNO }
+
 
     public class Usuario
     {
@@ -59,7 +61,8 @@ namespace Model.Models
             set { idUsuario = value; }
         }
 
-      
+        [StringLength(200, MinimumLength = 5)]
+        [Display(Name = "Endereço")]
         public string Endereco
         {
             get { return endereco; }
@@ -101,7 +104,7 @@ namespace Model.Models
         [Required(ErrorMessage = "Campo Obrigatório")]
         [StringLength(60, MinimumLength = 10)]
         [RegularExpression(@"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]
-        
+        [DataType(DataType.EmailAddress)]
         [Display(Name = "Email")]
         public string EmailUsuario
         {
@@ -112,7 +115,7 @@ namespace Model.Models
         [Required]
         [StringLength(20, MinimumLength = 8)]
         [DataType(DataType.Password)]
-        
+        [Display(Name = "Senha")]
         public string SenhaUsuario
         {
             get { return senhaUsuario; }
