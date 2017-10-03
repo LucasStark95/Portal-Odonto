@@ -5,11 +5,10 @@ namespace Model.Models
 {
     public class Aluno : Usuario
     {
-#region atributos 
 
         private int ciclo;
         private int idAluno;
-#endregion
+
         public Aluno()
         {
         }
@@ -29,7 +28,5 @@ namespace Model.Models
             get { return idAluno; }
             set { idAluno = value; }
         }
-
-
     }
 }

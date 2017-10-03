@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
 using Persistencia.Persistence;
 using Model.Models;
@@ -56,6 +56,11 @@ namespace Negocio.Business
 
         }
 
+        public Usuario ObterByLoginSenha(string login, string senha)
+        {
+            return usuarioPersistencia.Obter(e => e.EmailUsuario.ToLowerInvariant().Equals(login.ToLowerInvariant()) &&
+                e.SenhaUsuario.ToLowerInvariant().Equals(senha.ToLowerInvariant()));
+        }
 
         public Usuario Obter(int? id)
         {
@@ -70,6 +75,11 @@ namespace Negocio.Business
 
         }
 
+        public Usuario ObterByMatricula(int? matricula)
+        {
+            return usuarioPersistencia.Obter(e => e.MatriculaUsuario == matricula);
+        }
+
         public List<Usuario> Buscar(int? matricula)
         {
             try
@@ -79,6 +89,39 @@ namespace Negocio.Business
             catch (PersistenciaException e)
             {
                 throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
+        }
+
+        public bool BuscarMatricula(int? matricula)
+        {
+            return usuarioPersistencia.BuscarMatricula(e => e.MatriculaUsuario == matricula);
+        }
+
+        public bool BuscarPreCadastro(int? matricula, string email)
+        {
+            if(usuarioPersistencia.Obter(e => e.EmailUsuario.ToLowerInvariant().Equals(email.ToLowerInvariant()) &&
+                e.MatriculaUsuario == matricula) != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+
+        public bool BuscarUsuario(string email, string mae, int matricula)
+        {
+            if (usuarioPersistencia.Obter(e => e.EmailUsuario.ToLowerInvariant().Equals(email.ToLowerInvariant()) &&
+                 (e.MatriculaUsuario == matricula) && e.NomeMae.ToLowerInvariant().Equals(mae.ToLowerInvariant())) != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
 
         }

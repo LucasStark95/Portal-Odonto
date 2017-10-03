@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Model.Models;
 using Model.Models.Exceptions;
 
@@ -15,6 +13,20 @@ namespace Persistencia.Persistence
         static RepositorioUsuario()
         {
             listaUsuarios = new List<Usuario>();
+
+            Usuario adm = new Usuario("lucas.d1995@gmail.com", "lp1995lp", 0,0,1);
+            Usuario tec = new Usuario("nada.d1995@gmail.com", "lucas1995", 2,123,2);
+            Usuario pro = new Usuario("aqui.d1995@live.com", "lucas95", 1,222,3);
+            Usuario alu = new Usuario("ali.d1995@hotmail.com", "lp1995lp", 3,333,4);
+
+            if (!listaUsuarios.Contains(adm) && !listaUsuarios.Contains(tec))
+            {
+                listaUsuarios.Add(adm);
+                listaUsuarios.Add(tec);
+                listaUsuarios.Add(pro);
+                listaUsuarios.Add(alu);
+            }
+                
         }
 
         public Usuario Adicionar(Usuario usuario)
@@ -44,7 +56,12 @@ namespace Persistencia.Persistence
                 throw new PersistenciaException("Não foi possivél completar a ação", e);
             }
 
+            int posicao = listaUsuarios.FindIndex(e => e.IdUsuario == usuario.IdUsuario);
+            usuario.TipoUsuario = listaUsuarios[posicao].TipoUsuario;
+            listaUsuarios[posicao] = usuario;
+
         }
+
 
         public void Remover(Usuario usuario)
         {
@@ -97,6 +114,14 @@ namespace Persistencia.Persistence
                 throw new PersistenciaException("Não foi possivél completar a ação", e);
             }
 
+        }
+
+        public bool BuscarMatricula(Func<Usuario, bool> where)
+        {
+            if (listaUsuarios.Where(where).FirstOrDefault() == null)
+                return false;
+            else
+                return true;
         }
     }
 }

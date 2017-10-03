@@ -5,27 +5,36 @@ using Negocio.Business;
 using Model.Models.Exceptions;
 using System;
 using System.Collections.Generic;
+using PortalOdonto.Util;
+
 
 namespace PortalOdonto.Controllers
 {
+    [Authenticated]
+    [CustomAuthorize(NivelAcesso = Util.TipoUsuario.TECNICO, MetodoAcao = "Login", Controladora = "Usuario")]
     public class TecnicoController : Controller
     {
+
         private GerenciadorTriagem triagemGerenciador;
         private GerenciadorTecnico tecnicoGerenciador;
+        private GerenciadorTriagem triagem;
         private GerenciadorPaciente paciente;
         private GerenciadorConsulta consulta;     
 
 
         public TecnicoController()
         {
+
             tecnicoGerenciador = new GerenciadorTecnico();
             triagemGerenciador = new GerenciadorTriagem();
+            triagem = new GerenciadorTriagem();
             paciente = new GerenciadorPaciente();
             consulta = new GerenciadorConsulta();
 
         }
 
         // GET: Tecnico
+        
         public ActionResult Index()
         {
             return View();
@@ -34,16 +43,16 @@ namespace PortalOdonto.Controllers
 
         // ============================ Triagem =========================================== //
 
-        // GET: Tecnico/CadastroTriagem
+       
         public ActionResult CadastrarTriagem()
         {
-            Paciente p = new Paciente();
+           Paciente p = new Paciente();
            ViewBag.Sexo = new SelectList(p.tipoSexo);
            ViewBag.EstadoCivil = new SelectList(p.tipoEstadoCivil);
-            return View();
+           return View();
         }
 
-        // POST: Tecnico/CadastroTriagem
+        
         [HttpPost]
         public ActionResult CadastrarTriagem(FormCollection triagemD)
         {
@@ -70,7 +79,7 @@ namespace PortalOdonto.Controllers
             return View();
         }
 
-        //GET: Triagem
+ //GET: Triagem
         public ActionResult EditarTriagem(int? id)
         {
             if (id.HasValue)
@@ -100,7 +109,20 @@ namespace PortalOdonto.Controllers
             {
                 throw new NegocioException("Não foi possivél completar a acão", e);
             }
-        }
+        }		
+
+
+        // ============================ Paciente =========================================== //
+        
+          public ActionResult ListarPacientes()
+        {
+            List<Triagem> triagem = triagemGerenciador.ObterTodos();
+            if (triagem == null || triagem.Count == 0)
+                triagem = null;
+            return View(triagem);
+        }		
+		
+		
 
         // ============================ Paciente =========================================== //
 
@@ -112,7 +134,7 @@ namespace PortalOdonto.Controllers
             return View(triagem);
         }
 
-        //GET: Visualizar Paciente AINDA SERÁ ANALISADO SE É UTIL
+          //GET: Visualizar Paciente AINDA SERÁ ANALISADO SE É UTIL
         public ActionResult VisualizarPaciente(int? id)
         {
             //if (id.HasValue)
@@ -186,12 +208,16 @@ namespace PortalOdonto.Controllers
         }
 
         // ============================ Consulta =========================================== //
+
+        
         public ActionResult CadastrarConsulta()
         {
             return View();
         }
 
         // POST: Tecnico/CadastroPaciente
+
+        
         [HttpPost]
         public ActionResult CadastrarConsulta(Consulta_M con)
         {
@@ -212,15 +238,14 @@ namespace PortalOdonto.Controllers
                 throw new NegocioException("Não foi possivél completar a acão", e);
             }
             return View();
-        }
+        }        
 
-        //Visualizar Consulta
+        
         public ActionResult VisualizarConsulta(int id)
         {
             return View();
         }
 
-        //Visualizar Consultas
         public ActionResult VisualizarConsultas()
         {
             return View();

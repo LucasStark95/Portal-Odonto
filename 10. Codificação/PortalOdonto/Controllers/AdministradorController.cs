@@ -4,17 +4,25 @@ using System.Web.Mvc;
 using Model.Models;
 using Negocio.Business;
 using Model.Models.Exceptions;
+using PortalOdonto.Util;
+
 namespace PortalOdonto.Controllers
 {
+
+    [Authenticated]
+    [CustomAuthorize(NivelAcesso = Util.TipoUsuario.ADMINISTRADOR)]
     public class AdministradorController : Controller
     {
         
         private GerenciadorUsuario usuarioGerenciador;
-        // GET: Usuario
+        
+		// GET: Usuario
         public AdministradorController()
         {           
             usuarioGerenciador = new GerenciadorUsuario();
         }
+
+        
         public ActionResult Index()
         {
             List<Usuario> usuarios = usuarioGerenciador.ObterTodos();
@@ -23,7 +31,7 @@ namespace PortalOdonto.Controllers
             return View(usuarios);
         }
 
-        // GET: Usuario/Details/5
+       
         public ActionResult Details (int? id)
         {
             if (id.HasValue)
@@ -33,14 +41,13 @@ namespace PortalOdonto.Controllers
                     return View(user);
             }
             return RedirectToAction("Index");
-        }       
+        }
 
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Usuario/Create
         [HttpPost]
         public ActionResult Create(FormCollection dadosForm)
         {
@@ -48,32 +55,19 @@ namespace PortalOdonto.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    Usuario u = new Usuario();
                     
-                    int tipo = Convert.ToInt32(dadosForm["TipoUsuario"]);
-                    tipo--;
-                    switch (tipo)
+                    Usuario u = new Usuario();
+                    TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
+                    if (!usuarioGerenciador.BuscarMatricula(u.MatriculaUsuario))
                     {
-                        case ((int) TipoUsuario.PROFESSOR):                            
-                             Professor p = new Professor();
-                             TryUpdateModel<Professor>(p, dadosForm.ToValueProvider());
-                             TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
-                             usuarioGerenciador.Adicionar(u);
-                             break;
-                        case ((int)TipoUsuario.ALUNO):
-                            Aluno a = new Aluno();
-                            TryUpdateModel<Aluno>(a, dadosForm.ToValueProvider());
-                            TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
-                            usuarioGerenciador.Adicionar(u);
-                            break;
-                        case ((int)TipoUsuario.TECNICO):
-                            Tecnico t = new Tecnico();
-                            TryUpdateModel<Tecnico>(t, dadosForm.ToValueProvider());
-                            TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
-                            usuarioGerenciador.Adicionar(u);
-                            break;                                                                         
-                    }                    
-                    return RedirectToAction("Index");
+                        usuarioGerenciador.Adicionar(u);
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Matricula já existente.");
+                    }
+                    
                 }
                 else
                 {
@@ -101,7 +95,6 @@ namespace PortalOdonto.Controllers
             return RedirectToAction("Index");
         }
 
-
         [HttpPost]
         public ActionResult Edit(int id, Usuario user)
         {
@@ -121,8 +114,6 @@ namespace PortalOdonto.Controllers
             }
         }
 
-
-        // GET: Usuario/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id.HasValue)
@@ -135,7 +126,7 @@ namespace PortalOdonto.Controllers
             return RedirectToAction("Index");
         }
 
-        // POST: Usuario/Delete/5
+       
         [HttpPost]
         public ActionResult Delete(int id, Usuario user)
         {

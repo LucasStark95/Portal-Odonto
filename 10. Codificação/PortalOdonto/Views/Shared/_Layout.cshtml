@@ -21,6 +21,7 @@
             };
         };
     </script>
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -32,13 +33,19 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Portal Odonto", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <div style="margin-left: 1100px;">
+                    @if (PortalOdonto.Util.SessionHelper.Get(PortalOdonto.Util.SessionKey.USUARIO) != null && User.Identity.IsAuthenticated)
+                    {
+                        @Html.ActionLink("Logout", "Logout", new { controller = "Usuario" }, new { @class = "navbar-brand" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Login", "Login", new { controller = "Usuario" }, new { @class = "navbar-brand" })
+                    }
+
+                </div>
+             
             </div>            
-            <!----<div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Início", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Sobre", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
-                </ul>-->
             </div>
         </div>    
     <div class="container body-content">        
