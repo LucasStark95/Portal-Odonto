@@ -35,3 +35,17 @@ C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Persistencia\bin\Debug\E
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Persistencia\bin\Debug\Model.dll.config
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Persistencia\bin\Debug\EntityFramework.xml
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\Persistencia\bin\Debug\EntityFramework.SqlServer.xml
+C:\Portal-Odonto\10. Codificação\Persistencia\bin\Debug\Persistencia.dll.config
+C:\Portal-Odonto\10. Codificação\Persistencia\bin\Debug\Persistencia.dll
+C:\Portal-Odonto\10. Codificação\Persistencia\bin\Debug\Persistencia.pdb
+C:\Portal-Odonto\10. Codificação\Persistencia\bin\Debug\EntityFramework.dll
+C:\Portal-Odonto\10. Codificação\Persistencia\bin\Debug\EntityFramework.SqlServer.dll
+C:\Portal-Odonto\10. Codificação\Persistencia\bin\Debug\Model.dll
+C:\Portal-Odonto\10. Codificação\Persistencia\bin\Debug\Model.pdb
+C:\Portal-Odonto\10. Codificação\Persistencia\bin\Debug\Model.dll.config
+C:\Portal-Odonto\10. Codificação\Persistencia\bin\Debug\EntityFramework.xml
+C:\Portal-Odonto\10. Codificação\Persistencia\bin\Debug\EntityFramework.SqlServer.xml
+C:\Portal-Odonto\10. Codificação\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Portal-Odonto\10. Codificação\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Portal-Odonto\10. Codificação\Persistencia\obj\Debug\Persistencia.dll
+C:\Portal-Odonto\10. Codificação\Persistencia\obj\Debug\Persistencia.pdb

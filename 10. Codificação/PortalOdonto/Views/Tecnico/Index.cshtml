@@ -6,9 +6,9 @@
         <div class="col-md-3">
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">Matricula</span>
-                <input type="text" class="form-control" placeholder="Buscar" aria-label="Seacher" aria-describedby="basic-addon1">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                <input type="text" class="form-control" placeholder="Buscar" aria-label="Seacher" aria-describedby="basic-addon1">               
             </div>
+            <div><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button></div>
             <br />
             <fieldset>
             <legend>Perfil</legend>
@@ -22,8 +22,7 @@
                         @Html.ActionLink("Visualizar Perfil", "VisualizarPerfil", "", new { @class = "btn btn-default" })
                     </div>
                     <div class="col-md-4"> </div>
-                </div>
-                
+                </div>                
             </div>
             </fieldset>
         </div>
@@ -32,8 +31,7 @@
                 <ul class="nav nav-tabs">                    
                     <li role="presentation" class="active"><a href="@Url.Action("CadastrarTriagem")">Cadastrar Triagem</a></li>
                     <li role="presentation"><a href="@Url.Action("ListarPacientes")">Pacientes</a></li>
-                </ul>
-                josefina
+                </ul>               
             </div>
             <br>
         </div>

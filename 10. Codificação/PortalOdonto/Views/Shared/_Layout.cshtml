@@ -7,21 +7,17 @@
     <title>@ViewBag.Title - Portal Odonto</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <script type="text/javascript">
-        function filtro() {
-            var filtro = document.getElementById('filtro-nome');
-            var tabela = document.getElementById('lista');
-            filtro.onkeyup = function () {
-                var nomeFiltro = filtro.value;
-                for (var i = 1; i < tabela.rows.length; i++) {
-                    var conteudoCelula = tabela.rows[i].cells[0].innerText;
-                    var corresponde = conteudoCelula.toLowerCase().indexOf(nomeFiltro) >= 0;
-                    tabela.rows[i].style.display = corresponde ? '' : 'none';
-                }
-            };
-        };
+    @Styles.Render("~/Scripts/jquery.cycle.all.js")
+    @Styles.Render("~/Scripts/jquery-1.8.3.min")
+    <script>
+       $(function(){
+           $("slide ul").cycle({
+               fx: 'fade',
+               speed: 2000,
+               timeout: 4000
+           })
+       })
     </script>
-
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -50,6 +46,7 @@
         </div>    
     <div class="container body-content">        
         @RenderBody()
+        
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year -Universidade Federal de Sergipe</p>
