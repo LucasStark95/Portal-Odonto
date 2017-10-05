@@ -134,8 +134,8 @@ namespace PortalOdonto.Controllers
         public ActionResult EditarPerfil()
         {
 
-            Usuario tec = SessionHelper.Get(SessionKey.USUARIO) as Usuario;
-                if (tec != null)
+            Usuario tec = usuarioGerenciadora.ObterByMatricula((SessionHelper.Get(SessionKey.USUARIO) as Usuario).MatriculaUsuario);
+            if (tec != null)
                     return View(tec);
             
             return RedirectToAction("Index");
@@ -162,7 +162,7 @@ namespace PortalOdonto.Controllers
         }
 
         public ActionResult VisualizarPerfil()
-        {
+        {        
           Usuario user = usuarioGerenciadora.ObterByMatricula((SessionHelper.Get(SessionKey.USUARIO) as Usuario).MatriculaUsuario);
                 if (user != null)
                     return View(user);
