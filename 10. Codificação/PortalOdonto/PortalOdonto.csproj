@@ -223,6 +223,7 @@
     <Content Include="Views\Usuario\AlterarSenha.cshtml" />
     <Content Include="Views\Tecnico\EditarTriagem.cshtml" />
     <Content Include="Views\Tecnico\EditarPerfil.cshtml" />
+    <Content Include="Views\Tecnico\VisualizarPerfil.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
