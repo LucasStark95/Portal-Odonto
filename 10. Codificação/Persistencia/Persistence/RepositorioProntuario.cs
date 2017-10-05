@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model.Models;
+using Model.Models.Exceptions;
 
 
 namespace Persistencia.Persistence
@@ -19,31 +20,70 @@ namespace Persistencia.Persistence
 
         public Prontuario Adicionar(Prontuario prontuario)
         {
-            prontuario.IdProntuario = listaProntuarios.Count + 1;
-            listaProntuarios.Add(prontuario);
-            return prontuario;
+            try
+            {
+                prontuario.IdProntuario = listaProntuarios.Count + 1;
+                listaProntuarios.Add(prontuario);
+                return prontuario;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public void Editar(Prontuario prontuario)
         {
-            int posicao = listaProntuarios.FindIndex(e => e.IdProntuario == prontuario.IdProntuario);
-            listaProntuarios[posicao] = prontuario;
+            try {
+                int posicao = listaProntuarios.FindIndex(e => e.IdProntuario == prontuario.IdProntuario);
+                listaProntuarios[posicao] = prontuario;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public void Remover(Prontuario prontuario)
         {
-            int posicao = listaProntuarios.FindIndex(e => e.IdProntuario == prontuario.IdProntuario);
-            listaProntuarios.RemoveAt(posicao);
+            try
+            {
+                int posicao = listaProntuarios.FindIndex(e => e.IdProntuario == prontuario.IdProntuario);
+                listaProntuarios.RemoveAt(posicao);
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public Prontuario Obter(Func<Prontuario, bool> where)
         {
-            return listaProntuarios.Where(where).FirstOrDefault();
+            try
+            {
+                return listaProntuarios.Where(where).FirstOrDefault();
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public List<Prontuario> ObterTodos()
         {
-            return listaProntuarios;
+            try
+            {
+                return listaProntuarios;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
     }
 }

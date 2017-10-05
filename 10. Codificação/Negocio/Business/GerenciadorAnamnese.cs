@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Model.Models;
 using Persistencia.Persistence;
+using Model.Models.Exceptions;
+using System;
 
 namespace Negocio.Business
 {
@@ -19,28 +17,68 @@ namespace Negocio.Business
 
         public Anamnese Adicionar(Anamnese anamnese)
         {
-            anaPersistencia.Adicionar(anamnese);
-            return anamnese;
+            try
+            {
+                anaPersistencia.Adicionar(anamnese);
+                return anamnese;
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
 
         public void Editar(Anamnese anamnese)
         {
-            anaPersistencia.Editar(anamnese);
+            try
+            {
+                anaPersistencia.Editar(anamnese);
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
 
         public void Remover(Anamnese anamnese)
         {
-            anaPersistencia.Remover(anamnese);
+            try
+            {
+                anaPersistencia.Remover(anamnese);
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
 
         public Anamnese Obter(int id)
         {
-            return anaPersistencia.Obter(e => e.IdAnamnese == id);
+            try
+            {
+                return anaPersistencia.Obter(e => e.IdAnamnese == id);
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
 
         public List<Anamnese> ObterTodos()
         {
-            return anaPersistencia.ObterTodos();
+            try
+            {
+                return anaPersistencia.ObterTodos();
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
     }
 }

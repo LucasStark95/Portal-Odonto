@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Model.Models;
 using Persistencia.Persistence;
+using Model.Models.Exceptions;
 
 namespace Negocio.Business
 {
@@ -19,23 +17,55 @@ namespace Negocio.Business
 
         public Periograma Adicionar(Periograma periograma)
         {
-            periPersistencia.Adicionar(periograma);
-            return periograma;
+            try
+            {
+                periPersistencia.Adicionar(periograma);
+                return periograma;
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
 
         public void Editar(Periograma periograma)
         {
-            periPersistencia.Editar(periograma);
+            try
+            {
+                periPersistencia.Editar(periograma);
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
 
         public Periograma Obter(int id)
         {
-            return periPersistencia.Obter(e => e.IdPeriograma == id);
+            try
+            {
+                return periPersistencia.Obter(e => e.IdPeriograma == id);
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
 
         public List<Periograma> ObterTodos()
         {
-            return periPersistencia.ObterTodos();
+            try
+            {
+                return periPersistencia.ObterTodos();
+            }
+            catch (PersistenciaException e)
+            {
+                throw new NegocioException("Não foi possivél completar a ação", e);
+            }
+
         }
     }
 }

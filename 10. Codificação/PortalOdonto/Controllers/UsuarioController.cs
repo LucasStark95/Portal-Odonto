@@ -69,7 +69,7 @@ namespace PortalOdonto.Controllers
             return View();
         }
 
-
+		//GET
         public ActionResult AlterarSenha()
         {
             return View();

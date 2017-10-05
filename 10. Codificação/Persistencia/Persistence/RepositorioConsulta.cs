@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model.Models;
+using Model.Models.Exceptions;
 
 
 namespace Persistencia.Persistence
@@ -19,31 +20,69 @@ namespace Persistencia.Persistence
 
         public Consulta_M Adicionar(Consulta_M consulta)
         {
-            consulta.IdConsulta = listaConsultas.Count + 1;
-            listaConsultas.Add(consulta);
-            return consulta;
+            try
+            {
+                consulta.IdConsulta = listaConsultas.Count + 1;
+                listaConsultas.Add(consulta);
+                return consulta;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public void Editar(Consulta_M consulta)
         {
-            int posicao = listaConsultas.FindIndex(e => e.IdConsulta == consulta.IdConsulta);
-            listaConsultas[posicao] = consulta;
+            try {
+                int posicao = listaConsultas.FindIndex(e => e.IdConsulta == consulta.IdConsulta);
+                listaConsultas[posicao] = consulta;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public void Remover(Consulta_M consulta)
         {
-            int posicao = listaConsultas.FindIndex(e => e.IdConsulta == consulta.IdConsulta);
-            listaConsultas.RemoveAt(posicao);
+            try {
+                int posicao = listaConsultas.FindIndex(e => e.IdConsulta == consulta.IdConsulta);
+                listaConsultas.RemoveAt(posicao);
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+            
         }
 
         public Consulta_M Obter(Func<Consulta_M, bool> where)
         {
-            return listaConsultas.Where(where).FirstOrDefault();
+            try
+            {
+                return listaConsultas.Where(where).FirstOrDefault();
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+           
         }
 
         public List<Consulta_M> ObterTodos()
         {
-            return listaConsultas;
+            try
+            {
+                return listaConsultas;
+            }
+            catch (Exception e)
+            {
+                throw new PersistenciaException("Não foi possivél completar a ação", e);
+            }
+
         }
     }
 }
