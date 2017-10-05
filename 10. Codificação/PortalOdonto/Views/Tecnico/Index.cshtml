@@ -7,13 +7,25 @@
             <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">Matricula</span>
                 <input type="text" class="form-control" placeholder="Buscar" aria-label="Seacher" aria-describedby="basic-addon1">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             </div>
             <br />
-            <div class="col-md-2">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                <br/>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="@Url.Action("EditarPerfil")">Editar Perfil</a></button>
+            <fieldset>
+            <legend>Perfil</legend>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="col-md-4"> </div>
+                    <div class="col-md-2">
+                        @Html.ActionLink("Editar Perfil", "EditarPerfil", "", new { @class = "btn btn-default" })
+                    </div>
+                    <div class="col-md-2">
+                        @Html.ActionLink("Visualizar Perfil", "VisualizarPerfil", "", new { @class = "btn btn-default" })
+                    </div>
+                    <div class="col-md-4"> </div>
+                </div>
+                
             </div>
+            </fieldset>
         </div>
         <div class="col-md-7">
             <div class="bs-example">

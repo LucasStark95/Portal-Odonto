@@ -143,7 +143,7 @@ namespace PortalOdonto.Controllers
 
         // POST: Te
         [HttpPost]
-        public ActionResult EditarPerfil(int id, Usuario tec)
+        public ActionResult EditarPerfil(Usuario tec)
         {
             try
             {
@@ -161,9 +161,20 @@ namespace PortalOdonto.Controllers
             }
         }
 
+        public ActionResult VisualizarPerfil()
+        {
+            
+            
+                Usuario user = SessionHelper.Get(SessionKey.USUARIO) as Usuario;
+                if (user != null)
+                    return View(user);
+            
+            return RedirectToAction("Index");
+        }
+
         // ============================ Consulta =========================================== //
 
-        
+
         public ActionResult CadastrarConsulta()
         {
             return View();
