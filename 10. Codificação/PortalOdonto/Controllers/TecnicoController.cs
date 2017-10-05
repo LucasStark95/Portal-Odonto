@@ -15,16 +15,17 @@ namespace PortalOdonto.Controllers
     {
 
         private GerenciadorTriagem triagemGerenciador;
-        private GerenciadorTecnico tecnicoGerenciador;
+        private GerenciadorUsuario usuarioGerenciadora;
         private GerenciadorTriagem triagem;
         private GerenciadorPaciente paciente;
-        private GerenciadorConsulta consulta;     
+        private GerenciadorConsulta consulta;
+        
 
 
         public TecnicoController()
         {
 
-            tecnicoGerenciador = new GerenciadorTecnico();
+            usuarioGerenciadora = new GerenciadorUsuario();
             triagemGerenciador = new GerenciadorTriagem();
             triagem = new GerenciadorTriagem();
             paciente = new GerenciadorPaciente();
@@ -111,19 +112,7 @@ namespace PortalOdonto.Controllers
         }		
 
 
-        // ============================ Paciente =========================================== //
-        
-          public ActionResult ListarPacientes()
-        {
-            List<Triagem> triagem = triagemGerenciador.ObterTodos();
-            if (triagem == null || triagem.Count == 0)
-                triagem = null;
-            return View(triagem);
-        }		
-		
-		
-
-        // ============================ Paciente =========================================== //
+       // ============================ Paciente =========================================== //
 
         public ActionResult ListarPacientes()
         {
@@ -136,63 +125,29 @@ namespace PortalOdonto.Controllers
           //GET: Visualizar Paciente AINDA SERÁ ANALISADO SE É UTIL
         public ActionResult VisualizarPaciente(int? id)
         {
-            //if (id.HasValue)
-           // {
                 Triagem triagem = triagemGerenciador.Obter(id);
-                //if (triagem != null)
                     return View(triagem);
-           // }
-            //return RedirectToAction("index");
         }   
         // ============================ Perfil =========================================== //
 
-        // GET: Tecnico/Perfil/
-        public ActionResult CadastarTecnico()
-        {
-            return View();
-        }
-
-        public ActionResult CadastrarTecnico(Tecnico t)
-        {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    tecnicoGerenciador.Editar(t);
-                    return RedirectToAction("Index");
-                }
-
-            }
-            catch (ControllerException e)
-            {
-                throw new ControllerException("Não foi possivél completar a acão", e);
-            }
-            catch (Exception e)
-            {
-                throw new NegocioException("Não foi possivél completar a acão", e);
-            }
-            return View();
-        }
-
         // GET: Tecnico/EditarPerfil/
-        public ActionResult EditarPerfil(int? id)
+        public ActionResult EditarPerfil()
         {
-            if (id.HasValue)
-            {
-                Tecnico tec = tecnicoGerenciador.Obter(id);
+
+            Usuario tec = SessionHelper.Get(SessionKey.USUARIO) as Usuario;
                 if (tec != null)
                     return View(tec);
-            }
+            
             return RedirectToAction("Index");
         }
 
         // POST: Te
         [HttpPost]
-        public ActionResult EditarPerfil(int id, Tecnico tec)
+        public ActionResult EditarPerfil(int id, Usuario tec)
         {
             try
             {
-                tecnicoGerenciador.Editar(tec);
+                usuarioGerenciadora.Editar(tec);
                 return RedirectToAction("Index");
 
             }

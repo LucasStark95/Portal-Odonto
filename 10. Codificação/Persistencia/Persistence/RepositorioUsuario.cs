@@ -58,11 +58,6 @@ namespace Persistencia.Persistence
             {
                 throw new PersistenciaException("Não foi possivél completar a ação", e);
             }
-<<<<<<< .mine
-
-=======
-
->>>>>>> .theirs
         }
 
 

@@ -67,6 +67,11 @@
     <Compile Include="Models\EDMX\TB_Paciente.cs">
       <DependentUpon>Models.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Execptions\AplicacaoException.cs" />
+    <Compile Include="Models\Execptions\ControllerException.cs" />
+    <Compile Include="Models\Execptions\ModelException.cs" />
+    <Compile Include="Models\Execptions\NegocioException.cs" />
+    <Compile Include="Models\Execptions\PersistenceException.cs" />
     <Compile Include="Models\Paciente.cs" />
     <Compile Include="Models\Periograma.cs" />
     <Compile Include="Models\Prontuario.cs" />

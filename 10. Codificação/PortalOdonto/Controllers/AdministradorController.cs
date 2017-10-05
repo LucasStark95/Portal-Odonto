@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using Model.Models;
 using Negocio.Business;
-
 using PortalOdonto.Util;
-=========using Model.Models.Exceptions;
->>>>>>>>> Temporary merge branch 2namespace PortalOdonto.Controllers
+using Model.Models.Exceptions;
+namespace PortalOdonto.Controllers
 {
 
     [Authenticated]
@@ -55,7 +54,7 @@ using PortalOdonto.Util;
             {
                 if (ModelState.IsValid)
                 {
-                    
+
                     Usuario u = new Usuario();
                     TryUpdateModel<Usuario>(u, dadosForm.ToValueProvider());
                     if (!usuarioGerenciador.BuscarMatricula(u.MatriculaUsuario))
@@ -67,18 +66,22 @@ using PortalOdonto.Util;
                     {
                         ModelState.AddModelError("", "Matricula já existente.");
                     }
-                    
+
                 }
                 else
                 {
                     return RedirectToAction("Index");
                 }
+                return View();
             }
-
+            catch (ControllerException e)
             {
-
+                throw new ControllerException("Não foi possivél completar a acão", e);
             }
-            return View();
+            catch (Exception e)
+            {
+                throw new ControllerException("Não foi possivél completar a acão", e);
+            }
         }
 
         public ActionResult Edit(int? id)
@@ -101,11 +104,14 @@ using PortalOdonto.Util;
                 return RedirectToAction("Index");
                 
             }
-            
+            catch (ControllerException e)
             {
-                //
+                throw new ControllerException("Não foi possivél completar a acão", e);
             }
-            return RedirectToAction("Index");
+            catch (Exception e)
+            {
+                throw new ControllerException("Não foi possivél completar a acão", e);
+            }           
         }
 
         public ActionResult Delete(int? id)
@@ -129,11 +135,15 @@ using PortalOdonto.Util;
                 usuarioGerenciador.Remover(usuarioGerenciador.Obter(id));
                 return RedirectToAction("Index");
             }
-            
+
+            catch (ControllerException e)
             {
-                
+                throw new ControllerException("Não foi possivél completar a acão", e);
             }
-            return RedirectToAction("Index");
+            catch (Exception e)
+            {
+                throw new ControllerException("Não foi possivél completar a acão", e);
+            }            
         }
 
         [HttpPost]
