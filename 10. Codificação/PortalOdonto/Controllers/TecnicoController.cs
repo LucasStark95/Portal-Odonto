@@ -79,29 +79,16 @@ namespace PortalOdonto.Controllers
             return View();
         }
 
-        //GET: Triagem
+ //GET: Triagem
         public ActionResult EditarTriagem(int? id)
         {
-            try
+            if (id.HasValue)
             {
-                if (id.HasValue)
-                {
-                    Triagem triagem = triagemGerenciador.Obter(id);
-                    if (triagem != null)
-                        return View(triagem);
-                }
-                return RedirectToAction("Index");
+                Triagem triagem = triagemGerenciador.Obter(id);
+                if (triagem != null)
+                    return View(triagem);
             }
-            catch (ControllerException e)
-            {
-                throw new ControllerException("Não foi possivél completar a acão", e);
-            }
-            catch (Exception e)
-            {
-                throw new ControllerException("Não foi possivél completar a acão", e);
-            }
-            return View();
-
+            return RedirectToAction("Index");
         }
 
         // POST: Triagem
@@ -146,24 +133,12 @@ namespace PortalOdonto.Controllers
         // GET: Tecnico/EditarPerfil/
         public ActionResult EditarPerfil()
         {
-            try
-            {
 
-                Usuario tec = SessionHelper.Get(SessionKey.USUARIO) as Usuario;
-                if (tec != null)
+            Usuario tec = usuarioGerenciadora.ObterByMatricula((SessionHelper.Get(SessionKey.USUARIO) as Usuario).MatriculaUsuario);
+            if (tec != null)
                     return View(tec);
-
-                return RedirectToAction("Index");
-            }
-            catch (ControllerException e)
-            {
-                throw new ControllerException("Não foi possivél completar a acão", e);
-            }
-            catch (Exception e)
-            {
-                throw new NegocioException("Não foi possivél completar a acão", e);
-            }
-
+            
+            return RedirectToAction("Index");
         }
 
         // POST: Te
@@ -187,26 +162,17 @@ namespace PortalOdonto.Controllers
         }
 
         public ActionResult VisualizarPerfil()
-        {
-            try
-            {
-                Usuario user = SessionHelper.Get(SessionKey.USUARIO) as Usuario;
+        {        
+          Usuario user = usuarioGerenciadora.ObterByMatricula((SessionHelper.Get(SessionKey.USUARIO) as Usuario).MatriculaUsuario);
                 if (user != null)
                     return View(user);
-            }
-            catch (ControllerException e)
-            {
-                throw new ControllerException("Não foi possivél completar a acão", e);
-            }
-            catch (Exception e)
-            {
-                throw new NegocioException("Não foi possivél completar a acão", e);
-            }
+            
             return RedirectToAction("Index");
         }
 
         // ============================ Consulta =========================================== //
-        //PRECISA DO ALUNO PRA FAZER ESSA PARTE
+
+
         public ActionResult CadastrarConsulta()
         {
             return View();
@@ -250,7 +216,7 @@ namespace PortalOdonto.Controllers
 
         // ============================ Aréa a ser debatida =========================================== //
 
-        //NÃO PODE HAVER REMOÇÃO
+        //Pode haver remoção?
         // GET: Tecnico/Delete/5
         public ActionResult Delete(int id)
         {
