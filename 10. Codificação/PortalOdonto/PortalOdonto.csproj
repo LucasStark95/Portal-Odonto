@@ -217,7 +217,6 @@
     <Content Include="Views\Administrador\Create.cshtml" />
     <Content Include="Views\Tecnico\Index.cshtml" />
     <Content Include="Views\Administrador\Edit.cshtml" />
-    <Content Include="Views\Tecnico\CadastrarPaciente.cshtml" />
     <Content Include="Views\Tecnico\VisualizarPaciente.cshtml" />
     <Content Include="Views\Tecnico\CadastrarTriagem.cshtml" />
     <Content Include="Views\Tecnico\ListarPacientes.cshtml" />
