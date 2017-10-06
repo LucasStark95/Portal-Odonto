@@ -147,9 +147,11 @@ namespace PortalOdonto.Controllers
         {
             try
             {
-                usuarioGerenciadora.Editar(tec);
-                return RedirectToAction("Index");
-
+                if (ModelState.IsValid)
+                {
+                    usuarioGerenciadora.Editar(tec);
+                    return RedirectToAction("Index");
+                }
             }
             catch (ControllerException e)
             {
@@ -159,6 +161,7 @@ namespace PortalOdonto.Controllers
             {
                 throw new NegocioException("Não foi possivél completar a acão", e);
             }
+            return View();
         }
 
         public ActionResult VisualizarPerfil()
