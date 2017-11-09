@@ -33,6 +33,7 @@ namespace PortalOdonto.Controllers
                     // Obtendo o usuário.
                     //dadosLogin.Senha = Criptografia.GerarHashSenha(dadosLogin.Login + dadosLogin.Senha);
                     Usuario usuario = gerenciador.ObterByLoginSenha(dadosLogin.Login, dadosLogin.Senha);
+                    
 
                     // Autenticando.
                     if (usuario != null)
@@ -85,9 +86,9 @@ namespace PortalOdonto.Controllers
                 {
                     dadosLogin["NovaSenha"] = Criptografia.GerarHashSenha(dadosLogin["email"] + dadosLogin["NovaSenha"]);
 
-                    if (gerenciador.BuscarUsuario(dadosLogin["email"], dadosLogin["mae"], int.Parse(dadosLogin["matricula"])))
+                    if (gerenciador.BuscarUsuario(dadosLogin["email"], dadosLogin["mae"], (dadosLogin["matricula"])))
                     {
-                        Usuario auxiliar = gerenciador.ObterByMatricula(int.Parse(dadosLogin["matricula"]));
+                        Usuario auxiliar = gerenciador.ObterByMatricula((dadosLogin["matricula"]));
                         auxiliar.SenhaUsuario = dadosLogin["NovaSenha"];
                         gerenciador.Editar(auxiliar);
                         return RedirectToAction("Login");

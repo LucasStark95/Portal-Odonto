@@ -1,100 +1,87 @@
 ﻿@model Model.Models.Usuario
-
+<h1>Perfil</h1>
 <div>
-    <h4>Usuario</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.NomeUsuario)
-        </dt>
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-9">
+            <fieldset>
+                <legend>Dados do Usuário</legend>
+                <div class="form-horizontal">
+                    <div class="container text-center">
+                        <div class="row thumbnail">
+                            <hr />
+                            <div class="form-group">
+                                <div>
+                                    @Html.LabelFor(model => model.NomeUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-3">
 
-        <dd>
-            @Html.DisplayFor(model => model.NomeUsuario)
-        </dd>
+                                        @Html.DisplayFor(model => model.NomeUsuario, new { htmlAttributes = new { @class = "control-label col-md-2" } })
+                                    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MatriculaUsuario)
-        </dt>
+                                    @Html.LabelFor(model => model.NomeMae, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-3">
 
-        <dd>
-            @Html.DisplayFor(model => model.MatriculaUsuario)
-        </dd>
+                                        @Html.DisplayFor(model => model.NomeMae, new { htmlAttributes = new { @class = "control-label col-md-2" } })
+                                    </div>
+                                    <div class="col-md-2"> </div>
+                                </div>
+                            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Endereco)
-        </dt>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.EmailUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-3">
 
-        <dd>
-            @Html.DisplayFor(model => model.Endereco)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Bairro)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Bairro)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Cep)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Cep)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Cidade)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Cidade)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.NomeMae)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.NomeMae)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EmailUsuario)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EmailUsuario)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SenhaUsuario)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SenhaUsuario)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.DataNascimento)
-        </dt>
-
-        <dd>
-            @Model.DataNascimento.ToString("dd/MM/yyyy")
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TipoUsuario)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TipoUsuario)
-        </dd>
-
-    </dl>
+                                    @Html.DisplayFor(model => model.EmailUsuario, new { htmlAttributes = new { @class = "control-label col-md-2" } })
+                                </div>
+                                @Html.LabelFor(model => model.DataNascimento, htmlAttributes: new { @class = "control-labeul col-md-2" })
+                                <div class="col-md-3">
+                                    @Model.DataNascimento.ToString("dd/MM/yyyy")
+                                </div>
+                                <div class="col-md-4"> </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.TipoUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-3">
+                                    @Html.DisplayFor(model => model.TipoUsuario, new { htmlAttributes = new { @class = "control-label col-md-2" } })
+                                </div>
+                                @Html.LabelFor(model => model.MatriculaUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-3">
+                                    @Html.DisplayFor(model => model.MatriculaUsuario, new { htmlAttributes = new { @class = "control-label col-md-2" } })
+                                </div>
+                                <div class="col-md-4"> </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Endereco, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-3">
+                                    @Html.DisplayFor(model => model.Endereco, new { htmlAttributes = new { @class = "control-label col-md-2" } })
+                                </div>
+                                @Html.LabelFor(model => model.Bairro, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-3">
+                                    @Html.DisplayFor(model => model.Bairro, new { htmlAttributes = new { @class = "control-label col-md-2" } })
+                                </div>
+                                <div class="col-md-4"> </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Cep, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-3">
+                                    @Html.DisplayFor(model => model.Cep, new { htmlAttributes = new { @class = "control-label col-md-2" } })
+                                </div>
+                                @Html.LabelFor(model => model.Cidade, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-3">
+                                    @Html.DisplayFor(model => model.Cidade, new { htmlAttributes = new { @class = "control-label col-md-2" } })
+                                </div>
+                                <div class="col-md-4"> </div>
+                            </div>
+                            <br />
+                            <p>
+                                @Html.ActionLink("Editar", "Edit", new { id = Model.IdUsuario }, new { @class = "btn btn-default" }) |
+                                @Html.ActionLink("Voltar", "Index", "", new { @class = "btn btn-default" })
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Editar Perfil", "EditarPerfil") |
-    @Html.ActionLink("Voltar", "Index")
-</p>

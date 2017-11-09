@@ -66,6 +66,7 @@ C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStu
 C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.csprojResolveAssemblyReference.cache
 C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.dll
 C:\Users\Fabricia\OneDrive\UFS\Sexto Periodo\Engenharia de Software II\VisualStudio\Codificacao\PortalOdonto\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.pdb
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.csproj.CoreCompileInputs.cache
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\ApplicationInsights.config
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\roslyn\csc.exe
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\roslyn\csc.exe.config
@@ -109,6 +110,7 @@ C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\System.Web.Optimization.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\Model.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\Negocio.dll
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\EntityFramework.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\Persistencia.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\PortalOdonto.pdb
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\PortalOdonto.dll.config
@@ -121,8 +123,11 @@ C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\System.Web.Optimization.xml
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\Model.pdb
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\Model.dll.config
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\Negocio.pdb
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\EntityFramework.xml
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\Persistencia.pdb
+C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\Persistencia.dll.config
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\pt-BR\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\pt-br\System.Web.Helpers.resources.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\pt-br\System.Web.Mvc.resources.dll
@@ -132,10 +137,5 @@ C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\pt-br\System.Web.WebPages.Razor.resources.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\pt-br\System.Web.Optimization.resources.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.csprojResolveAssemblyReference.cache
-C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.csproj.CoreCompileInputs.cache
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.dll
 C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\obj\Debug\PortalOdonto.Testes.pdb
-C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\EntityFramework.dll
-C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\Model.dll.config
-C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\EntityFramework.xml
-C:\Users\Lucas\Documents\PortalOdonto\10. Codificação\PortalOdonto.Testes\bin\Debug\Persistencia.dll.config

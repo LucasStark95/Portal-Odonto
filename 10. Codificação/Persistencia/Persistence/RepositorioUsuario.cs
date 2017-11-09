@@ -15,10 +15,10 @@ namespace Persistencia.Persistence
         {
             listaUsuarios = new List<Usuario>();
 
-            Usuario adm = new Usuario("lucas.d1995@gmail.com", "lp1995lp", 0,0,1);
-            Usuario tec = new Usuario("nada.d1995@gmail.com", "lucas1995", 2,123,2);
-            Usuario pro = new Usuario("aqui.d1995@live.com", "lucas95", 1,222,3);
-            Usuario alu = new Usuario("ali.d1995@hotmail.com", "lp1995lp", 3,333,4);
+            Usuario adm = new Usuario("lucas.d1995@gmail.com", "lp1995lp", 0,"0",1);
+            Usuario tec = new Usuario("nada.d1995@gmail.com", "lucas1995", 2,"123",2);
+            Usuario pro = new Usuario("aqui.d1995@live.com", "lucas95", 1,"222",3);
+            Usuario alu = new Usuario("ali.d1995@hotmail.com", "lp1995lp", 3,"333",4);
 
             
 
@@ -52,6 +52,7 @@ namespace Persistencia.Persistence
             try
             {
                 int posicao = listaUsuarios.FindIndex(e => e.IdUsuario == usuario.IdUsuario);
+                usuario.TipoUsuario = listaUsuarios[posicao].TipoUsuario;
                 listaUsuarios[posicao] = usuario;
             }
             catch (Exception e)
@@ -88,11 +89,11 @@ namespace Persistencia.Persistence
 
         }
 
-        public List<Usuario> Buscar(Func<Usuario, bool> where)
+        public List<Usuario> Buscar(string matricula)
         {
             try
             {
-                return listaUsuarios.Where(where).ToList();
+                return listaUsuarios.Where(l => l.MatriculaUsuario.Contains(matricula)).ToList();
             }
             catch (Exception e)
             {

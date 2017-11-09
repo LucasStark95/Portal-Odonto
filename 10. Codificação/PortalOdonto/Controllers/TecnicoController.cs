@@ -97,9 +97,11 @@ namespace PortalOdonto.Controllers
         {
             try
             {
-                triagemGerenciador.Editar(triagem);
-                return RedirectToAction("Index");
-
+                if (ModelState.IsValid)
+                {
+                    triagemGerenciador.Editar(triagem);
+                    return RedirectToAction("Index");
+                }
             }
             catch (ControllerException e)
             {
@@ -109,6 +111,7 @@ namespace PortalOdonto.Controllers
             {
                 throw new NegocioException("Não foi possivél completar a acão", e);
             }
+            return View();
         }		
 
 
@@ -215,35 +218,6 @@ namespace PortalOdonto.Controllers
         public ActionResult VisualizarConsultas()
         {
             return View();
-        }
-
-        // ============================ Aréa a ser debatida =========================================== //
-
-        //Pode haver remoção?
-        // GET: Tecnico/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Tecnico/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch (ControllerException e)
-            {
-                throw new ControllerException("Não foi possivél completar a acão", e);
-            }
-            catch (Exception e)
-            {
-                throw new NegocioException("Não foi possivél completar a acão", e);
-            }
         }
     }
 }

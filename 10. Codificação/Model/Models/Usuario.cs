@@ -14,7 +14,7 @@ namespace Model.Models
     {
         private int idUsuario;
         private string nomeUsuario;
-        private int matriculaUsuario;
+        private string matriculaUsuario;
         private int tipoUsuario;
         private string emailUsuario;
         private string senhaUsuario;
@@ -27,7 +27,7 @@ namespace Model.Models
 
         public Usuario() { }
 
-        public Usuario( string email, string senha, int tipo, int matricula, int identificador)
+        public Usuario( string email, string senha, int tipo, string matricula, int identificador)
         {
             idUsuario = identificador;
             emailUsuario = email;
@@ -47,7 +47,8 @@ namespace Model.Models
 
         [Required(ErrorMessage = "Campo Obrigatório")]
         [Display(Name = "Matricula")]
-        public int MatriculaUsuario
+        [RegularExpression(@"^[0-9]+$", ErrorMessage = "Apenas permitido digitos entre 0 e 9.")]
+        public string MatriculaUsuario
         {
             get { return matriculaUsuario; }
             set { matriculaUsuario = value; }
@@ -132,7 +133,7 @@ namespace Model.Models
             set { dataNascimento = value; }
         }
 
-        [Display(Name = "Nivel de Usuário")]
+        [Display(Name = "Usuário tipo")]
         public int TipoUsuario
         {
             get { return tipoUsuario; }

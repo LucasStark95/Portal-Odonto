@@ -96,12 +96,18 @@ namespace PortalOdonto.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(int id, Usuario user)
+        public ActionResult Edit(int id, FormCollection user)
         {
             try
             {
-                usuarioGerenciador.Editar(user);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    Usuario aux = new Usuario();
+                    TryUpdateModel<Usuario>(aux, user.ToValueProvider());
+                    usuarioGerenciador.Editar(aux);
+                    return RedirectToAction("Index");
+                }
+                
                 
             }
             catch (ControllerException e)
@@ -111,7 +117,9 @@ namespace PortalOdonto.Controllers
             catch (Exception e)
             {
                 throw new ControllerException("Não foi possivél completar a acão", e);
-            }           
+            }
+
+            return View();
         }
 
         public ActionResult Delete(int? id)
@@ -147,11 +155,11 @@ namespace PortalOdonto.Controllers
         }
 
         [HttpPost]
-        public ActionResult Buscar(int? matricula)
+        public ActionResult Buscar(string matricula)
         {
             List<Usuario> usuarios = usuarioGerenciador.Buscar(matricula);
             if (usuarios == null)
-                usuarios = null;
+                usuarios = usuarioGerenciador.ObterTodos();
 
             return View("Index", usuarios);
         }

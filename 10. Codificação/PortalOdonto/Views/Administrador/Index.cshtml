@@ -22,10 +22,11 @@
                 <div class="form-group">
                     <div class="col-md-3"> </div>
                     <div class="col-md-3">
-                        <input type="submit" value="Busca" class="btn btn-default" />
+                        
+                        <input type="submit" value="Busca" class="btn btn-default"/>
                     </div>
                     <div class="col-md-6">
-                        @Html.ActionLink("Limpar", "Index","", new { @class = "btn btn-default" })
+                        @Html.ActionLink("Limpar", "","", new { @class = "btn btn-default", @type = "reset" })
                     </div>
                     <br/>
                 </div>

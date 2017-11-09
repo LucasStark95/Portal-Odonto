@@ -75,16 +75,16 @@ namespace Negocio.Business
 
         }
 
-        public Usuario ObterByMatricula(int? matricula)
+        public Usuario ObterByMatricula(string matricula)
         {
             return usuarioPersistencia.Obter(e => e.MatriculaUsuario == matricula);
         }
 
-        public List<Usuario> Buscar(int? matricula)
+        public List<Usuario> Buscar(string matricula)
         {
             try
             {
-                return usuarioPersistencia.Buscar(e => e.MatriculaUsuario == matricula);
+                return usuarioPersistencia.Buscar(matricula);
             }
             catch (PersistenciaException e)
             {
@@ -93,12 +93,12 @@ namespace Negocio.Business
 
         }
 
-        public bool BuscarMatricula(int? matricula)
+        public bool BuscarMatricula(string matricula)
         {
             return usuarioPersistencia.BuscarMatricula(e => e.MatriculaUsuario == matricula);
         }
 
-        public bool BuscarPreCadastro(int? matricula, string email)
+        public bool BuscarPreCadastro(string matricula, string email)
         {
             if(usuarioPersistencia.Obter(e => e.EmailUsuario.ToLowerInvariant().Equals(email.ToLowerInvariant()) &&
                 e.MatriculaUsuario == matricula) != null)
@@ -112,7 +112,7 @@ namespace Negocio.Business
             
         }
 
-        public bool BuscarUsuario(string email, string mae, int matricula)
+        public bool BuscarUsuario(string email, string mae, string matricula)
         {
             if (usuarioPersistencia.Obter(e => e.EmailUsuario.ToLowerInvariant().Equals(email.ToLowerInvariant()) &&
                  (e.MatriculaUsuario == matricula) && e.NomeMae.ToLowerInvariant().Equals(mae.ToLowerInvariant())) != null)
