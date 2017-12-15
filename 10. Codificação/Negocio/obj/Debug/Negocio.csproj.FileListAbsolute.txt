@@ -55,3 +55,17 @@ C:\Portal-Odonto\10. Codificação\Negocio\obj\Debug\Negocio.csprojResolveAssemb
 C:\Portal-Odonto\10. Codificação\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
 C:\Portal-Odonto\10. Codificação\Negocio\obj\Debug\Negocio.dll
 C:\Portal-Odonto\10. Codificação\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Lucas\Documents\Portal\PortalOdonto\10. Codificação\Negocio\bin\Debug\Negocio.dll
+C:\Users\Lucas\Documents\Portal\PortalOdonto\10. Codificação\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Lucas\Documents\Portal\PortalOdonto\10. Codificação\Negocio\bin\Debug\Model.dll
+C:\Users\Lucas\Documents\Portal\PortalOdonto\10. Codificação\Negocio\bin\Debug\Persistencia.dll
+C:\Users\Lucas\Documents\Portal\PortalOdonto\10. Codificação\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\Lucas\Documents\Portal\PortalOdonto\10. Codificação\Negocio\bin\Debug\Model.pdb
+C:\Users\Lucas\Documents\Portal\PortalOdonto\10. Codificação\Negocio\bin\Debug\Model.dll.config
+C:\Users\Lucas\Documents\Portal\PortalOdonto\10. Codificação\Negocio\bin\Debug\Persistencia.pdb
+C:\Users\Lucas\Documents\Portal\PortalOdonto\10. Codificação\Negocio\bin\Debug\Persistencia.dll.config
+C:\Users\Lucas\Documents\Portal\PortalOdonto\10. Codificação\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\Lucas\Documents\Portal\PortalOdonto\10. Codificação\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Documents\Portal\PortalOdonto\10. Codificação\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Documents\Portal\PortalOdonto\10. Codificação\Negocio\obj\Debug\Negocio.dll
+C:\Users\Lucas\Documents\Portal\PortalOdonto\10. Codificação\Negocio\obj\Debug\Negocio.pdb
