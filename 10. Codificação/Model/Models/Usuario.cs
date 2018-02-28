@@ -24,6 +24,7 @@ namespace Model.Models
         private string cep;
         private string cidade;
         private DateTime dataNascimento;
+        private string numeroUsuario;
 
         public Usuario() { }
 
@@ -138,6 +139,13 @@ namespace Model.Models
         {
             get { return tipoUsuario; }
             set { tipoUsuario = value; }
+        }
+
+        [Display(Name = "Número")]
+        public string NumeroUsuario
+        {
+            get { return numeroUsuario; }
+            set { numeroUsuario = value; }
         }
     }
 }

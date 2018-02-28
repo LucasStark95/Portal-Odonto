@@ -1,0 +1,6 @@
+projectKey=POdonto
+serverUrl=http://localhost:9000
+serverVersion=7.0.0.36138
+dashboardUrl=http://localhost:9000/dashboard/index/POdonto
+ceTaskId=AWHDGBOjmqtg0Y2As4_Z
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWHDGBOjmqtg0Y2As4_Z

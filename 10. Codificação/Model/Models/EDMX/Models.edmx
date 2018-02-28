@@ -4,7 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Models.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PortalOdontoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TB_Odontograma">
+          <Key>
+            <PropertyRef Name="SQC_Odon" />
+          </Key>
+          <Property Name="SQC_Odon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Odo_Observacao" Type="varchar" MaxLength="255" />
+        </EntityType>
         <EntityType Name="TB_Paciente">
           <Key>
             <PropertyRef Name="SQC_Paciente" />
@@ -13,21 +20,179 @@
           <Property Name="Pac_Nome" Type="varchar" MaxLength="60" />
           <Property Name="Pac_Rg" Type="varchar" MaxLength="12" />
           <Property Name="Pac_Endereco" Type="varchar" MaxLength="60" />
-          <Property Name="Pac_DataNascimento" Type="date" />
+          <Property Name="Pac_DataNascimento" Type="datetime" Nullable="false" />
           <Property Name="Pac_Telefone" Type="varchar" MaxLength="13" />
           <Property Name="Pac_Responsavel" Type="varchar" MaxLength="60" />
           <Property Name="Pac_MotivoConsulta" Type="varchar" MaxLength="225" />
           <Property Name="Pac_EstadoCivil" Type="varchar" MaxLength="15" />
           <Property Name="Pac_Cpf" Type="varchar" MaxLength="14" />
+          <Property Name="Pac_Sexo" Type="varchar" MaxLength="30" />
+          <Property Name="Pac_Naturalidade" Type="varchar" MaxLength="100" />
+          <Property Name="Pac_Estado" Type="varchar" MaxLength="30" />
+          <Property Name="Pac_Raca" Type="varchar" MaxLength="100" />
+          <Property Name="Pac_Religiao" Type="varchar" MaxLength="250" />
+          <Property Name="Pac_Peso" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Pac_Altura" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Pac_GrauDeInstrucao" Type="varchar" MaxLength="250" />
+          <Property Name="Pac_Pai" Type="varchar" MaxLength="250" />
+          <Property Name="Pac_Mae" Type="varchar" MaxLength="250" />
+          <Property Name="Pac_NacionalidadePai" Type="varchar" MaxLength="250" />
+          <Property Name="Pac_NacionalidadeMae" Type="varchar" MaxLength="250" />
+          <Property Name="Pac_Profissao" Type="varchar" MaxLength="250" />
+          <Property Name="Pac_Zona" Type="varchar" MaxLength="250" />
+          <Property Name="Pac_Contato" Type="varchar" MaxLength="30" />
+          <Property Name="Pac_PressaoArterial" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Pac_BatimentoCardiaco" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Pac_Nacionalidade" Type="varchar" MaxLength="100" />
+          <Property Name="Pac_Cidade" Type="varchar" MaxLength="60" />
+          <Property Name="Pac_Cep" Type="varchar" MaxLength="20" />
+          <Property Name="Pac_Numero" Type="varchar" MaxLength="10" />
         </EntityType>
-        <EntityContainer Name="ModelModelsStoreContainer">
+        <EntityType Name="TB_Perguntas">
+          <Key>
+            <PropertyRef Name="SQC_Pergunta" />
+          </Key>
+          <Property Name="SQC_Pergunta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TB_Perguntas_SQC_Pergunta" Type="int" Nullable="false" />
+          <Property Name="Pgt_Enunciado" Type="varchar" MaxLength="500" />
+          <Property Name="Pgt_Conclusao" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TB_Periograma">
+          <Key>
+            <PropertyRef Name="SQC_Peri" />
+          </Key>
+          <Property Name="SQC_Peri" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Per_Diagnostico" Type="varchar" MaxLength="255" />
+          <Property Name="Per_Prognostico" Type="varchar" MaxLength="255" />
+          <Property Name="Per_IndiceBiofilme" Type="float" />
+          <Property Name="Per_IindiceSangramento" Type="float" />
+        </EntityType>
+        <EntityType Name="TB_Pessoa">
+          <Key>
+            <PropertyRef Name="SQC_Pessoa" />
+          </Key>
+          <Property Name="SQC_Pessoa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Pes_Rg" Type="int" Nullable="false" />
+          <Property Name="Pes_Cpf" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Pes_Nome" Type="varchar" MaxLength="60" />
+          <Property Name="Pes_Telefone" Type="varchar" MaxLength="13" />
+          <Property Name="Pes_Endereco" Type="varchar" MaxLength="65" />
+          <Property Name="Pes_DataNascimento" Type="date" Nullable="false" />
+          <Property Name="Pes_Cidade" Type="varchar" MaxLength="30" />
+          <Property Name="Pes_Bairro" Type="varchar" MaxLength="30" />
+          <Property Name="Pes_Numero" Type="varchar" MaxLength="50" />
+          <Property Name="Pes_Cep" Type="varchar" MaxLength="9" />
+          <Property Name="Pes_Email" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Pes_Senha" Type="varchar" MaxLength="256" />
+          <Property Name="Pes_Matricula" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Pes_TipoUsuario" Type="int" Nullable="false" />
+          <Property Name="Pes_NomeMae" Type="varchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="TB_Triagem">
+          <Key>
+            <PropertyRef Name="SQC_Triagem" />
+            <PropertyRef Name="TB_Paciente_SQC_Paciente" />
+          </Key>
+          <Property Name="SQC_Triagem" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TB_Pessoa_SQC_Pessoa" Type="int" Nullable="false" />
+          <Property Name="TB_Paciente_SQC_Paciente" Type="int" Nullable="false" />
+          <Property Name="Tri_Radiologia" Type="bit" />
+          <Property Name="Tri_Periapical" Type="bit" />
+          <Property Name="Tri_Panoramica" Type="bit" />
+          <Property Name="Tri_Interproximal" Type="bit" />
+          <Property Name="Tri_Dentistica" Type="bit" />
+          <Property Name="Tri_ClasseI" Type="bit" />
+          <Property Name="Tri_ClasseII" Type="bit" />
+          <Property Name="Tri_ClasseIII" Type="bit" />
+          <Property Name="Tri_ClasseIV" Type="bit" />
+          <Property Name="Tri_ClasseV" Type="bit" />
+          <Property Name="Tri_Clareamento" Type="bit" />
+          <Property Name="Tri_Periodontia" Type="bit" />
+          <Property Name="Tri_Cirurgia" Type="bit" />
+          <Property Name="Tri_Simples" Type="bit" />
+          <Property Name="Tri_Avancado" Type="bit" />
+          <Property Name="Tri_Endodontia" Type="bit" />
+          <Property Name="Tri_Pediatria" Type="bit" />
+          <Property Name="Tri_Protese" Type="bit" />
+          <Property Name="Tri_ProtesePt" Type="bit" />
+          <Property Name="Tri_ProtesePpr" Type="bit" />
+          <Property Name="Tri_ProteseFixa" Type="bit" />
+          <Property Name="Tri_CicloII" Type="bit" />
+          <Property Name="Tri_Descricao" Type="varchar" MaxLength="255" />
+          <Property Name="Tri_DataRealizacao" Type="date" />
+          <Property Name="Tri_CicloIII" Type="bit" />
+          <Property Name="Tri_CicloIV" Type="bit" />
+          <Property Name="Tri_CicloV" Type="bit" />
+          <Property Name="Tri_MotivoConsulta" Type="varchar" MaxLength="200" />
+          <Property Name="Tri_Procedimento" Type="bit" />
+        </EntityType>
+        <Association Name="FK_Perg">
+          <End Role="TB_Perguntas" Type="Self.TB_Perguntas" Multiplicity="1" />
+          <End Role="TB_Perguntas1" Type="Self.TB_Perguntas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Perguntas">
+              <PropertyRef Name="SQC_Pergunta" />
+            </Principal>
+            <Dependent Role="TB_Perguntas1">
+              <PropertyRef Name="TB_Perguntas_SQC_Pergunta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tria">
+          <End Role="TB_Pessoa" Type="Self.TB_Pessoa" Multiplicity="1" />
+          <End Role="TB_Triagem" Type="Self.TB_Triagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Pessoa">
+              <PropertyRef Name="SQC_Pessoa" />
+            </Principal>
+            <Dependent Role="TB_Triagem">
+              <PropertyRef Name="TB_Pessoa_SQC_Pessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tria1">
+          <End Role="TB_Paciente" Type="Self.TB_Paciente" Multiplicity="1" />
+          <End Role="TB_Triagem" Type="Self.TB_Triagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Paciente">
+              <PropertyRef Name="SQC_Paciente" />
+            </Principal>
+            <Dependent Role="TB_Triagem">
+              <PropertyRef Name="TB_Paciente_SQC_Paciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PortalOdontoModelStoreContainer">
+          <EntitySet Name="TB_Odontograma" EntityType="Self.TB_Odontograma" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Paciente" EntityType="Self.TB_Paciente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Perguntas" EntityType="Self.TB_Perguntas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Periograma" EntityType="Self.TB_Periograma" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Pessoa" EntityType="Self.TB_Pessoa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Triagem" EntityType="Self.TB_Triagem" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Perg" Association="Self.FK_Perg">
+            <End Role="TB_Perguntas" EntitySet="TB_Perguntas" />
+            <End Role="TB_Perguntas1" EntitySet="TB_Perguntas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tria" Association="Self.FK_Tria">
+            <End Role="TB_Pessoa" EntitySet="TB_Pessoa" />
+            <End Role="TB_Triagem" EntitySet="TB_Triagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tria1" Association="Self.FK_Tria1">
+            <End Role="TB_Paciente" EntitySet="TB_Paciente" />
+            <End Role="TB_Triagem" EntitySet="TB_Triagem" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="Model.Models" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="PortalOdontoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TB_Odontograma">
+          <Key>
+            <PropertyRef Name="SQC_Odon" />
+          </Key>
+          <Property Name="SQC_Odon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Odo_Observacao" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="TB_Paciente">
           <Key>
             <PropertyRef Name="SQC_Paciente" />
@@ -36,25 +201,212 @@
           <Property Name="Pac_Nome" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="Pac_Rg" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
           <Property Name="Pac_Endereco" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-          <Property Name="Pac_DataNascimento" Type="DateTime" Precision="0" />
+          <Property Name="Pac_DataNascimento" Type="DateTime" Precision="3" Nullable="false" />
           <Property Name="Pac_Telefone" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
           <Property Name="Pac_Responsavel" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="Pac_MotivoConsulta" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
           <Property Name="Pac_EstadoCivil" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="Pac_Cpf" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TB_Triagem" Relationship="Self.FK_Tria1" FromRole="TB_Paciente" ToRole="TB_Triagem" />
+          <Property Name="Pac_Sexo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_Naturalidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_Estado" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_Raca" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_Religiao" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_Peso" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Pac_Altura" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Pac_GrauDeInstrucao" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_Pai" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_Mae" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_NacionalidadePai" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_NacionalidadeMae" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_Profissao" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_Zona" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_Contato" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_PressaoArterial" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Pac_BatimentoCardiaco" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Pac_Nacionalidade" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_Cidade" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_Cep" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Pac_Numero" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="TB_Perguntas">
+          <Key>
+            <PropertyRef Name="SQC_Pergunta" />
+          </Key>
+          <Property Name="SQC_Pergunta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TB_Perguntas_SQC_Pergunta" Type="Int32" Nullable="false" />
+          <Property Name="Pgt_Enunciado" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TB_Perguntas1" Relationship="Self.FK_Perg" FromRole="TB_Perguntas" ToRole="TB_Perguntas1" />
+          <NavigationProperty Name="TB_Perguntas2" Relationship="Self.FK_Perg" FromRole="TB_Perguntas1" ToRole="TB_Perguntas" />
+          <Property Name="Pgt_Conclusao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_Periograma">
+          <Key>
+            <PropertyRef Name="SQC_Peri" />
+          </Key>
+          <Property Name="SQC_Peri" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Per_Diagnostico" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Per_Prognostico" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Per_IndiceBiofilme" Type="Double" />
+          <Property Name="Per_IindiceSangramento" Type="Double" />
+        </EntityType>
+        <EntityType Name="TB_Pessoa">
+          <Key>
+            <PropertyRef Name="SQC_Pessoa" />
+          </Key>
+          <Property Name="SQC_Pessoa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Pes_Rg" Type="Int32" Nullable="false" />
+          <Property Name="Pes_Cpf" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Pes_Nome" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Pes_Telefone" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Pes_Endereco" Type="String" MaxLength="65" FixedLength="false" Unicode="false" />
+          <Property Name="Pes_DataNascimento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Pes_Cidade" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Pes_Bairro" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Pes_Numero" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Pes_Cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="Pes_Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Pes_Senha" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Pes_Matricula" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Pes_TipoUsuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TB_Triagem" Relationship="Self.FK_Tria" FromRole="TB_Pessoa" ToRole="TB_Triagem" />
+          <Property Name="Pes_NomeMae" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TB_Triagem">
+          <Key>
+            <PropertyRef Name="SQC_Triagem" />
+            <PropertyRef Name="TB_Paciente_SQC_Paciente" />
+          </Key>
+          <Property Name="SQC_Triagem" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TB_Pessoa_SQC_Pessoa" Type="Int32" Nullable="false" />
+          <Property Name="TB_Paciente_SQC_Paciente" Type="Int32" Nullable="false" />
+          <Property Name="Tri_Radiologia" Type="Boolean" />
+          <Property Name="Tri_Periapical" Type="Boolean" />
+          <Property Name="Tri_Panoramica" Type="Boolean" />
+          <Property Name="Tri_Interproximal" Type="Boolean" />
+          <Property Name="Tri_Dentistica" Type="Boolean" />
+          <Property Name="Tri_ClasseI" Type="Boolean" />
+          <Property Name="Tri_ClasseII" Type="Boolean" />
+          <Property Name="Tri_ClasseIII" Type="Boolean" />
+          <Property Name="Tri_ClasseIV" Type="Boolean" />
+          <Property Name="Tri_ClasseV" Type="Boolean" />
+          <Property Name="Tri_Clareamento" Type="Boolean" />
+          <Property Name="Tri_Periodontia" Type="Boolean" />
+          <Property Name="Tri_Cirurgia" Type="Boolean" />
+          <Property Name="Tri_Simples" Type="Boolean" />
+          <Property Name="Tri_Avancado" Type="Boolean" />
+          <Property Name="Tri_Endodontia" Type="Boolean" />
+          <Property Name="Tri_Pediatria" Type="Boolean" />
+          <Property Name="Tri_Protese" Type="Boolean" />
+          <Property Name="Tri_ProtesePt" Type="Boolean" />
+          <Property Name="Tri_ProtesePpr" Type="Boolean" />
+          <Property Name="Tri_ProteseFixa" Type="Boolean" />
+          <Property Name="Tri_CicloII" Type="Boolean" />
+          <Property Name="Tri_Descricao" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Tri_DataRealizacao" Type="DateTime" Precision="0" />
+          <Property Name="Tri_CicloIII" Type="Boolean" />
+          <Property Name="Tri_CicloIV" Type="Boolean" />
+          <Property Name="Tri_CicloV" Type="Boolean" />
+          <NavigationProperty Name="TB_Paciente" Relationship="Self.FK_Tria1" FromRole="TB_Triagem" ToRole="TB_Paciente" />
+          <NavigationProperty Name="TB_Pessoa" Relationship="Self.FK_Tria" FromRole="TB_Triagem" ToRole="TB_Pessoa" />
+          <Property Name="Tri_MotivoConsulta" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Tri_Procedimento" Type="Boolean" />
+        </EntityType>
+        <Association Name="FK_Tria1">
+          <End Role="TB_Paciente" Type="Self.TB_Paciente" Multiplicity="1" />
+          <End Role="TB_Triagem" Type="Self.TB_Triagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Paciente">
+              <PropertyRef Name="SQC_Paciente" />
+            </Principal>
+            <Dependent Role="TB_Triagem">
+              <PropertyRef Name="TB_Paciente_SQC_Paciente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Perg">
+          <End Role="TB_Perguntas" Type="Self.TB_Perguntas" Multiplicity="1" />
+          <End Role="TB_Perguntas1" Type="Self.TB_Perguntas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Perguntas">
+              <PropertyRef Name="SQC_Pergunta" />
+            </Principal>
+            <Dependent Role="TB_Perguntas1">
+              <PropertyRef Name="TB_Perguntas_SQC_Pergunta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tria">
+          <End Role="TB_Pessoa" Type="Self.TB_Pessoa" Multiplicity="1" />
+          <End Role="TB_Triagem" Type="Self.TB_Triagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_Pessoa">
+              <PropertyRef Name="SQC_Pessoa" />
+            </Principal>
+            <Dependent Role="TB_Triagem">
+              <PropertyRef Name="TB_Pessoa_SQC_Pessoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="PortalOdontoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TB_Odontograma" EntityType="Self.TB_Odontograma" />
           <EntitySet Name="TB_Paciente" EntityType="Self.TB_Paciente" />
+          <EntitySet Name="TB_Perguntas" EntityType="Self.TB_Perguntas" />
+          <EntitySet Name="TB_Periograma" EntityType="Self.TB_Periograma" />
+          <EntitySet Name="TB_Pessoa" EntityType="Self.TB_Pessoa" />
+          <EntitySet Name="TB_Triagem" EntityType="Self.TB_Triagem" />
+          <AssociationSet Name="FK_Tria1" Association="Self.FK_Tria1">
+            <End Role="TB_Paciente" EntitySet="TB_Paciente" />
+            <End Role="TB_Triagem" EntitySet="TB_Triagem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Perg" Association="Self.FK_Perg">
+            <End Role="TB_Perguntas" EntitySet="TB_Perguntas" />
+            <End Role="TB_Perguntas1" EntitySet="TB_Perguntas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tria" Association="Self.FK_Tria">
+            <End Role="TB_Pessoa" EntitySet="TB_Pessoa" />
+            <End Role="TB_Triagem" EntitySet="TB_Triagem" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelModelsStoreContainer" CdmEntityContainer="PortalOdontoEntities">
+        <EntityContainerMapping StorageEntityContainer="PortalOdontoModelStoreContainer" CdmEntityContainer="PortalOdontoEntities">
+          <EntitySetMapping Name="TB_Odontograma">
+            <EntityTypeMapping TypeName="PortalOdontoModel.TB_Odontograma">
+              <MappingFragment StoreEntitySet="TB_Odontograma">
+                <ScalarProperty Name="SQC_Odon" ColumnName="SQC_Odon" />
+                <ScalarProperty Name="Odo_Observacao" ColumnName="Odo_Observacao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TB_Paciente">
-            <EntityTypeMapping TypeName="Model.Models.TB_Paciente">
+            <EntityTypeMapping TypeName="PortalOdontoModel.TB_Paciente">
               <MappingFragment StoreEntitySet="TB_Paciente">
+                <ScalarProperty Name="Pac_Numero" ColumnName="Pac_Numero" />
+                <ScalarProperty Name="Pac_Cep" ColumnName="Pac_Cep" />
+                <ScalarProperty Name="Pac_Cidade" ColumnName="Pac_Cidade" />
+                <ScalarProperty Name="Pac_Nacionalidade" ColumnName="Pac_Nacionalidade" />
+                <ScalarProperty Name="Pac_BatimentoCardiaco" ColumnName="Pac_BatimentoCardiaco" />
+                <ScalarProperty Name="Pac_PressaoArterial" ColumnName="Pac_PressaoArterial" />
+                <ScalarProperty Name="Pac_Contato" ColumnName="Pac_Contato" />
+                <ScalarProperty Name="Pac_Zona" ColumnName="Pac_Zona" />
+                <ScalarProperty Name="Pac_Profissao" ColumnName="Pac_Profissao" />
+                <ScalarProperty Name="Pac_NacionalidadeMae" ColumnName="Pac_NacionalidadeMae" />
+                <ScalarProperty Name="Pac_NacionalidadePai" ColumnName="Pac_NacionalidadePai" />
+                <ScalarProperty Name="Pac_Mae" ColumnName="Pac_Mae" />
+                <ScalarProperty Name="Pac_Pai" ColumnName="Pac_Pai" />
+                <ScalarProperty Name="Pac_GrauDeInstrucao" ColumnName="Pac_GrauDeInstrucao" />
+                <ScalarProperty Name="Pac_Altura" ColumnName="Pac_Altura" />
+                <ScalarProperty Name="Pac_Peso" ColumnName="Pac_Peso" />
+                <ScalarProperty Name="Pac_Religiao" ColumnName="Pac_Religiao" />
+                <ScalarProperty Name="Pac_Raca" ColumnName="Pac_Raca" />
+                <ScalarProperty Name="Pac_Estado" ColumnName="Pac_Estado" />
+                <ScalarProperty Name="Pac_Naturalidade" ColumnName="Pac_Naturalidade" />
+                <ScalarProperty Name="Pac_Sexo" ColumnName="Pac_Sexo" />
                 <ScalarProperty Name="SQC_Paciente" ColumnName="SQC_Paciente" />
                 <ScalarProperty Name="Pac_Nome" ColumnName="Pac_Nome" />
                 <ScalarProperty Name="Pac_Rg" ColumnName="Pac_Rg" />
@@ -65,6 +417,87 @@
                 <ScalarProperty Name="Pac_MotivoConsulta" ColumnName="Pac_MotivoConsulta" />
                 <ScalarProperty Name="Pac_EstadoCivil" ColumnName="Pac_EstadoCivil" />
                 <ScalarProperty Name="Pac_Cpf" ColumnName="Pac_Cpf" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Perguntas">
+            <EntityTypeMapping TypeName="PortalOdontoModel.TB_Perguntas">
+              <MappingFragment StoreEntitySet="TB_Perguntas">
+                <ScalarProperty Name="Pgt_Conclusao" ColumnName="Pgt_Conclusao" />
+                <ScalarProperty Name="SQC_Pergunta" ColumnName="SQC_Pergunta" />
+                <ScalarProperty Name="TB_Perguntas_SQC_Pergunta" ColumnName="TB_Perguntas_SQC_Pergunta" />
+                <ScalarProperty Name="Pgt_Enunciado" ColumnName="Pgt_Enunciado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Periograma">
+            <EntityTypeMapping TypeName="PortalOdontoModel.TB_Periograma">
+              <MappingFragment StoreEntitySet="TB_Periograma">
+                <ScalarProperty Name="SQC_Peri" ColumnName="SQC_Peri" />
+                <ScalarProperty Name="Per_Diagnostico" ColumnName="Per_Diagnostico" />
+                <ScalarProperty Name="Per_Prognostico" ColumnName="Per_Prognostico" />
+                <ScalarProperty Name="Per_IndiceBiofilme" ColumnName="Per_IndiceBiofilme" />
+                <ScalarProperty Name="Per_IindiceSangramento" ColumnName="Per_IindiceSangramento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Pessoa">
+            <EntityTypeMapping TypeName="PortalOdontoModel.TB_Pessoa">
+              <MappingFragment StoreEntitySet="TB_Pessoa">
+                <ScalarProperty Name="Pes_NomeMae" ColumnName="Pes_NomeMae" />
+                <ScalarProperty Name="SQC_Pessoa" ColumnName="SQC_Pessoa" />
+                <ScalarProperty Name="Pes_Rg" ColumnName="Pes_Rg" />
+                <ScalarProperty Name="Pes_Cpf" ColumnName="Pes_Cpf" />
+                <ScalarProperty Name="Pes_Nome" ColumnName="Pes_Nome" />
+                <ScalarProperty Name="Pes_Telefone" ColumnName="Pes_Telefone" />
+                <ScalarProperty Name="Pes_Endereco" ColumnName="Pes_Endereco" />
+                <ScalarProperty Name="Pes_DataNascimento" ColumnName="Pes_DataNascimento" />
+                <ScalarProperty Name="Pes_Cidade" ColumnName="Pes_Cidade" />
+                <ScalarProperty Name="Pes_Bairro" ColumnName="Pes_Bairro" />
+                <ScalarProperty Name="Pes_Numero" ColumnName="Pes_Numero" />
+                <ScalarProperty Name="Pes_Cep" ColumnName="Pes_Cep" />
+                <ScalarProperty Name="Pes_Email" ColumnName="Pes_Email" />
+                <ScalarProperty Name="Pes_Senha" ColumnName="Pes_Senha" />
+                <ScalarProperty Name="Pes_Matricula" ColumnName="Pes_Matricula" />
+                <ScalarProperty Name="Pes_TipoUsuario" ColumnName="Pes_TipoUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Triagem">
+            <EntityTypeMapping TypeName="PortalOdontoModel.TB_Triagem">
+              <MappingFragment StoreEntitySet="TB_Triagem">
+                <ScalarProperty Name="Tri_Procedimento" ColumnName="Tri_Procedimento" />
+                <ScalarProperty Name="Tri_MotivoConsulta" ColumnName="Tri_MotivoConsulta" />
+                <ScalarProperty Name="SQC_Triagem" ColumnName="SQC_Triagem" />
+                <ScalarProperty Name="TB_Pessoa_SQC_Pessoa" ColumnName="TB_Pessoa_SQC_Pessoa" />
+                <ScalarProperty Name="TB_Paciente_SQC_Paciente" ColumnName="TB_Paciente_SQC_Paciente" />
+                <ScalarProperty Name="Tri_Radiologia" ColumnName="Tri_Radiologia" />
+                <ScalarProperty Name="Tri_Periapical" ColumnName="Tri_Periapical" />
+                <ScalarProperty Name="Tri_Panoramica" ColumnName="Tri_Panoramica" />
+                <ScalarProperty Name="Tri_Interproximal" ColumnName="Tri_Interproximal" />
+                <ScalarProperty Name="Tri_Dentistica" ColumnName="Tri_Dentistica" />
+                <ScalarProperty Name="Tri_ClasseI" ColumnName="Tri_ClasseI" />
+                <ScalarProperty Name="Tri_ClasseII" ColumnName="Tri_ClasseII" />
+                <ScalarProperty Name="Tri_ClasseIII" ColumnName="Tri_ClasseIII" />
+                <ScalarProperty Name="Tri_ClasseIV" ColumnName="Tri_ClasseIV" />
+                <ScalarProperty Name="Tri_ClasseV" ColumnName="Tri_ClasseV" />
+                <ScalarProperty Name="Tri_Clareamento" ColumnName="Tri_Clareamento" />
+                <ScalarProperty Name="Tri_Periodontia" ColumnName="Tri_Periodontia" />
+                <ScalarProperty Name="Tri_Cirurgia" ColumnName="Tri_Cirurgia" />
+                <ScalarProperty Name="Tri_Simples" ColumnName="Tri_Simples" />
+                <ScalarProperty Name="Tri_Avancado" ColumnName="Tri_Avancado" />
+                <ScalarProperty Name="Tri_Endodontia" ColumnName="Tri_Endodontia" />
+                <ScalarProperty Name="Tri_Pediatria" ColumnName="Tri_Pediatria" />
+                <ScalarProperty Name="Tri_Protese" ColumnName="Tri_Protese" />
+                <ScalarProperty Name="Tri_ProtesePt" ColumnName="Tri_ProtesePt" />
+                <ScalarProperty Name="Tri_ProtesePpr" ColumnName="Tri_ProtesePpr" />
+                <ScalarProperty Name="Tri_ProteseFixa" ColumnName="Tri_ProteseFixa" />
+                <ScalarProperty Name="Tri_CicloII" ColumnName="Tri_CicloII" />
+                <ScalarProperty Name="Tri_Descricao" ColumnName="Tri_Descricao" />
+                <ScalarProperty Name="Tri_DataRealizacao" ColumnName="Tri_DataRealizacao" />
+                <ScalarProperty Name="Tri_CicloIII" ColumnName="Tri_CicloIII" />
+                <ScalarProperty Name="Tri_CicloIV" ColumnName="Tri_CicloIV" />
+                <ScalarProperty Name="Tri_CicloV" ColumnName="Tri_CicloV" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

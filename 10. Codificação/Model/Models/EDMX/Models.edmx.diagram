@@ -4,8 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="400aaae6f8e249d588ce48a9a36823e6" Name="Diagram1">
-        <EntityTypeShape EntityType="Model.Models.TB_Paciente" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="f4c8baa4799e44b586ebb59955af3bfb" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="PortalOdontoModel.TB_Odontograma" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PortalOdontoModel.TB_Paciente" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PortalOdontoModel.TB_Perguntas" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PortalOdontoModel.TB_Periograma" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PortalOdontoModel.TB_Pessoa" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PortalOdontoModel.TB_Triagem" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="PortalOdontoModel.FK_Tria1" ManuallyRouted="false" />
+        <AssociationConnector Association="PortalOdontoModel.FK_Perg" ManuallyRouted="false" />
+        <AssociationConnector Association="PortalOdontoModel.FK_Tria" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

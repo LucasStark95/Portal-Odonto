@@ -47,15 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persistence\IRepositorioGenerico.cs" />
+    <Compile Include="Persistence\IUnitOfWork.cs" />
     <Compile Include="Persistence\RepositorioAdministrador.cs" />
     <Compile Include="Persistence\RepositorioAluno.cs" />
     <Compile Include="Persistence\RepositorioAnamnese.cs" />
     <Compile Include="Persistence\RepositorioConsulta.cs" />
+    <Compile Include="Persistence\RepositorioGenerico.cs" />
     <Compile Include="Persistence\RepositorioPaciente.cs" />
     <Compile Include="Persistence\RepositorioPeriograma.cs" />
     <Compile Include="Persistence\RepositorioProntuario.cs" />
     <Compile Include="Persistence\RepositorioTriagem.cs" />
     <Compile Include="Persistence\RepositorioUsuario.cs" />
+    <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

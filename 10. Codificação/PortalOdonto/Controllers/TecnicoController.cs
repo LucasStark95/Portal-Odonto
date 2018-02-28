@@ -134,6 +134,7 @@ namespace PortalOdonto.Controllers
         // ============================ Perfil =========================================== //
 
         // GET: Tecnico/EditarPerfil/
+        
         public ActionResult EditarPerfil()
         {
 
@@ -143,7 +144,7 @@ namespace PortalOdonto.Controllers
             
             return RedirectToAction("Index");
         }
-
+        
         // POST: Te
         [HttpPost]
         public ActionResult EditarPerfil(Usuario tec)
@@ -166,7 +167,7 @@ namespace PortalOdonto.Controllers
             }
             return View();
         }
-
+        
         public ActionResult VisualizarPerfil()
         {        
           Usuario user = usuarioGerenciadora.ObterByMatricula((SessionHelper.Get(SessionKey.USUARIO) as Usuario).MatriculaUsuario);
@@ -175,7 +176,7 @@ namespace PortalOdonto.Controllers
             
             return RedirectToAction("Index");
         }
-
+        
         // ============================ Consulta =========================================== //
 
 

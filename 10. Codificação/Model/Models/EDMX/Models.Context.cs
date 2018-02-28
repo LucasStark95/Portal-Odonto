@@ -16,15 +16,20 @@ namespace Model.Models.EDMX
     public partial class PortalOdontoEntities : DbContext
     {
         public PortalOdontoEntities()
-            : base("name=PortalOdonto")
+            : base("name=PortalOdontoEntities")
         {
         }
     
-        /*protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
-        }*/
+        }
     
+        public virtual DbSet<TB_Odontograma> TB_Odontograma { get; set; }
         public virtual DbSet<TB_Paciente> TB_Paciente { get; set; }
+        public virtual DbSet<TB_Perguntas> TB_Perguntas { get; set; }
+        public virtual DbSet<TB_Periograma> TB_Periograma { get; set; }
+        public virtual DbSet<TB_Pessoa> TB_Pessoa { get; set; }
+        public virtual DbSet<TB_Triagem> TB_Triagem { get; set; }
     }
 }

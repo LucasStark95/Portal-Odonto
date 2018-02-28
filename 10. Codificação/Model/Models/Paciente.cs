@@ -21,8 +21,8 @@ namespace Model.Models
         private string estadoCivil;
         private string raca;
         private string religiao;
-        private double peso;
-        private double altura;
+        private decimal peso;
+        private decimal altura;
         private string grauDeInstrucao;
         private string pai;
         private string mae;
@@ -32,9 +32,13 @@ namespace Model.Models
         private string zona;
         private string contato;
         private string cidade;
-        private double pressaoArterial;
-        private double batimentoCardiaco;
-        private int idPaciente;       
+        private decimal pressaoArterial;
+        private decimal batimentoCardiaco;
+        private int idPaciente;
+        private string numero;
+        private string cep;
+
+     
 
         public Paciente()
         {
@@ -169,14 +173,14 @@ namespace Model.Models
         }
 
         [Display(Name = "Peso")]
-        public double Peso
+        public decimal Peso
         {
             get { return peso; }
             set { peso = value; }
         }
 
         [Display(Name = "Altura")]
-        public double Altura
+        public decimal Altura
         {
             get { return altura; }
             set { altura = value; }
@@ -255,17 +259,31 @@ namespace Model.Models
         }
 
         [Display(Name = "Pressão Arterial")]
-        public double PressaoArterial
+        public decimal PressaoArterial
         {
             get { return pressaoArterial; }
             set { pressaoArterial = value; }
         }
 
         [Display(Name = "Batimento Cardiaco")]
-        public double BatimentoCardiaco
+        public decimal BatimentoCardiaco
         {
             get { return batimentoCardiaco; }
             set { batimentoCardiaco = value; }
-        }      
+        }
+
+        [Display(Name = "Número")]
+        public string Numero
+        {
+            get { return numero; }
+            set { numero = value; }
+        }
+
+        [Display(Name = "Cep")]
+        public string Cep
+        {
+            get { return cep; }
+            set { cep = value; }
+        }
     }
 }

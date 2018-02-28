@@ -1,9 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ModelModelsStoreContainer" CdmEntityContainer="PortalOdontoEntities">
+  <EntityContainerMapping StorageEntityContainer="PortalOdontoModelStoreContainer" CdmEntityContainer="PortalOdontoEntities">
+    <EntitySetMapping Name="TB_Odontograma">
+      <EntityTypeMapping TypeName="PortalOdontoModel.TB_Odontograma">
+        <MappingFragment StoreEntitySet="TB_Odontograma">
+          <ScalarProperty Name="SQC_Odon" ColumnName="SQC_Odon" />
+          <ScalarProperty Name="Odo_Observacao" ColumnName="Odo_Observacao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="TB_Paciente">
-      <EntityTypeMapping TypeName="Model.Models.TB_Paciente">
+      <EntityTypeMapping TypeName="PortalOdontoModel.TB_Paciente">
         <MappingFragment StoreEntitySet="TB_Paciente">
+          <ScalarProperty Name="Pac_Numero" ColumnName="Pac_Numero" />
+          <ScalarProperty Name="Pac_Cep" ColumnName="Pac_Cep" />
+          <ScalarProperty Name="Pac_Cidade" ColumnName="Pac_Cidade" />
+          <ScalarProperty Name="Pac_Nacionalidade" ColumnName="Pac_Nacionalidade" />
+          <ScalarProperty Name="Pac_BatimentoCardiaco" ColumnName="Pac_BatimentoCardiaco" />
+          <ScalarProperty Name="Pac_PressaoArterial" ColumnName="Pac_PressaoArterial" />
+          <ScalarProperty Name="Pac_Contato" ColumnName="Pac_Contato" />
+          <ScalarProperty Name="Pac_Zona" ColumnName="Pac_Zona" />
+          <ScalarProperty Name="Pac_Profissao" ColumnName="Pac_Profissao" />
+          <ScalarProperty Name="Pac_NacionalidadeMae" ColumnName="Pac_NacionalidadeMae" />
+          <ScalarProperty Name="Pac_NacionalidadePai" ColumnName="Pac_NacionalidadePai" />
+          <ScalarProperty Name="Pac_Mae" ColumnName="Pac_Mae" />
+          <ScalarProperty Name="Pac_Pai" ColumnName="Pac_Pai" />
+          <ScalarProperty Name="Pac_GrauDeInstrucao" ColumnName="Pac_GrauDeInstrucao" />
+          <ScalarProperty Name="Pac_Altura" ColumnName="Pac_Altura" />
+          <ScalarProperty Name="Pac_Peso" ColumnName="Pac_Peso" />
+          <ScalarProperty Name="Pac_Religiao" ColumnName="Pac_Religiao" />
+          <ScalarProperty Name="Pac_Raca" ColumnName="Pac_Raca" />
+          <ScalarProperty Name="Pac_Estado" ColumnName="Pac_Estado" />
+          <ScalarProperty Name="Pac_Naturalidade" ColumnName="Pac_Naturalidade" />
+          <ScalarProperty Name="Pac_Sexo" ColumnName="Pac_Sexo" />
           <ScalarProperty Name="SQC_Paciente" ColumnName="SQC_Paciente" />
           <ScalarProperty Name="Pac_Nome" ColumnName="Pac_Nome" />
           <ScalarProperty Name="Pac_Rg" ColumnName="Pac_Rg" />
@@ -14,6 +43,87 @@
           <ScalarProperty Name="Pac_MotivoConsulta" ColumnName="Pac_MotivoConsulta" />
           <ScalarProperty Name="Pac_EstadoCivil" ColumnName="Pac_EstadoCivil" />
           <ScalarProperty Name="Pac_Cpf" ColumnName="Pac_Cpf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Perguntas">
+      <EntityTypeMapping TypeName="PortalOdontoModel.TB_Perguntas">
+        <MappingFragment StoreEntitySet="TB_Perguntas">
+          <ScalarProperty Name="Pgt_Conclusao" ColumnName="Pgt_Conclusao" />
+          <ScalarProperty Name="SQC_Pergunta" ColumnName="SQC_Pergunta" />
+          <ScalarProperty Name="TB_Perguntas_SQC_Pergunta" ColumnName="TB_Perguntas_SQC_Pergunta" />
+          <ScalarProperty Name="Pgt_Enunciado" ColumnName="Pgt_Enunciado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Periograma">
+      <EntityTypeMapping TypeName="PortalOdontoModel.TB_Periograma">
+        <MappingFragment StoreEntitySet="TB_Periograma">
+          <ScalarProperty Name="SQC_Peri" ColumnName="SQC_Peri" />
+          <ScalarProperty Name="Per_Diagnostico" ColumnName="Per_Diagnostico" />
+          <ScalarProperty Name="Per_Prognostico" ColumnName="Per_Prognostico" />
+          <ScalarProperty Name="Per_IndiceBiofilme" ColumnName="Per_IndiceBiofilme" />
+          <ScalarProperty Name="Per_IindiceSangramento" ColumnName="Per_IindiceSangramento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Pessoa">
+      <EntityTypeMapping TypeName="PortalOdontoModel.TB_Pessoa">
+        <MappingFragment StoreEntitySet="TB_Pessoa">
+          <ScalarProperty Name="Pes_NomeMae" ColumnName="Pes_NomeMae" />
+          <ScalarProperty Name="SQC_Pessoa" ColumnName="SQC_Pessoa" />
+          <ScalarProperty Name="Pes_Rg" ColumnName="Pes_Rg" />
+          <ScalarProperty Name="Pes_Cpf" ColumnName="Pes_Cpf" />
+          <ScalarProperty Name="Pes_Nome" ColumnName="Pes_Nome" />
+          <ScalarProperty Name="Pes_Telefone" ColumnName="Pes_Telefone" />
+          <ScalarProperty Name="Pes_Endereco" ColumnName="Pes_Endereco" />
+          <ScalarProperty Name="Pes_DataNascimento" ColumnName="Pes_DataNascimento" />
+          <ScalarProperty Name="Pes_Cidade" ColumnName="Pes_Cidade" />
+          <ScalarProperty Name="Pes_Bairro" ColumnName="Pes_Bairro" />
+          <ScalarProperty Name="Pes_Numero" ColumnName="Pes_Numero" />
+          <ScalarProperty Name="Pes_Cep" ColumnName="Pes_Cep" />
+          <ScalarProperty Name="Pes_Email" ColumnName="Pes_Email" />
+          <ScalarProperty Name="Pes_Senha" ColumnName="Pes_Senha" />
+          <ScalarProperty Name="Pes_Matricula" ColumnName="Pes_Matricula" />
+          <ScalarProperty Name="Pes_TipoUsuario" ColumnName="Pes_TipoUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Triagem">
+      <EntityTypeMapping TypeName="PortalOdontoModel.TB_Triagem">
+        <MappingFragment StoreEntitySet="TB_Triagem">
+          <ScalarProperty Name="Tri_Procedimento" ColumnName="Tri_Procedimento" />
+          <ScalarProperty Name="Tri_MotivoConsulta" ColumnName="Tri_MotivoConsulta" />
+          <ScalarProperty Name="SQC_Triagem" ColumnName="SQC_Triagem" />
+          <ScalarProperty Name="TB_Pessoa_SQC_Pessoa" ColumnName="TB_Pessoa_SQC_Pessoa" />
+          <ScalarProperty Name="TB_Paciente_SQC_Paciente" ColumnName="TB_Paciente_SQC_Paciente" />
+          <ScalarProperty Name="Tri_Radiologia" ColumnName="Tri_Radiologia" />
+          <ScalarProperty Name="Tri_Periapical" ColumnName="Tri_Periapical" />
+          <ScalarProperty Name="Tri_Panoramica" ColumnName="Tri_Panoramica" />
+          <ScalarProperty Name="Tri_Interproximal" ColumnName="Tri_Interproximal" />
+          <ScalarProperty Name="Tri_Dentistica" ColumnName="Tri_Dentistica" />
+          <ScalarProperty Name="Tri_ClasseI" ColumnName="Tri_ClasseI" />
+          <ScalarProperty Name="Tri_ClasseII" ColumnName="Tri_ClasseII" />
+          <ScalarProperty Name="Tri_ClasseIII" ColumnName="Tri_ClasseIII" />
+          <ScalarProperty Name="Tri_ClasseIV" ColumnName="Tri_ClasseIV" />
+          <ScalarProperty Name="Tri_ClasseV" ColumnName="Tri_ClasseV" />
+          <ScalarProperty Name="Tri_Clareamento" ColumnName="Tri_Clareamento" />
+          <ScalarProperty Name="Tri_Periodontia" ColumnName="Tri_Periodontia" />
+          <ScalarProperty Name="Tri_Cirurgia" ColumnName="Tri_Cirurgia" />
+          <ScalarProperty Name="Tri_Simples" ColumnName="Tri_Simples" />
+          <ScalarProperty Name="Tri_Avancado" ColumnName="Tri_Avancado" />
+          <ScalarProperty Name="Tri_Endodontia" ColumnName="Tri_Endodontia" />
+          <ScalarProperty Name="Tri_Pediatria" ColumnName="Tri_Pediatria" />
+          <ScalarProperty Name="Tri_Protese" ColumnName="Tri_Protese" />
+          <ScalarProperty Name="Tri_ProtesePt" ColumnName="Tri_ProtesePt" />
+          <ScalarProperty Name="Tri_ProtesePpr" ColumnName="Tri_ProtesePpr" />
+          <ScalarProperty Name="Tri_ProteseFixa" ColumnName="Tri_ProteseFixa" />
+          <ScalarProperty Name="Tri_CicloII" ColumnName="Tri_CicloII" />
+          <ScalarProperty Name="Tri_Descricao" ColumnName="Tri_Descricao" />
+          <ScalarProperty Name="Tri_DataRealizacao" ColumnName="Tri_DataRealizacao" />
+          <ScalarProperty Name="Tri_CicloIII" ColumnName="Tri_CicloIII" />
+          <ScalarProperty Name="Tri_CicloIV" ColumnName="Tri_CicloIV" />
+          <ScalarProperty Name="Tri_CicloV" ColumnName="Tri_CicloV" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

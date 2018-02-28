@@ -14,15 +14,45 @@ namespace Model.Models.EDMX
     
     public partial class TB_Paciente
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TB_Paciente()
+        {
+            this.TB_Triagem = new HashSet<TB_Triagem>();
+        }
+    
         public int SQC_Paciente { get; set; }
         public string Pac_Nome { get; set; }
         public string Pac_Rg { get; set; }
         public string Pac_Endereco { get; set; }
-        public Nullable<System.DateTime> Pac_DataNascimento { get; set; }
+        public System.DateTime Pac_DataNascimento { get; set; }
         public string Pac_Telefone { get; set; }
         public string Pac_Responsavel { get; set; }
         public string Pac_MotivoConsulta { get; set; }
         public string Pac_EstadoCivil { get; set; }
         public string Pac_Cpf { get; set; }
+        public string Pac_Sexo { get; set; }
+        public string Pac_Naturalidade { get; set; }
+        public string Pac_Estado { get; set; }
+        public string Pac_Raca { get; set; }
+        public string Pac_Religiao { get; set; }
+        public Nullable<decimal> Pac_Peso { get; set; }
+        public Nullable<decimal> Pac_Altura { get; set; }
+        public string Pac_GrauDeInstrucao { get; set; }
+        public string Pac_Pai { get; set; }
+        public string Pac_Mae { get; set; }
+        public string Pac_NacionalidadePai { get; set; }
+        public string Pac_NacionalidadeMae { get; set; }
+        public string Pac_Profissao { get; set; }
+        public string Pac_Zona { get; set; }
+        public string Pac_Contato { get; set; }
+        public Nullable<decimal> Pac_PressaoArterial { get; set; }
+        public Nullable<decimal> Pac_BatimentoCardiaco { get; set; }
+        public string Pac_Nacionalidade { get; set; }
+        public string Pac_Cidade { get; set; }
+        public string Pac_Cep { get; set; }
+        public string Pac_Numero { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TB_Triagem> TB_Triagem { get; set; }
     }
 }

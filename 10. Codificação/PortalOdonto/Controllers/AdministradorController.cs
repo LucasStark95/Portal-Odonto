@@ -35,7 +35,7 @@ namespace PortalOdonto.Controllers
         {
             if (id.HasValue)
             {
-                Usuario user = usuarioGerenciador.Obter(id);
+                Usuario user = usuarioGerenciador.Obter((int)id);
                 if (user != null)
                     return View(user);
             }
@@ -88,7 +88,7 @@ namespace PortalOdonto.Controllers
         {
             if (id.HasValue)
             {
-                Usuario user = usuarioGerenciador.Obter(id);
+                Usuario user = usuarioGerenciador.Obter((int)id);
                 if (user!= null)
                     return View(user);
             }
@@ -126,7 +126,7 @@ namespace PortalOdonto.Controllers
         {
             if (id.HasValue)
             {
-                Usuario user = usuarioGerenciador.Obter(id);
+                Usuario user = usuarioGerenciador.Obter((int)id);
                 if (user!= null)
                     return View(user);
                 return RedirectToAction("Index");
